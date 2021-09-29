@@ -1,10 +1,4 @@
-<html>
-    <head>
-        <title>Database Viewer</title>
-    </head>
-</html>
-<script>
-    let database = [{brand:"Centimia",price:5530,image1:"http://dummyimage.com/600x400.png/5fa2dd/ffffff",image2:"http://dummyimage.com/600x400.png/dddddd/000000",image3:"http://dummyimage.com/600x400.png/cc0000/ffffff",image4:"http://dummyimage.com/600x400.png/dddddd/000000",seller_name:"Helena Wiffen",description:"In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",details:{marketed_by:"Topdrive",company_address:"218 Shasta Circle",email:"hwiffen0@sphinn.com"},features:{colour:"Green",pattern:null,fit:null,material:null,waist_rise:null,wash_instruction:null},gender:null,type:null},
+var database = [{brand:"Centimia",price:5530,image1:"http://dummyimage.com/600x400.png/5fa2dd/ffffff",image2:"http://dummyimage.com/600x400.png/dddddd/000000",image3:"http://dummyimage.com/600x400.png/cc0000/ffffff",image4:"http://dummyimage.com/600x400.png/dddddd/000000",seller_name:"Helena Wiffen",description:"In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",details:{marketed_by:"Topdrive",company_address:"218 Shasta Circle",email:"hwiffen0@sphinn.com"},features:{colour:"Green",pattern:null,fit:null,material:null,waist_rise:null,wash_instruction:null},gender:null,type:null},
 {brand:"Fiveclub",price:5338,image1:"http://dummyimage.com/600x400.png/cc0000/ffffff",image2:"http://dummyimage.com/600x400.png/ff4444/ffffff",image3:"http://dummyimage.com/600x400.png/cc0000/ffffff",image4:"http://dummyimage.com/600x400.png/cc0000/ffffff",seller_name:"Bryn Humburton",description:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",details:{marketed_by:"Yodoo",company_address:"60035 Florence Pass",email:"bhumburton1@google.fr"},features:{colour:"Turquoise",pattern:null,fit:null,material:null,waist_rise:null,wash_instruction:null},gender:null,type:null},
 {brand:"Oyoloo",price:8231,image1:"http://dummyimage.com/600x400.png/ff4444/ffffff",image2:"http://dummyimage.com/600x400.png/dddddd/000000",image3:"http://dummyimage.com/600x400.png/dddddd/000000",image4:"http://dummyimage.com/600x400.png/cc0000/ffffff",seller_name:"Simonette Bramer",description:"Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",details:{marketed_by:"Lajo",company_address:"879 Dennis Park",email:"sbramer2@japanpost.jp"},features:{colour:"Turquoise",pattern:null,fit:null,material:null,waist_rise:null,wash_instruction:null},gender:null,type:null},
 {brand:"Demimbu",price:8789,image1:"http://dummyimage.com/600x400.png/dddddd/000000",image2:"http://dummyimage.com/600x400.png/ff4444/ffffff",image3:"http://dummyimage.com/600x400.png/cc0000/ffffff",image4:"http://dummyimage.com/600x400.png/5fa2dd/ffffff",seller_name:"Hallie Frank",description:"Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",details:{marketed_by:"Trilith",company_address:"19 Springs Point",email:"hfrank3@ox.ac.uk"},features:{colour:"Pink",pattern:null,fit:null,material:null,waist_rise:null,wash_instruction:null},gender:null,type:null},
@@ -204,49 +198,3 @@
 {brand:"Jayo",price:4649,image1:"http://dummyimage.com/600x400.png/dddddd/000000",image2:"http://dummyimage.com/600x400.png/dddddd/000000",image3:"http://dummyimage.com/600x400.png/ff4444/ffffff",image4:"http://dummyimage.com/600x400.png/5fa2dd/ffffff",seller_name:"Lazarus Reith",description:"Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",details:{marketed_by:"Feedfire",company_address:"4935 Rockefeller Road",email:"lreith5h@sciencedirect.com"},features:{colour:"Orange",pattern:null,fit:null,material:null,waist_rise:null,wash_instruction:null},gender:null,type:null},
 {brand:"Cogilith",price:9509,image1:"http://dummyimage.com/600x400.png/5fa2dd/ffffff",image2:"http://dummyimage.com/600x400.png/dddddd/000000",image3:"http://dummyimage.com/600x400.png/cc0000/ffffff",image4:"http://dummyimage.com/600x400.png/dddddd/000000",seller_name:"Selma Hellcat",description:"In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",details:{marketed_by:"Skidoo",company_address:"57245 Sutteridge Plaza",email:"shellcat5i@dion.ne.jp"},features:{colour:"Aquamarine",pattern:null,fit:null,material:null,waist_rise:null,wash_instruction:null},gender:null,type:null},
 {brand:"Thoughtblab",price:1483,image1:"http://dummyimage.com/600x400.png/5fa2dd/ffffff",image2:"http://dummyimage.com/600x400.png/ff4444/ffffff",image3:"http://dummyimage.com/600x400.png/cc0000/ffffff",image4:"http://dummyimage.com/600x400.png/ff4444/ffffff",seller_name:"Deborah Fynn",description:"Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",details:{marketed_by:"Tanoodle",company_address:"7 Ludington Pass",email:"dfynn5j@addtoany.com"},features:{colour:"Puce",pattern:null,fit:null,material:null,waist_rise:null,wash_instruction:null},gender:null,type:null}]
-    localStorage.setItem("database", JSON.stringify(database));
-
-    var data = JSON.parse(localStorage.getItem("database"));
-
-    var type = ["shirt", "jeans", "chinos", "t-shirt", "sandals", "shoes", "boots", "crocs", "skirt", "top", "suit", "blazer", "trackpant", "trousers", "kurti", "saree", "boxers", "kurta"];
-
-    var category = ["men", "women", "kids", "boys", "girls"];
-
-    var pattern = ["checkers", "plain", "print", "stripes", "solid"];
-
-    var fit = ["slim-fit", "narrow-bottom", "ankle-length", "turtle-neck", "skinny-fit", "regular-fit"];
-
-    var material = ["cotton", "polyester", "knit-wear", "Viscose Polyester", "linen", "georgette"];
-
-    var waist_rise = ["Mid-rise", "high-rise", "low-rise"];
-
-    var wash_instructions = ["machine-wash", "hand-wash"];
-
-    var brands = ["Levis", "Peter England", "Roadster", "Biba", "Zara", "Richard Parker", "Maanywar", "Wrogn", "One", "Fcuk", "H&M", "Mast & Harbor", "Denim", "Raymond", "Allen Solly", "Van Heusen"];
-
-    for(var i = 0; i < data.length; i++) {
-        if(data[i].type == null) {
-            data[i].type = type[Math.floor((Math.random() * 18))];
-        }
-        if(data[i].gender == null) {
-            data[i].gender = category[Math.floor((Math.random() * 5))];
-        }
-        if(data[i].features.pattern == null) {
-            data[i].features.pattern = pattern[Math.floor((Math.random() * 5))];
-        }
-        if(data[i].features.fit == null) {
-            data[i].features.fit = fit[Math.floor((Math.random() * 6))];
-        }
-        if(data[i].features.material == null) {
-            data[i].features.material = material[Math.floor((Math.random() * 6))];
-        }
-        if(data[i].features.waist_rise == null) {
-            data[i].features.waist_rise = waist_rise[Math.floor((Math.random() * 3))];
-        }
-        if(data[i].features.wash_instruction == null) {
-            data[i].features.wash_instruction = wash_instructions[Math.floor((Math.random() * 2))];
-        }
-        data[i].brand = brands[Math.floor((Math.random() * 16))];
-    }
-    localStorage.setItem("database", JSON.stringify(data));
-</script>
