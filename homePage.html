@@ -12,10 +12,13 @@
         *{
             font-family: 'Rubik', sans-serif;
         }
-        #outerBox{
+        /* #outerBox{
             height: 705px;
+        } */
+
+        #firstPart {
+            margin: -10px -10px -10px -10px;
         }
-        
         
         #discountBar{
             width: 100%;
@@ -38,7 +41,6 @@
             height: 100px;
             grid-template-columns: 22% 42%  36%;
             /* border: 1px solid black; */
-            
         }
        .align{
            margin: 40px 0 0 80px ;
@@ -132,7 +134,7 @@
        }
        #secondPart{
             overflow: scroll;
-           
+            margin: 15px -10px -10px -10px;
         }
         ::-webkit-scrollbar {
              display: none;
@@ -342,9 +344,24 @@
            height: 100%;
            cursor: pointer;
        }
-       div{
-           border: 1px solid black;
+       @media (min-height: 700px) {
+        #outerBox{
+            height: 705px;
+        }
        }
+       @media (min-height: 760px) {
+        #outerBox{
+            height: 800px;
+        }
+       }
+       @media (min-height: 1000px) {
+        #outerBox{
+            height: 1024px;
+        }
+       }
+       /* div{
+           border: 1px solid black;
+       } */
     </style>
 </head>
 <body>
