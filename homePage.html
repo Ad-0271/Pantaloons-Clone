@@ -488,6 +488,7 @@
 
         .results ul {
              width: 200px;
+             margin-top: 12px;
         }
         .results ul li {
             box-sizing: border-box;
@@ -569,7 +570,7 @@
 
 
     <div id="secondPart">
-        <div class="firstBox" id="mySlideshow" title="Online Exclusive Upto 50% Off"  style="cursor: pointer;">
+        <div class="firstBox" id="mySlideshow" style="cursor: pointer;">
             
         </div>
         <div class="secondBox">
@@ -913,39 +914,6 @@
     
     </div>
 </div>
-
-<script>
-    var images = [  "https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8405.jpg" ,
-                    "https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8408.jpg?w=1519&auto=format",
-                    "https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8410.jpg?w=1519&auto=format",
-                    "https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8413.jpg?w=1519&auto=format",
-                    "https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8415.jpg?w=1519&auto=format"
-
-    ]
-    let container = document.getElementById("mySlideshow");
-        let interval;
-        function startSlideshow() {
-            let counter = 0;
-            let img = document.createElement("img");
-            img.setAttribute("class", "imgSlide")
-            img.src = images[counter];
-            container.append(img);
-            counter++;
-            interval = setInterval(function () {
-                container.innerHTML = null;
-                if (counter === images.length) {
-                    counter = 0;
-                }
-                let img = document.createElement("img");
-                img.setAttribute("class", "imgSlide")
-                img.src = images[counter];
-                container.append(img);
-                counter++;
-            }, 3000)
-        }
-        startSlideshow();
-
-</script>
 </body>
 </html>
 
@@ -6301,6 +6269,72 @@
             database.forEach(function(el) {
                 if(el.type == value || el.brand == value || el.features.pattern == value || el.features.fit == value || el.features.material == value || el.features.waist_rise == value || el.features.wash_instruction == value || el.gender == value) {
                     productPage.push(el);
+                }
+            });
+            localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        }
+        var images = [  "https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8405.jpg" ,
+                    "https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8408.jpg?w=1519&auto=format",
+                    "https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8410.jpg?w=1519&auto=format",
+                    "https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8413.jpg?w=1519&auto=format",
+                    "https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8415.jpg?w=1519&auto=format",
+                ];
+
+        var title = [   "Online Exclusives Upto 50% Off",
+                    "Kids Winter Wear",
+                    "Selected Products from Top Brands",
+                    "Latest Trends On Sleepwears",
+                    "Latest Kids Footwears",
+                ];
+
+        var alt = ["50%", "kids", "brands", "women", "type"];
+        let container = document.getElementById("mySlideshow");
+        let interval;
+        let alter_image;
+        function startSlideshow() {
+            let counter = 0;
+            let img = document.createElement("img");
+            img.setAttribute("class", "imgSlide")
+            img.src = images[counter];
+            container.append(img);
+            counter++;
+            interval = setInterval(function () {
+                container.innerHTML = null;
+                if (counter === images.length) {
+                    counter = 0;
+                }
+                let img = document.createElement("img");
+                img.setAttribute("class", "imgSlide");
+                img.src = images[counter];
+                img.title = title[counter];
+                img.alt = alt[counter];
+                alter_image = alt[counter];
+                img.addEventListener("click", slideFunction);
+                container.append(img);
+                counter++;
+            }, 5000)
+        }
+        startSlideshow();
+
+
+        function slideFunction() {
+            let value = alter_image;
+            let productPage = JSON.parse(localStorage.getItem("categoryPage"));
+            productPage = [];
+
+            database.forEach(function(el){
+                if(el.discount == value) {
+                    productPage.push(el);
+                } else if(el.gender == value) {
+                    productPage.push(el);
+                } else if(value == "brands") {
+                    if(el.brand == "Zara" || el.brand == "Levis" || el.brand == "Biba" || el.brand == "Raymond" || el.brand == "Van Heusen" || el.brand == "H&M") {
+                        productPage.push(el);
+                    }
+                } else if(value == "type") {
+                    if(el.gender == "kids" && (el.type == "boots" || el.type == "shoes" || el.type == "sandals" || el.type == "crocs")) {
+                        productPage.push(el);
+                    }
                 }
             });
             localStorage.setItem("categoryPage", JSON.stringify(productPage));
