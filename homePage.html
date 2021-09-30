@@ -586,42 +586,40 @@
         <div class="secondBox">
                 <div class="text"> <span class="color">TOP </span> DEALS  </div>
                 <div class="topDeals">
-                    <div>
+                    <div onclick="filterdata('45%')">
                         <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8466.jpg" class="img" title="Pantaloon Junior Upto 45% off"/>
                     </div>
-                    <div>
-                        <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8467.jpg" class="img" title="Style at Rs 999" />
+                    <div onclick="filterdata('999')">
+                        <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8467.jpg" class="img" title="Style at Rs 999"/>
                     </div>
-                    <div>
-                        <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8469.jpg" class="img" title="Zink London" />
+                    <div onclick="filterdata('50%')">
+                        <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8469.jpg" class="img" title="Zink London"/>
                     </div>
-                    <div>
-                        <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8473.jpg" class="img" title="Cushion Covers at Flat 35% off" />
-                    </div>
-                    
+                    <div onclick="filterdata('35%')">
+                        <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8473.jpg" class="img" title="Cushion Covers at Flat 35% off"/>
+                    </div>                    
                 </div>
         </div>
 
         <div class="thirdBox">
                 <div class="text"> <span class="color">FASHION </span> STEALS </div>
                 <div class="under">
-                    <div>
-                        <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/399.png?w=960&auto=format" class="img"  title="399 offers pantaloons" />
+                    <div onclick="filterdata('u399')">
+                        <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/399.png?w=960&auto=format" class="img" title="399 offers pantaloons" />
                     </div>
-                    <div>
-                        <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/699.png?w=960&auto=format" class="img" title="699 offers pantaloons" />
+                    <div onclick="filterdata('u699')">
+                        <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/699.png?w=960&auto=format" class="img" title="699 offers pantaloons"/>
                     </div>
-                    <div>
+                    <div onclick="filterdata('u999')">
                         <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/999.png?w=960&auto=format" class="img" title="999 offers pantaloons"/>
                     </div>
                 </div>
-
         </div>
 
         <div class="fourthBox">
                 <div class="text"> <span class="color">WHAT'S </span> HOT </div>
                 <div id="hot">
-                       <div>
+                       <div onclick="filterdata('dresses')">
                            <div> 
                                <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-6949.jpg" class="img" title="Dresses"/>
                            </div>
@@ -634,7 +632,7 @@
                                </div>
                            </div>
                        </div>
-                       <div>
+                       <div onclick="filterdata('soft_snuggles')">
                            <div>
                             <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-6959.jpg" class="img" title="Soft Snuggles"/>
                            </div>
@@ -648,7 +646,7 @@
                         </div>
                            
                        </div>
-                       <div>
+                       <div onclick="filterdata('easy_tees')">
                             <div>
                                 <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-6960.jpg" class="img" title="Easy Tees" />
                             </div>
@@ -661,7 +659,7 @@
                                 </div>
                             </div>
                        </div>
-                       <div>
+                       <div onclick="filterdata('sunny_days')">
                              <div>
                                 <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-6961.jpg" class="img" title="Sunny Days" />
                              </div>
@@ -674,7 +672,7 @@
                                 </div>
                             </div>
                        </div>
-                       <div>
+                       <div onclick="filterdata('ethnic_vibes')">
                             <div>
                                 <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-6962.jpg" class="img" title="Ethnic Vibes" />
                             </div>
@@ -928,6 +926,7 @@
 </html>
 
 <script>
+
     let database = [
     {
         brand: "H&M",
@@ -6130,6 +6129,7 @@
         discount: "35%"
     }
 ];
+  
     function toHomepage() {
         window.location.href="homePage.html";
     }
@@ -6515,4 +6515,94 @@
             localStorage.setItem("categoryPage", JSON.stringify(productPage));
         }
         
+
+    if (localStorage.getItem('database') === null){
+        localStorage.setItem('database', JSON.stringify(database));
+    }
+
+
+    function filterdata(value){
+
+        if (localStorage.getItem('categoryPage') === null){
+            localStorage.setItem('categoryPage', JSON.stringify([]));
+        }
+
+        var filtered_data = [];
+
+        if (value == '50%'){
+            filtered_data = database.filter(el => {
+                return el.discount == '35%' || el.discount == '50%';
+            });
+
+            localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
+
+        } else if (value == '45%'){
+            filtered_data = database.filter(el => {
+                return el.discount <= '45%';
+            });
+
+            localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
+
+        } else if (value == '35%'){      
+            filtered_data = database.filter(el => {
+                return el.discount == '35%';
+            });
+
+            localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
+
+        } else if (value == '999' || value == 'u999'){
+            filtered_data = database.filter(el => {
+                return el.price <= '999';
+            });
+
+            localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
+
+        } else if(value == 'u399'){
+            filtered_data = database.filter(el => {
+                return el.price <= '399';
+            });
+
+            localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
+
+        } else if(value == 'u699'){
+            filtered_data = database.filter(el => {
+                return el.price <= '699';
+            });
+
+            localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
+
+        } else if(value == 'dresses' || value == 'ethnic_vibes'){
+            filtered_data = database.filter(el => {
+                return (el.gender == 'women' || (el.gender == 'girls')) && (el.type == 'kurti' || el.type == 'kurta' || el.type == 'saree');
+            });
+
+            localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
+
+        } else if(value == 'soft_snuggles'){
+            filtered_data = database.filter(el => {
+                return (el.gender == 'women' || el.gender == 'girls') && (el.type == 'skirt' || el.type == 'top');
+            });
+
+            localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
+
+        } else if(value == 'easy_tees'){
+            filtered_data = database.filter(el => {
+                return (el.gender == 'men' || el.gender == 'boys') && el.type == 't-shirt';
+            });
+
+            localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
+
+        } else if(value == 'sunny_days'){
+            filtered_data = database.filter(el => {
+                return el.gender == 'kids';
+            });
+
+            localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
+
+        }
+
+        console.log(filtered_data);
+        // window.location = 'categoryPage.html';
+    };
+
 </script>
