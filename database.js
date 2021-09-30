@@ -5199,4 +5199,4 @@ var database = [
         type: "trousers",
         discount: "35%"
     }
-]
+];
