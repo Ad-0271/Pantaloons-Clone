@@ -1,0 +1,306 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+    rel="stylesheet">
+        <title>Product Page</title>
+        <style>
+            #firstPart {
+                margin: -10px -10px 0px -10px;
+                border-bottom: 1px solid rgba(128, 128, 128, 0.281);
+            }
+
+            #discountBar{
+                width: 100%;
+                height: 50px;
+                box-sizing: border-box;
+                text-align: center;
+                font-size: 16px;
+                background-color: #00aa8a;
+                color: white;
+                padding: 14px 0 0 0;
+            }
+
+            .secondbar{
+                display: grid;
+                width: 100%;
+                height: 100px;
+                grid-template-columns: 22% 42%  36%;
+                /* border: 1px solid black; */
+            }
+
+            .align{
+           margin: 40px 0 0 80px ;
+            cursor: pointer;
+       }
+       .select{
+           display: grid;
+           grid-template-columns: auto auto auto auto auto auto auto;
+           height: 40px;
+           margin: 40px 0 0 0 ;
+       }
+       .select>div{
+           font-weight: 400;
+           box-sizing: border-box;
+           padding: 20px 0 0 0;
+           font-size: 15px;
+           color: rgb(77, 77, 77);
+       }
+       #red{
+           color: red;
+       }
+       .grid1{
+           width: 80%;
+           height: 20px;
+           display: grid;
+           grid-template-columns: auto auto auto auto;
+           font-size: 12px;
+           font-weight: 200;
+           /* text-align: right; */
+            margin: 15px 0 0 40px;
+           
+       }
+       .grid2{
+           width: 80%;
+           margin: 10px 0 0 40px;
+           height: 40px;
+       }
+       .grid2 > div:nth-child(1){
+           width: 60%;
+           height: 40px;
+           border: 1px solid #00aa8a;
+           border-radius: 5px;
+           display: inline-block;
+           vertical-align: top;
+       }
+       
+       .grid2 > div>div{
+           width: 30px;
+           height: 30px;
+           display: inline-block;
+           margin: 5px 0 0 40px ;
+           vertical-align: top;
+       }
+       #search{
+         border: 1px solid #f5f5f5; ;
+         margin: 10px 0 0 10px;
+         vertical-align: top;
+         width: 60%;
+         outline: none;
+         color: rgb(109, 109, 109);
+         box-sizing: border-box;
+         font-family: 'Roboto', sans-serif;
+         background-color: #f5f5f5;
+       }
+
+       #search:focus {
+           outline: none;
+       }
+
+       .addToCart{
+           width: 30px;
+           height: 30px;
+           display: inline-block;
+           vertical-align: top;
+            margin: 5px 0 0 20px;
+       }
+       .img{
+           width: 100%;
+           height: 100%;
+           cursor : pointer;
+
+       }
+
+       #outerPart {
+           display: flex;
+           flex-direction: column;
+           height: 780px;
+       }
+       *{
+            font-family: 'Rubik', sans-serif;
+        }
+
+        .wrapper {
+            margin: auto;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.15);
+            position: relative;
+        }
+
+        #womenTop, #menTop, #kidsTop, #homeD, #accE, #brandsTop, #red {
+            cursor: pointer;
+        }
+        #womenTop:hover, #menTop:hover, #kidsTop:hover, #homeD:hover, #accE:hover, #brandsTop:hover {
+            color: #00aa8a;
+            transition: all 0.5s linear;
+        }
+
+        /* div {
+            border: 1px solid red;
+        } */
+
+        #secondPart {
+            height: 100%;
+            display: flex;
+        }
+
+        #menuPart {
+            flex-basis: 25%;
+            background-color: #e6eeee;
+        }
+
+        #productPart {
+            flex-basis: 75%;
+            overflow: scroll;
+        }
+
+        #menu_Bar {
+            width: 95%;
+            height: 95%;
+            overflow: scroll;
+            margin: auto;
+            margin-top: 15px;
+            border: 1px solid rgb(185, 184, 184);
+            background-color: #f5f5f5;
+            
+        }
+        
+        button {
+            display: flex;
+            width: 100%;
+            height: 60px;
+            gap: 20px;
+            border: 1px solid rgb(185, 184, 184);
+            background-color: #f5f5f5;
+
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #00aa8a;
+            transition: all 0.5s linear;
+            color: white;
+        }
+        .btn_img {
+            flex-basis: 20%;
+            /* border: 1px solid red; */
+            margin-left: 5px;
+        }
+        .btn_header {
+            flex-basis: 70%;
+            /* border: 1px solid red; */
+            text-align: left;
+            margin-top: 15px;
+            font-weight: 100;
+            font-size: 16px;
+        }
+        .btnI {
+            width: 90%;
+            height: 90%;
+            margin-top: 2px;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="outerPart">
+            
+            <div id="firstPart" >
+                <div id="discountBar"> 
+                     <span> Extra 20% OFF* on All your Orders above ₹3500. Use Code: PTDTRA20 | * T & Cs Apply > </span>
+                </div>
+                 <div class="secondbar">
+                        <div class="align">
+                            <div> <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/v2/PT_D_logo.png" title="Pantaloons" onclick="toHomepage()" style="cursor: pointer;"/> </div>
+                            
+                        </div>
+                        <div >
+                                <div class="select">
+                                    <div id="womenTop">WOMEN</div>
+                                    <div id="menTop" style="cursor: pointer;">MEN</div>
+                                    <div id="kidsTop" style="cursor: pointer;">KIDS</div>
+                                    <div id="homeD">HOME DECORE</div>
+                                    <div id="accE">ACCESSORIES</div>
+                                    <div id="brandsTop">BRANDS</div>
+                                    <div id="red">SALE</div>
+                                </div>
+                        </div>
+                        <div>
+                                <div class="grid1">
+                                    <div>GREENCARD</div>
+                                    <div>TRACK ORDER</div>
+                                    <div>STORE LOCATOR</div>
+                                    <div>CONTACT US</div>
+                                </div>
+                                <div class="grid2">
+                                    <div class="wrapper">
+                                        <input type="text" id="search" value="" placeholder="Search Here"/>
+                                        <div> <img src="https://i.pinimg.com/736x/80/37/08/803708a2135c22ec40826c306b00e933.jpg" class="img" , style="border-radius: 50%;" id="searchImg" /> </div>
+                                        <div class="results"></div>
+                                    </div>
+                                      <div class="addToCart">
+                                            <img src="https://icon-library.com/images/add-user-icon/add-user-icon-23.jpg" class="img" />
+                                      </div>  
+                                      <div class="addToCart"> 
+                                            <img src="https://pantaloons.imgix.net/img/app/others/heart_bordered.png" class="img" />
+                                      </div>
+                                    <div class="addToCart">
+                                            <img src="https://thumbs.dreamstime.com/b/add-to-cart-icon-adding-shopping-cart-well-organized-fully-editable-add-to-cart-icon-adding-shopping-cart-any-use-like-167547952.jpg" class="img" />
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+            </div>
+            
+            <div id="secondPart">
+                <div id="menuPart">
+                    <div id="menu_Bar">
+                        <button class="menu_btn">
+                            <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
+                            <div class="btn_header">GENDER</div>
+                        </button>
+                        <button class="menu_btn">
+                            <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
+                            <div class="btn_header">GENDER</div>
+                        </button>
+                        <button class="menu_btn">
+                            <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
+                            <div class="btn_header">GENDER</div>
+                        </button>
+                        <button class="menu_btn">
+                            <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
+                            <div class="btn_header">GENDER</div>
+                        </button>
+                        <button class="menu_btn">
+                            <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
+                            <div class="btn_header">GENDER</div>
+                        </button>
+                        <button class="menu_btn">
+                            <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
+                            <div class="btn_header">GENDER</div>
+                        </button>
+                        <button class="menu_btn">
+                            <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
+                            <div class="btn_header">GENDER</div>
+                        </button>
+                        <button class="menu_btn">
+                            <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
+                            <div class="btn_header">GENDER</div>
+                        </button>
+                    </div>
+                </div>
+                <div id="productPart">
+                    <div>
+                        <div id="total_items">1234</div>
+                        <div>Products</div>
+                    </div>
+                    <div>
+                        <div>Sort</div>
+                        <div id="sort_options"></div>
+                    </div>
+                    <div id="products"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
