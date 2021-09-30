@@ -21,6 +21,7 @@
 
         #firstPart {
             margin: -10px -10px -10px -10px;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.281);
         }
         
         #discountBar{
@@ -98,7 +99,7 @@
            vertical-align: top;
        }
        #search{
-         border: 1px solid white ;
+         border: 1px solid #f5f5f5; ;
          margin: 10px 0 0 10px;
          vertical-align: top;
          width: 60%;
@@ -106,6 +107,7 @@
          color: rgb(109, 109, 109);
          box-sizing: border-box;
          font-family: 'Roboto', sans-serif;
+         background-color: #f5f5f5;
        }
 
        #search:focus {
@@ -480,7 +482,7 @@
        } */
        .wrapper {
             margin: auto;
-            background: #ffffff;
+            background-color: #f5f5f5;
             border-radius: 5px;
             box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.15);
             position: relative;
@@ -512,6 +514,14 @@
         .results ul li:hover {
             background: #ececec
         }
+
+        #womenTop, #menTop, #kidsTop, #homeD, #accE, #brandsTop, #red {
+            cursor: pointer;
+        }
+        #womenTop:hover, #menTop:hover, #kidsTop:hover, #homeD:hover, #accE:hover, #brandsTop:hover {
+            color: #00aa8a;
+            transition: all 0.5s linear;
+        }
     </style>
 </head>
 
@@ -532,13 +542,13 @@
                 </div>
                 <div >
                         <div class="select">
-                            <div id="womenTop" style="cursor: pointer;">WOMEN</div>
+                            <div id="womenTop">WOMEN</div>
                             <div id="menTop" style="cursor: pointer;">MEN</div>
                             <div id="kidsTop" style="cursor: pointer;">KIDS</div>
-                            <div>HOME DECORE</div>
-                            <div>ACCESSORIES</div>
-                            <div>BRANDS</div>
-                            <div id="red" style="cursor: pointer;">SALE</div>
+                            <div id="homeD">HOME DECORE</div>
+                            <div id="accE">ACCESSORIES</div>
+                            <div id="brandsTop">BRANDS</div>
+                            <div id="red">SALE</div>
                         </div>
                 </div>
                 <div>
@@ -685,21 +695,21 @@
             <div class="top">
                 <div>
                     
-                    <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/MEn & WOmen Kurtas 180.jpg?w=180.938&auto=format" class="imgc" title="Kurtas pantaloons" />
+                    <img id="kurtasTC" src="https://pantaloons.imgix.net/img/app/brands/pantaloons/MEn & WOmen Kurtas 180.jpg?w=180.938&auto=format" class="imgc" title="Kurtas pantaloons" />
                     
                     <div class="toptext">
                         Kurtas
                     </div>
                 </div>
                 <div>
-                    <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/Mens Tshirts 208_28052021.jpg?w=180.938&auto=format" title="Tshirts pantaloons"
+                    <img id="menT-shirtTC" src="https://pantaloons.imgix.net/img/app/brands/pantaloons/Mens Tshirts 208_28052021.jpg?w=180.938&auto=format" title="Tshirts pantaloons"
                         class="imgc" />
                         <div class="toptext">
                            Men T-shirts
                         </div>
                 </div>
                 <div>
-                    <img
+                    <img id="shirtsTC"
                             src="https://pantaloons.imgix.net/img/app/brands/pantaloons/Shirts 208_28052021.jpg?w=180.938&auto=format" title="Shirts pantaloons"
                             class="imgc" />
                             <div class="toptext">
@@ -707,49 +717,49 @@
                             </div>
                 </div>
                 <div>
-                    <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/sleepwear 208.jpg?w=180.938&auto=format" title="Sleepwear pantaloons"
+                    <img id="sleepwearTC" src="https://pantaloons.imgix.net/img/app/brands/pantaloons/sleepwear 208.jpg?w=180.938&auto=format" title="Sleepwear pantaloons"
                         class="imgc" />
                         <div class="toptext">
                             Sleepwear
                         </div>
                 </div>
                 <div>
-                    <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/kids dress 208_12052021.jpg?w=180.938&auto=format" title="Kids Dresses pantaloons"
+                    <img id="kidsDressTC" src="https://pantaloons.imgix.net/img/app/brands/pantaloons/kids dress 208_12052021.jpg?w=180.938&auto=format" title="Kids Dresses pantaloons"
                         class="imgc" />
                         <div class="toptext">
                             Kids Dresses
                         </div>
                 </div>
                 <div>
-                   <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/Jeans 208.jpg?w=180.938&auto=format" title="Jeans pantaloons"
+                   <img id="jeansTC" src="https://pantaloons.imgix.net/img/app/brands/pantaloons/Jeans 208.jpg?w=180.938&auto=format" title="Jeans pantaloons"
                         class="imgc" />
                         <div class="toptext">
                             Jeans
                         </div>
                 </div>
                 <div>
-                    <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/womens tops & tees 208.jpg?w=180.938&auto=format" title="Tees & Tops pantaloons"
+                    <img id="teesTC" src="https://pantaloons.imgix.net/img/app/brands/pantaloons/womens tops & tees 208.jpg?w=180.938&auto=format" title="Tees & Tops pantaloons"
                         class="imgc" />
                         <div class="toptext">
                             Tees & Tops
                         </div>
                 </div>
                 <div>
-                   <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/kids bottom wear 208.jpg?w=180.938&auto=format" title="Kids Bottomwear pantaloons"
+                   <img id="kidsBotTC" src="https://pantaloons.imgix.net/img/app/brands/pantaloons/kids bottom wear 208.jpg?w=180.938&auto=format" title="Kids Bottomwear pantaloons"
                         class="imgc" />
                         <div class="toptext">
                             Kids Bottomwear
                         </div>
                 </div>
                 <div>
-                    <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/Kids Tees.jpg?w=180.938&auto=format" title="Kids T-shirt pantaloons"
+                    <img id="kidsT-ShirtTC" src="https://pantaloons.imgix.net/img/app/brands/pantaloons/Kids Tees.jpg?w=180.938&auto=format" title="Kids T-shirt pantaloons"
                         class="imgc" />
                         <div class="toptext">
                             Kids T-shirt
                         </div>
                 </div>
                 <div>
-                    <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/Mens Shorts.jpg?w=180.938&auto=format" title="Shorts pantaloons"
+                    <img id="shortsTC" src="https://pantaloons.imgix.net/img/app/brands/pantaloons/Mens Shorts.jpg?w=180.938&auto=format" title="Shorts pantaloons"
                         class="imgc" />
                         <div class="toptext">
                             Shorts
@@ -6227,7 +6237,7 @@
                     return item.toLowerCase().includes(input.toLowerCase());
                 });
             }
-            renderResults(results);
+            renderResults(results.slice(0, 5));
         }
 
 
@@ -6265,14 +6275,21 @@
             let value = searchInput.value;
             let productPage = JSON.parse(localStorage.getItem("categoryPage"));
             productPage = [];
+            let flag = true;
 
             database.forEach(function(el) {
                 if(el.type == value || el.brand == value || el.features.pattern == value || el.features.fit == value || el.features.material == value || el.features.waist_rise == value || el.features.wash_instruction == value || el.gender == value) {
+                    flag = false;
                     productPage.push(el);
                 }
             });
+            if(flag) {
+                productPage = database;
+            }
             localStorage.setItem("categoryPage", JSON.stringify(productPage));
         }
+
+
         var images = [  "https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8405.jpg" ,
                     "https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8408.jpg?w=1519&auto=format",
                     "https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8410.jpg?w=1519&auto=format",
@@ -6307,7 +6324,6 @@
                 img.setAttribute("class", "imgSlide");
                 img.src = images[counter];
                 img.title = title[counter];
-                img.alt = alt[counter];
                 alter_image = alt[counter];
                 img.addEventListener("click", slideFunction);
                 container.append(img);
@@ -6339,4 +6355,164 @@
             });
             localStorage.setItem("categoryPage", JSON.stringify(productPage));
         }
+
+
+        let kurtasTC = document.getElementById("kurtasTC");
+        kurtasTC.addEventListener("click", kurtasDat);
+
+        function kurtasDat() {
+            let productPage = JSON.parse(localStorage.getItem("categoryPage"));
+            productPage = [];
+
+            database.forEach(function(el) {
+                if((el.type == "kurta" || el.type == "kurti") && el.gender == "women") {
+                    productPage.push(el);
+                }
+            });
+            localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        }
+
+
+        let menT_shirtTC = document.getElementById("menT-shirtTC");
+        menT_shirtTC.addEventListener("click", menT_shirtTCDat);
+
+        function menT_shirtTCDat() {
+            let productPage = JSON.parse(localStorage.getItem("categoryPage"));
+            productPage = [];
+
+            database.forEach(function(el) {
+                if(el.gender == "men" && el.type == "t-shirt") {
+                    productPage.push(el);
+                }
+            });
+            localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        }
+        
+
+        let shirtsTC = document.getElementById("shirtsTC");
+        shirtsTC.addEventListener("click", shirtsTCDat);
+
+        function shirtsTCDat() {
+            let productPage = JSON.parse(localStorage.getItem("categoryPage"));
+            productPage = [];
+
+            database.forEach(function(el) {
+                if(el.type == "shirt") {
+                    productPage.push(el);
+                }
+            });
+            localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        }
+        
+
+        let sleepwearTC = document.getElementById("sleepwearTC");
+        sleepwearTC.addEventListener("click", sleepwearTCDat);
+
+        function sleepwearTCDat() {
+            let productPage = JSON.parse(localStorage.getItem("categoryPage"));
+            productPage = [];
+
+            database.forEach(function(el) {
+                if(el.type == "boxers") {
+                    productPage.push(el);
+                }
+            });
+            localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        }
+        
+
+        let kidsDressTC = document.getElementById("kidsDressTC");
+        kidsDressTC.addEventListener("click", kidsDressTCDat);
+
+        function kidsDressTCDat() {
+            let productPage = JSON.parse(localStorage.getItem("categoryPage"));
+            productPage = [];
+
+            database.forEach(function(el) {
+                if(el.gender == "kids") {
+                    productPage.push(el);
+                }
+            });
+            localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        }
+        
+
+        let jeansTC = document.getElementById("jeansTC");
+        jeansTC.addEventListener("click", jeansTCDat);
+
+        function jeansTCDat() {
+            let productPage = JSON.parse(localStorage.getItem("categoryPage"));
+            productPage = [];
+
+            database.forEach(function(el) {
+                if(el.type == "jeans") {
+                    productPage.push(el);
+                }
+            });
+            localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        }
+
+
+        let teesTC = document.getElementById("teesTC");
+        teesTC.addEventListener("click", teesTCDat);
+
+        function teesTCDat() {
+            let productPage = JSON.parse(localStorage.getItem("categoryPage"));
+            productPage = [];
+
+            database.forEach(function(el) {
+                if(el.type == "t-shirt") {
+                    productPage.push(el);
+                }
+            });
+            localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        }
+
+
+        let kidsBotTC = document.getElementById("kidsBotTC");
+        kidsBotTC.addEventListener("click", kidsBotTCDat);
+
+        function kidsBotTCDat() {
+            let productPage = JSON.parse(localStorage.getItem("categoryPage"));
+            productPage = [];
+
+            database.forEach(function(el) {
+                if(el.gender == "kids" && (el.type == "chinos" || el.type == "jeans" || el.type == "trackpant" || el.type == "boxers" || el.type == "trousers")) {
+                    productPage.push(el);
+                }
+            });
+            localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        }
+
+
+        let kidsT_ShirtTC = document.getElementById("kidsT-ShirtTC");
+        kidsT_ShirtTC.addEventListener("click", kidsT_ShirtTCDat);
+
+        function kidsT_ShirtTCDat() {
+            let productPage = JSON.parse(localStorage.getItem("categoryPage"));
+            productPage = [];
+            database.forEach(function(el) {
+                if(el.gender == "kids" && el.type == "t-shirt") {
+                    productPage.push(el);
+                }
+            });
+            localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        }
+        
+
+        let shortsTC = document.getElementById("shortsTC");
+        shortsTC.addEventListener("click", shortsTCDat);
+
+        function shortsTCDat() {
+            let productPage = JSON.parse(localStorage.getItem("categoryPage"));
+            productPage = [];
+
+            database.forEach(function(el) {
+                if(el.type == "boxers" || el.type == "trackpant" || el.type == "skirt") {
+                    productPage.push(el);
+                }
+            });
+            localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        }
+        
 </script>
