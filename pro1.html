@@ -144,6 +144,8 @@
         #secondPart {
             height: 100%;
             display: flex;
+            margin-top: 30px;
+            gap: 20px;
         }
 
         #menuPart {
@@ -166,6 +168,10 @@
             background-color: #f5f5f5;
             
         }
+        productpart::-webkit-scrollbar{
+           display: none;
+        }
+
         
         button {
             display: flex;
@@ -200,6 +206,37 @@
             height: 90%;
             margin-top: 2px;
         }
+        div{
+            border: 1px solid black;
+        }
+
+        #proflex{
+            display:flex;
+            gap: 15px;
+        }
+        #total_items{
+            flex-basis: 5%;
+        }
+
+        #productflex{
+            flex-basis: 80%;
+        }
+
+
+        #sortflex
+        {
+            display:flex;
+            gap: 5px;
+        }
+        #textalign{
+            flex-basis:80% ;
+            text-align: right;
+        }
+        #sort_options
+        {
+         flex-basis: 20%;
+        }
+
         </style>
     </head>
     <body>
@@ -260,43 +297,44 @@
                             <div class="btn_header">GENDER</div>
                         </button>
                         <button class="menu_btn">
-                            <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
-                            <div class="btn_header">GENDER</div>
+                            <div class="btn_img"><img class="btnI" src="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"></div>
+                            <div class="btn_header">PRODUCT TYPE</div>
+                        </button>
+                        <button class="menu_btn">
+                            <div class="btn_img"><img class="btnI" src="https://img.vectorfair.com/vectorfair-uploads/2020-11-29/free/TM_1017_VkVDIFZBTiAzNDctMjY.jpg"></div>
+                            <div class="btn_header">BRANDS</div>
                         </button>
                         <button class="menu_btn">
                             <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
-                            <div class="btn_header">GENDER</div>
+                            <div class="btn_header">FIT</div>
                         </button>
                         <button class="menu_btn">
                             <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
-                            <div class="btn_header">GENDER</div>
+                            <div class="btn_header">DISCOUNT</div>
                         </button>
                         <button class="menu_btn">
                             <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
-                            <div class="btn_header">GENDER</div>
+                            <div class="btn_header">PATTERN</div>
                         </button>
                         <button class="menu_btn">
                             <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
-                            <div class="btn_header">GENDER</div>
-                        </button>
-                        <button class="menu_btn">
-                            <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
-                            <div class="btn_header">GENDER</div>
-                        </button>
-                        <button class="menu_btn">
-                            <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
-                            <div class="btn_header">GENDER</div>
+                            <div class="btn_header">WASH</div>
                         </button>
                     </div>
                 </div>
-                <div id="productPart">
-                    <div>
+                <div class="produc" id="productPart">
+                    <div id="proflex">
                         <div id="total_items">1234</div>
-                        <div>Products</div>
+                        <div id="productflex">Products</div>
                     </div>
-                    <div>
-                        <div>Sort</div>
-                        <div id="sort_options"></div>
+                    <div id="sortflex">
+                        <div id="textalign">Sort:</div>
+                        <div id="sort_options"><select id="Sort">
+                            <option value="">Choose</option>
+                            <option value="low">Price:Lowest</option>
+                            <option value="high">Price:Highest</option>
+                            <option value="discount">Discount</option>
+                            </select></div>
                     </div>
                     <div id="products"></div>
                 </div>
