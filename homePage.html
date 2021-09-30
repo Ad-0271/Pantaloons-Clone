@@ -5957,13 +5957,6 @@
 
             localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
 
-        } else if(value == 'u999'){
-            filtered_data = database.filter(el => {
-                return el.price <= '999';
-            });
-
-            localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
-
         } else if(value == 'dresses' || value == 'ethnic_vibes'){
             filtered_data = database.filter(el => {
                 return (el.gender == 'women' || (el.gender == 'girls')) && (el.type == 'kurti' || el.type == 'kurta' || el.type == 'saree');
