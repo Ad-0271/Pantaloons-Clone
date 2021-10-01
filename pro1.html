@@ -1,0 +1,536 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+    rel="stylesheet">
+        <title>Product Page</title>
+        <style>
+            #firstPart {
+                margin: -10px -10px 0px -10px;
+                border-bottom: 1px solid rgba(128, 128, 128, 0.281);
+            }
+
+            #discountBar{
+                width: 100%;
+                height: 50px;
+                box-sizing: border-box;
+                text-align: center;
+                font-size: 16px;
+                background-color: #00aa8a;
+                color: white;
+                padding: 14px 0 0 0;
+            }
+
+            .secondbar{
+                display: grid;
+                width: 100%;
+                height: 100px;
+                grid-template-columns: 22% 42%  36%;
+                /* border: 1px solid black; */
+            }
+
+            .align{
+           margin: 40px 0 0 80px ;
+            cursor: pointer;
+       }
+       .select{
+           display: grid;
+           grid-template-columns: auto auto auto auto auto auto auto;
+           height: 40px;
+           margin: 40px 0 0 0 ;
+       }
+       .select>div{
+           font-weight: 400;
+           box-sizing: border-box;
+           padding: 20px 0 0 0;
+           font-size: 15px;
+           color: rgb(77, 77, 77);
+       }
+       #red{
+           color: red;
+       }
+       .grid1{
+           width: 80%;
+           height: 20px;
+           display: grid;
+           grid-template-columns: auto auto auto auto;
+           font-size: 12px;
+           font-weight: 200;
+           /* text-align: right; */
+            margin: 15px 0 0 40px;
+           
+       }
+       .grid2{
+           width: 80%;
+           margin: 10px 0 0 40px;
+           height: 40px;
+       }
+       .grid2 > div:nth-child(1){
+           width: 60%;
+           height: 40px;
+           border: 1px solid #00aa8a;
+           border-radius: 5px;
+           display: inline-block;
+           vertical-align: top;
+       }
+       
+       .grid2 > div>div{
+           width: 30px;
+           height: 30px;
+           display: inline-block;
+           margin: 5px 0 0 40px ;
+           vertical-align: top;
+       }
+       #search{
+         border: 1px solid #f5f5f5; ;
+         margin: 10px 0 0 10px;
+         vertical-align: top;
+         width: 60%;
+         outline: none;
+         color: rgb(109, 109, 109);
+         box-sizing: border-box;
+         font-family: 'Roboto', sans-serif;
+         background-color: #f5f5f5;
+       }
+
+       #search:focus {
+           outline: none;
+       }
+
+       .addToCart{
+           width: 30px;
+           height: 30px;
+           display: inline-block;
+           vertical-align: top;
+            margin: 5px 0 0 20px;
+       }
+       .img{
+           width: 100%;
+           height: 100%;
+           cursor : pointer;
+
+       }
+
+       #outerPart {
+           display: flex;
+           flex-direction: column;
+           height: 780px;
+       }
+       *{
+            font-family: 'Rubik', sans-serif;
+        }
+
+        .wrapper {
+            margin: auto;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.15);
+            position: relative;
+        }
+
+        #womenTop, #menTop, #kidsTop, #homeD, #accE, #brandsTop, #red {
+            cursor: pointer;
+        }
+        #womenTop:hover, #menTop:hover, #kidsTop:hover, #homeD:hover, #accE:hover, #brandsTop:hover {
+            color: #00aa8a;
+            transition: all 0.5s linear;
+        }
+
+        /* div {
+            border: 1px solid red;
+        } */
+
+        #secondPart {
+            height: 100%;
+            display: flex;
+        }
+
+        #menuPart {
+            flex-basis: 25%;
+            background-color: #e6eeee;
+        }
+
+        #productPart {
+            flex-basis: 75%;
+            overflow: scroll;
+        }
+
+        #menu_Bar {
+            width: 95%;
+            height: 95%;
+            overflow: scroll;
+            margin: auto;
+            margin-top: 15px;
+            border: 1px solid rgb(185, 184, 184);
+            background-color: #f5f5f5;
+            
+        }
+        
+        button {
+            display: flex;
+            width: 100%;
+            height: 60px;
+            gap: 20px;
+            border: 1px solid rgb(185, 184, 184);
+            background-color: #f5f5f5;
+
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #00aa8a;
+            transition: all 0.5s linear;
+            color: white;
+        }
+        #menu_Bar > div:hover{
+            background-color: #00aa8a;
+            transition: all 0.5s linear;
+            color: white;
+            cursor: pointer;
+        }
+        #menu_Bar > div > div:nth-child(2){
+            height: fit-content;
+        }
+        .btn_img {
+            flex-basis: 20%;
+            /* border: 1px solid red; */
+            margin-left: 5px;
+        }
+        .btn_header {
+            flex-basis: 70%;
+            /* border: 1px solid red; */
+            text-align: left;
+            margin-top: 15px;
+            font-weight: 100;
+            font-size: 16px;
+        }
+        .btnI {
+            width: 90%;
+            height: 90%;
+            margin-top: 2px;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="outerPart">
+            
+            <div id="firstPart" >
+                <div id="discountBar"> 
+                     <span> Extra 20% OFF* on All your Orders above ₹3500. Use Code: PTDTRA20 | * T & Cs Apply > </span>
+                </div>
+                 <div class="secondbar">
+                        <div class="align">
+                            <div> <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/v2/PT_D_logo.png" title="Pantaloons" onclick="toHomepage()" style="cursor: pointer;"/> </div>
+                            
+                        </div>
+                        <div >
+                                <div class="select">
+                                    <div id="womenTop">WOMEN</div>
+                                    <div id="menTop" style="cursor: pointer;">MEN</div>
+                                    <div id="kidsTop" style="cursor: pointer;">KIDS</div>
+                                    <div id="homeD">HOME DECORE</div>
+                                    <div id="accE">ACCESSORIES</div>
+                                    <div id="brandsTop">BRANDS</div>
+                                    <div id="red">SALE</div>
+                                </div>
+                        </div>
+                        <div>
+                                <div class="grid1">
+                                    <div>GREENCARD</div>
+                                    <div>TRACK ORDER</div>
+                                    <div>STORE LOCATOR</div>
+                                    <div>CONTACT US</div>
+                                </div>
+                                <div class="grid2">
+                                    <div class="wrapper">
+                                        <input type="text" id="search" value="" placeholder="Search Here"/>
+                                        <div> <img src="https://i.pinimg.com/736x/80/37/08/803708a2135c22ec40826c306b00e933.jpg" class="img" , style="border-radius: 50%;" id="searchImg" /> </div>
+                                        <div class="results"></div>
+                                    </div>
+                                      <div class="addToCart">
+                                            <img src="https://icon-library.com/images/add-user-icon/add-user-icon-23.jpg" class="img" />
+                                      </div>  
+                                      <div class="addToCart"> 
+                                            <img src="https://pantaloons.imgix.net/img/app/others/heart_bordered.png" class="img" />
+                                      </div>
+                                    <div class="addToCart">
+                                            <img src="https://thumbs.dreamstime.com/b/add-to-cart-icon-adding-shopping-cart-well-organized-fully-editable-add-to-cart-icon-adding-shopping-cart-any-use-like-167547952.jpg" class="img" />
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+            </div>
+            
+            <div id="secondPart">
+                <div id="menuPart">
+                    <div id="menu_Bar" style="border: 1px solid red;">
+                        <button class="menu_btn">
+                            <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
+                            <div class="btn_header">GENDER</div>
+                        </button>
+                        <button class="menu_btn">
+                            <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
+                            <div class="btn_header">GENDER</div>
+                        </button>
+                        <button class="menu_btn">
+                            <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
+                            <div class="btn_header">GENDER</div>
+                        </button>
+                        <button class="menu_btn">
+                            <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
+                            <div class="btn_header">GENDER</div>
+                        </button>
+                        <button class="menu_btn">
+                            <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
+                            <div class="btn_header">GENDER</div>
+                        </button>
+                        <button class="menu_btn">
+                            <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
+                            <div class="btn_header">GENDER</div>
+                        </button>
+                        <button class="menu_btn">
+                            <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
+                            <div class="btn_header">GENDER</div>
+                        </button>
+                        <button class="menu_btn">
+                            <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
+                            <div class="btn_header">GENDER</div>
+                        </button>
+                    </div>
+                </div>
+                <div id="productPart">
+                    <div>
+                        <div id="total_items">1234</div>
+                        <div>Products</div>
+                    </div>
+                    <div>
+                        <div>Sort</div>
+                        <div id="sort_options"></div>
+                    </div>
+                    <div id="products"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    let data = JSON.parse(localStorage.getItem('categoryPage'));
+
+    // console.log(data);
+    let filter = {
+
+        // data : JSON.parse(localStorage.getItem('categoryPage')),
+
+        GENDER : {
+            icon : 'https://icon-library.com/images/add-user-icon/add-user-icon-23.jpg',
+                   },
+        check_genders : function(){
+            data.forEach(el => {
+                this.GENDER[el.gender] = 'yo whatsup';
+            });
+        },
+
+        BRAND : {
+            icon : 'https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg',
+        },
+        check_brands : function(){
+            data.forEach(el => {
+                this.BRAND[el.brand] = 'yo whatsup';
+            })
+        },
+
+        TYPE : {
+            icon : 'https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg',
+        },
+        check_types : function(){
+            data.forEach(el => {
+                this.TYPE[el.type] = 'yo whatsup';
+            })
+        },
+
+        FIT : {
+            icon : 'https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg',
+        },
+        check_fit : function(){
+            data.forEach(el => {
+                this.FIT[el.features.fit] = 'yo whatsup';
+            })
+        },
+
+        WASH_INSTRUCTION : {
+            icon : 'https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg',
+        },
+        check_wash_instructions : function(){
+            data.forEach(el => {
+                this.WASH_INSTRUCTION[el.features.wash_instruction] = 'yo whatsup';
+            })
+        },
+
+        MATERIAL : {
+            icon : 'https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg',
+        },
+        check_material : function(){
+            data.forEach(el => {
+                this.MATERIAL[el.features.material] = 'yo whatsup';
+            })
+        },
+
+        PATTERN : {
+            icon : 'https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg',
+        },
+        check_pattern : function(){
+            data.forEach(el => {
+                this.PATTERN[el.features.pattern] = 'yo whatsup';
+            })
+        },
+
+        WAIST_RISE : {
+            icon : 'https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg',
+        },
+        check_waist_rise : function(){
+            data.forEach(el => {
+                this.WAIST_RISE[el.features.waist_rise] = 'yo whatsup';
+            })
+        },
+
+    };
+
+    filter.check_genders();
+    filter.check_brands();
+    filter.check_types();
+    filter.check_fit();
+    filter.check_wash_instructions();
+    filter.check_material();
+    filter.check_pattern();
+    filter.check_waist_rise();
+
+    let menu = document.getElementById('menu_Bar');
+    menu.innerHTML = null;
+
+    // let emptyglobalvariable;
+
+    let arr = [];
+    for(let key in filter){
+
+        if (Object.keys(filter[key]).length > 2){
+
+            let filter_div = document.createElement('div');
+            // filter_div.style.display = 'flex';
+            filter_div.style.height = 'fit-content'
+            filter_div.style.border = '1px solid black';
+            filter_div.setAttribute('id', key);
+            // filter_div.onclick = function(){
+            //     addcategories(key);
+            // };
+            // filter_div.ondblclick = function(){
+            //     removecategories(key);
+            // };
+
+            let div1 = document.createElement('div');
+            div1.style.display = 'flex';
+            div1.onclick = () => {
+                addcategories(key);
+            };
+
+            let div2 = document.createElement('div');
+            div2.setAttribute('id', key + 'chcklst');
+
+            let img_div = document.createElement('div');
+            img_div.style.flexBasis = '20%';
+            img_div.style.height = '90%';
+            img_div.style.margin = '1% 3%';
+            img_div.style.border = '1px solid black';
+
+            let img = document.createElement('img');
+            img.src = filter[key].icon;
+            img.style.width = '100%';
+            img.style.height = '100%';
+            img_div.appendChild(img);
+
+            let text_div = document.createElement('div');
+            text_div.innerHTML = key;
+            text_div.style.margin = '5%';
+
+            div1.append(img_div, text_div);
+            filter_div.append(div1, div2);
+            menu.appendChild(filter_div);
+
+        }
+    }
+
+    console.log(filter);
+
+    let checklist_div = document.createElement('div');
+
+    let selectedfilter = {};
+
+    function addcategories(category){
+
+
+
+
+        let checklist_div = document.getElementById(category + 'chcklst');
+        // document.getElementsByTagName('ul').innerHTML = null;
+        console.log(checklist_div.innerHTML);
+        
+
+       
+
+        if (checklist_div.textContent != ''){
+            checklist_div.textContent = '';
+        } else {
+            console.log('this works')
+            let checklist = document.createElement('ul');
+        
+            for (let key in filter[category]){
+
+                if(key != 'icon'){
+
+                    let list = document.createElement('li');
+                    list.innerHTML = key;
+                    list.onclick = () => {
+                        showfiltereddata(key);
+                    }
+                    checklist.appendChild(list);
+                }
+            }   
+
+            checklist_div.appendChild(checklist);
+
+            // filter_div.appendChild(checklist_div);
+        }
+
+        
+        // filter_div.removeEventListener('onclick', addcategories());
+    };
+
+    
+    console.log(Object.keys(selectedfilter).length);
+    function showfiltereddata(value){
+        console.log(value);
+        // for (let key in selectedfilter){
+        //     console.log('it enters')
+        //     if (selectedfilter[value] == undefined){
+        //         selectedfilter[value] = 1;
+                
+        //     } else {
+        //         delete selectedfilter.key;
+        //     }
+        // }
+
+        for (let i = -1; i < Object.keys(selectedfilter).length; i++){
+            
+            if (selectedfilter[value] == undefined){
+                selectedfilter[value] = 1;
+                console.log('in if')
+            } else{
+                console.log(selectedfilter[value]);
+                selectedfilter[value]++;
+                console.log(selectedfilter[value]);
+                
+            }
+        }
+        console.log(selectedfilter);
+    }
+</script>
