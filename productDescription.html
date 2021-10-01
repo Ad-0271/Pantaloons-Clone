@@ -475,9 +475,62 @@
         .similarProd{
             width: 65%;
             margin: 80px auto auto auto;
-            height: 450px;
+            height: 500px;
 
         }
+
+        .similarText{
+            font-size: 50px;
+            text-align: center;
+            font-weight: 400;
+            color: #b3b3b3;
+        }
+        .colour{
+            color: #81d0c4;
+        }
+        .similarText1{
+            font-size: 15px;
+            font-weight: 300;
+            text-align: center;
+            margin-top: 10px;
+            
+        }
+        .types{
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            width: 80%;
+            height: 30px;
+            margin: 20px auto auto auto ;
+            grid-gap: 10px;
+            
+        }
+        .types>div{
+            border-radius: 20px;
+            display: grid;
+            grid-template-columns: 20% 80%;
+            border: 1px solid black;
+
+        }
+        .types>div>div:nth-child(1){
+            border-radius: 50%;
+            border: 1px solid black;
+            margin: 7px 0 0 11px;
+            height: 11px;
+            font-size: 10px;
+            text-align: center;
+            font-weight: 500;
+            padding: -1px 0 0 0;
+        }
+        .types>div>div:nth-child(2){
+            border-radius: 20px;
+        }
+
+        /* div{
+            border: 0.5px solid black;
+        } */
+        
+
+
             /* fromHereSameInAllPages */
         .emailBox{
             width: 100%;
@@ -534,53 +587,117 @@
         .otherDetails{
             background-color: #f1f1f1;
             width: 100%;
-            height: 600px;
+            height: 550px;
             padding-top: 50px;
         }
 
-        .firstBox{
-            width: 85%;
+        .otherfirstBox{
+            width: 90%;
             /* height: 140px; */
-            margin: auto auto auto auto ;
+            margin: auto ;
             display: grid;
-            grid-template-columns: auto auto auto auto auto auto  250px 150px;
+            grid-template-columns: 150px 150px 150px 150px 150px 150px   250px 150px;
             grid-gap: 10px;
         }
         .img1{
-            width: 80%;
+            width: 90%;
             height: 80%;
             margin: 0 0 0 15px;
         }
 
         .img2{
-            width: 70%;
+            width: 80%;
             height: 70%;
             margin: 16px 0 0 15PX;
         }
         .img3{
-            width: 80%;
+            width: 90%;
             height: 80%;
             margin: 0px 0 0 10px;
         }
         
-        .firstBox>div>div{
+        .otherfirstBox>div>div{
             font-size: 12px;
             font-weight: 300;
             text-align: center;
-            margin: 0 0 0 0;
+            
         }
-        div{
-            border: 0.5px solid black;
-        }
+        
 
         .returnPolicyBox{
             border: 1px solid grey;
-            width: 70%;
+            width: 90%;
             height: 40px;
-            padding: 10px;
+            padding: 12px 0 0 3px;
             box-sizing: border-box;
+            margin: 30px 0 0 10px;
+            font-weight: 400;
         }
 
+        .otherSecondBox{
+             border-top: 1px solid rgb(214, 214, 214);
+             border-bottom: 1px solid rgb(214, 214, 214);
+             margin: 70px auto auto auto;
+             width: 90%;
+             display: grid;
+             grid-template-columns: 60% 40%;
+             height: 300px;
+
+        }
+
+        .oSB1{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            height: 100%;
+           padding: 60px 0 0 25px;
+           box-sizing: border-box;
+           border-right: 1px solid rgb(214, 214, 214);
+        }
+        .oSB2{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            height: 100%;
+           padding: 60px 0 0 25px;
+           box-sizing: border-box;
+          
+        }
+
+        .otherSecondBox>div>div>div:nth-child(2),
+        .otherSecondBox>div>div>div:nth-child(3),
+        .otherSecondBox>div>div>div:nth-child(4),
+        .otherSecondBox>div>div>div:nth-child(5),
+        .otherSecondBox>div>div>div:nth-child(6){
+            font-size: 12px;
+            font-weight: 300;
+            margin: 20px 0 0 0;
+            color: #a7a7a7;
+
+        }
+        .headingText{
+            font-size: 13px;
+            font-weight: 400;
+            color: #5e5e5e;
+        }
+
+        .oSB2>div>div:nth-child(2),
+        .oSB2>div>div:nth-child(3),
+        .oSB2>div>div:nth-child(4),
+        .oSB2>div>div:nth-child(5),
+        .oSB2>div>div:nth-child(6){
+            text-align: center;
+            font-size: 12px;
+            font-weight: 300;
+           margin: 20px 0 0 0;
+            color: #a7a7a7;
+        }
+        .headingText1{
+            font-size: 13px;
+            font-weight: 400;
+            color: #5e5e5e;
+            text-align: center;
+        }
+
+        
 
     </style>
 </head>
@@ -770,7 +887,35 @@
 
 
         <div class="similarProd">
+            <div class="similarText">Similar <span class="colour">Products</span> </div>
+            <div class="similarText1">What similarities are you interested in?</div>
 
+            <div class="types">
+                <div>
+                    <div>✔</div>
+                    <div></div>
+                </div>
+                <div>
+                    <div>✔</div>
+                    <div></div>
+                </div>
+                <div>
+                    <div>✔</div>
+                    <div></div>
+                </div>
+                <div>
+                    <div>✔</div>
+                    <div></div>
+                </div>
+                <div>
+                    <div>✔</div>
+                    <div></div>
+                </div>
+                <div>
+                    <div>✔</div>
+                    <div></div>
+                </div>
+            </div>
         </div>
 
         <!-- /* fromHereSameInAllPages */ -->
@@ -782,7 +927,7 @@
 
             <div class="enterEmailBox">
                 <div>
-                        <input type="text" class="input"/>
+                        <input type="text" class="input" placeholder="Enter your email address"/>
                 </div>
                 <div>
                     →
@@ -792,7 +937,7 @@
         </div>
 
         <div class="otherDetails">
-            <div class="firstBox">
+            <div class="otherfirstBox">
                 <div>
                     <img src="https://www.ethnicmusical.com/wp-content/uploads/2019/12/easy-returns-logo-1536x1536.png" class="img1">
                     <div>EASY RETURNS </div>
@@ -806,25 +951,87 @@
                     <div>FREE SHIPPING </div>
                 </div>
                 <div>
-                    <img src="https://png.pngtree.com/png-vector/20210528/ourlarge/pngtree-cash-on-delivery-order-logo-designs-png-image_3351055.jpg" class="img1">
+                    <img src="https://cdn1.iconfinder.com/data/icons/marketplace-and-shipping/64/COD_cash_on_delivery_shipping_payment_delivery-512.png" class="img1">
                     <div>CASH ON DELIVERY AVAILABLE </div>
                 </div>
                 <div>
-                    <img src="https://thumbs.dreamstime.com/b/secure-mobile-payment-icon-secure-mobile-payment-linear-style-sign-mobile-concept-web-design-symbol-logo-illustration-169401070.jpg" class="img2">
+                    <img src="https://www.freeiconspng.com/thumbs/payment-icon/cash-payment-icon-5.png" class="img2">
                     <div>SECURE PAYMENT</div>
                 </div>
                 <div>
-                    <img src="https://media.istockphoto.com/vectors/equalizer-icon-vector-id831704198" class="img3">
+                    <img src="https://www.primeai3.in/PICS/waiting001.gif" class="img3">
                     <div>FREE ALTERATION </div>
                 </div>
                 <div>
                     <div class="returnPolicyBox">
-
+                        RETURN & REFUND POLICY
                     </div>
 
                 </div>
                 <div>
                     <img src="https://assets.abfrlcdn.com/img/app/others/birlalogo.jpg" class="img2">
+                </div>
+
+            </div>
+
+            <div class="otherSecondBox">
+
+                <div class="oSB1">
+                    <div>
+                            <div class="headingText">MY ACCOUNT</div>
+                            <div>MY ORDERS</div>
+                            <div>RETURNS / REFUNDS</div>
+                            <div>MY ADDRESSES</div>
+                            <div>MY PERSONAL INFO</div>
+                            <div>CHANGE PASSWORD</div>
+                    </div>
+                    <div>   
+                            <div class="headingText">ABOUT US</div>
+                            <div>OFFICIAL BRAND STORE</div>
+                            <div>FAQS</div>
+                            <div>PAYMENT OPTIONS</div>
+                            <div>ABOUT US</div>
+                            <div>INVESTOR RELATIONS</div>
+                    </div>
+                    <div>
+                            <div class="headingText">POLICIES</div>
+                            <div>RETURNS & EXCHANGE POLICY</div>
+                            <div>SHIPPING POLICY</div>
+                            <div>TERMS & CONDITIONS OF USE</div>
+                            <div>PROMOTIONAL T & C</div>
+                            <div>PRIVACY POLICY</div>
+                    </div>
+                    <div>
+                            <div class="headingText">CONTACT US</div>
+                            <div>STORE LOCATOR</div>
+                            <div>CUSTOMER SUPPORT</div>
+                           
+                    </div>
+                </div>
+                <div class="oSB2">
+                    <div>
+                            <div class="headingText1">MEN</div>
+                            <div>SHIRTS</div>
+                            <div>T-SHIRTS</div>
+                            <div>JACKETS</div>
+                            <div>ACTIVEWEAR</div>
+                            <div>TROUSERS</div>
+                    </div>
+                    <div>
+                            <div class="headingText1">WOMEN</div>
+                            <div>TEES & TOPS</div>
+                            <div>DRESSES</div>
+                            <div>SHIRTS AND BLOUSES</div>
+                            <div>KURTAS & KURTIS</div>
+                            <div>JEANS & JEGGINGS</div>
+                    </div>
+                    <div>
+                            <div class="headingText1">KIDS</div>
+                            <div>TEES & TOPS</div>
+                            <div>BOTTOMS & LEGGINGS</div>
+                            <div>SHORTS & BERMUDAS</div>
+                            
+                    </div>
                 </div>
 
             </div>
