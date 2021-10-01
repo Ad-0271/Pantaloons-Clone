@@ -424,7 +424,9 @@
             div.append(img, brand_name, product_type, mrp);
 
             parent.append(div);
-        })
+        });
+
+        document.getElementById("total_items").textContent = data.length;
     }
     showProducts(database);
 
@@ -450,6 +452,7 @@
     }
     
     let data = JSON.parse(localStorage.getItem('categoryPage'));
+    let anotherdata = [];
 
     // console.log(data);
     let filter = {
@@ -609,9 +612,16 @@
                 if(key != 'icon'){
 
                     let list = document.createElement('li');
+                    list.setAttribute('id',key);
                     list.innerHTML = key;
                     list.onclick = () => {
+                        if(document.getElementById(key).style.fontWeight < 700){
+                            document.getElementById(key).style.fontWeight = '700';
+                        } else {
+                            document.getElementById(key).style.fontWeight = '400';
+                        }
                         showfiltereddata(key);
+                        
                     }
                     checklist.appendChild(list);
                 }
@@ -623,6 +633,7 @@
     };
     
     let mySet = new Set();
+    let setarr = []
     
     function showfiltereddata(input) {
         if(mySet.has(input)) {
@@ -630,6 +641,41 @@
         } else {
             mySet.add(input);
         }
-        console.log(Array.from(mySet.values()));
+
+        setarr = Array.from(mySet.values());
+
+        let anotheruselesvar = [];
+        for (let i = 0; i < setarr.length; i++){
+            filterdata(setarr[i]);
+            anotheruselesvar.push(arr5[0]);
+        };
+
+        let anotherset = new Set();
+        for (let i = 0; i < anotheruselesvar.length; i++){
+            anotherset.add(anotheruselesvar[i]);
+        }
+        console.log(anotherset);
+        
+        let arr6 = Array.from(anotherset.values());
+
+        showProducts(arr6);
+        
+        
+    }
+
+    let arr5 = [];
+    function filterdata(parameter){
+        
+        arr5 = data.filter(el => {
+            if(el.type == parameter || el.gender == parameter || el.brand == parameter || el.features.pattern == parameter || el.features.fit == parameter || el.features.wash_instruction == parameter || el.features.material == parameter || el.features.waist_rise == parameter){
+
+                return true;
+            } else {
+            return false;
+            }
+        });
+        
+        
+
     }
 </script>
