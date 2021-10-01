@@ -422,9 +422,7 @@
             font-size: 17px;
         }
 
-        /* div{
-            border: 0.5px solid black;
-        } */
+        
 
         .smallText1{
             font-size: 11px;
@@ -437,12 +435,104 @@
             font-size: 11px;
             font-weight: 300;
             margin: 4px 0 0 0;
-            
+             border-bottom: 1px solid rgb(236, 236, 236);
+             padding-bottom: 29px;
 
         }
         .freeColor{
             color: #9b9b9b;
         }
+
+       
+
+        .prodDescBox{
+            width: 65%;
+            /* height: 200px; */
+            margin: 70px auto auto auto;
+            border-top: 1px solid rgb(236, 236, 236);
+           
+        }
+
+        .descNames{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                width: 35%;
+                height: 30px;
+                margin: 30px 0 0 30px;
+        }
+        .descNames>div{
+            font-size: 16px;
+            font-weight: 300;
+
+        }
+        .fullDesc{
+            width: 90%;
+            margin: 15px 0 0 30px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        .similarProd{
+            width: 65%;
+            margin: 80px auto auto auto;
+            height: 450px;
+
+        }
+
+        .emailBox{
+            width: 100%;
+            height: 180px;
+            background-image: url("https://assets.trendin.com/resources/img/pantaloons/home/newsletter_bg.png");
+            background-size: contain;
+            margin: 80px 0 0 0;
+        }
+
+        .emailText{
+            width: 30%;
+            height: 50px;
+            padding: 20px 0 0 0 ;
+            margin: auto;
+            color: white;
+            font-size: 21px;
+            text-align: center;
+            font-weight: 300;
+        }
+        .fontWeight{
+            font-weight: 500;
+        }
+
+        .enterEmailBox{
+            width: 28%;
+            height: 45px;
+            margin: 15px auto auto auto;
+            display: grid;
+            grid-template-columns: 85% 12%;
+            grid-gap: 8px ;
+        }
+
+        .input{
+            margin: 15px 0 0 15px;
+            width: 80%;
+            outline: none;
+            border: white;
+        }
+        .enterEmailBox>div:nth-child(1){
+            background-color: white;
+        }
+        .enterEmailBox>div:nth-child(2){
+            background-color: #f4ba0c;
+            border-radius: 5px;
+            font-size: 30px;
+            font-weight: 600;
+            text-align: center;
+            padding: 3px;
+            box-sizing: border-box;
+        }
+
+         div{
+            border: 0.5px solid black;
+        }
+
 
     </style>
 </head>
@@ -614,19 +704,55 @@
                     
                 </div>
             </div>
+        </div>
+
+
+        <div class="prodDescBox">
+            <div class="descNames">
+                <div>DESCRIPTION</div>
+                <div>FEATURE</div>
+                <div>DETAILS</div>
+            </div>
+            <div class="fullDesc">
+                A well fitted formal shirt always makes you look sharp. Make an impression in this blue print Super Slim Fit shirt from
+                Peter England.
+            </div>
+            
+        </div>
+
+
+        <div class="similarProd">
+
+        </div>
+
+        <div class="emailBox">
+            <div class="emailText">
+                <div>GETS <span class="fontWeight">LATEST OFFERS </span> AND <span class="fontWeight">DEALS</span> </div>
+                <div>RIGHT IN YOUR <span class="fontWeight">INBOX.</span></div>
+            </div>
+
+            <div class="enterEmailBox">
+                <div>
+                        <input type="text" class="input"/>
+                </div>
+                <div>
+                    →
+                </div>
+            </div>
+
+        </div>
+
+        <div class="otherDetails">
 
 
 
         </div>
 
 
+
+
+
     </div>
-
-
-
-
 </div>
-
-
 </body>
 </html>
