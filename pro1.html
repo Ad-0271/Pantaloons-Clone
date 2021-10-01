@@ -182,6 +182,15 @@
             transition: all 0.5s linear;
             color: white;
         }
+        #menu_Bar > div:hover{
+            background-color: #00aa8a;
+            transition: all 0.5s linear;
+            color: white;
+            cursor: pointer;
+        }
+        #menu_Bar > div > div:nth-child(2){
+            height: fit-content;
+        }
         .btn_img {
             flex-basis: 20%;
             /* border: 1px solid red; */
@@ -254,7 +263,7 @@
             
             <div id="secondPart">
                 <div id="menuPart">
-                    <div id="menu_Bar">
+                    <div id="menu_Bar" style="border: 1px solid red;">
                         <button class="menu_btn">
                             <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
                             <div class="btn_header">GENDER</div>
@@ -304,3 +313,224 @@
         </div>
     </body>
 </html>
+
+<script>
+    let data = JSON.parse(localStorage.getItem('categoryPage'));
+
+    // console.log(data);
+    let filter = {
+
+        // data : JSON.parse(localStorage.getItem('categoryPage')),
+
+        GENDER : {
+            icon : 'https://icon-library.com/images/add-user-icon/add-user-icon-23.jpg',
+                   },
+        check_genders : function(){
+            data.forEach(el => {
+                this.GENDER[el.gender] = 'yo whatsup';
+            });
+        },
+
+        BRAND : {
+            icon : 'https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg',
+        },
+        check_brands : function(){
+            data.forEach(el => {
+                this.BRAND[el.brand] = 'yo whatsup';
+            })
+        },
+
+        TYPE : {
+            icon : 'https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg',
+        },
+        check_types : function(){
+            data.forEach(el => {
+                this.TYPE[el.type] = 'yo whatsup';
+            })
+        },
+
+        FIT : {
+            icon : 'https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg',
+        },
+        check_fit : function(){
+            data.forEach(el => {
+                this.FIT[el.features.fit] = 'yo whatsup';
+            })
+        },
+
+        WASH_INSTRUCTION : {
+            icon : 'https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg',
+        },
+        check_wash_instructions : function(){
+            data.forEach(el => {
+                this.WASH_INSTRUCTION[el.features.wash_instruction] = 'yo whatsup';
+            })
+        },
+
+        MATERIAL : {
+            icon : 'https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg',
+        },
+        check_material : function(){
+            data.forEach(el => {
+                this.MATERIAL[el.features.material] = 'yo whatsup';
+            })
+        },
+
+        PATTERN : {
+            icon : 'https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg',
+        },
+        check_pattern : function(){
+            data.forEach(el => {
+                this.PATTERN[el.features.pattern] = 'yo whatsup';
+            })
+        },
+
+        WAIST_RISE : {
+            icon : 'https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg',
+        },
+        check_waist_rise : function(){
+            data.forEach(el => {
+                this.WAIST_RISE[el.features.waist_rise] = 'yo whatsup';
+            })
+        },
+
+    };
+
+    filter.check_genders();
+    filter.check_brands();
+    filter.check_types();
+    filter.check_fit();
+    filter.check_wash_instructions();
+    filter.check_material();
+    filter.check_pattern();
+    filter.check_waist_rise();
+
+    let menu = document.getElementById('menu_Bar');
+    menu.innerHTML = null;
+
+    // let emptyglobalvariable;
+
+    let arr = [];
+    for(let key in filter){
+
+        if (Object.keys(filter[key]).length > 2){
+
+            let filter_div = document.createElement('div');
+            // filter_div.style.display = 'flex';
+            filter_div.style.height = 'fit-content'
+            filter_div.style.border = '1px solid black';
+            filter_div.setAttribute('id', key);
+            // filter_div.onclick = function(){
+            //     addcategories(key);
+            // };
+            // filter_div.ondblclick = function(){
+            //     removecategories(key);
+            // };
+
+            let div1 = document.createElement('div');
+            div1.style.display = 'flex';
+            div1.onclick = () => {
+                addcategories(key);
+            };
+
+            let div2 = document.createElement('div');
+            div2.setAttribute('id', key + 'chcklst');
+
+            let img_div = document.createElement('div');
+            img_div.style.flexBasis = '20%';
+            img_div.style.height = '90%';
+            img_div.style.margin = '1% 3%';
+            img_div.style.border = '1px solid black';
+
+            let img = document.createElement('img');
+            img.src = filter[key].icon;
+            img.style.width = '100%';
+            img.style.height = '100%';
+            img_div.appendChild(img);
+
+            let text_div = document.createElement('div');
+            text_div.innerHTML = key;
+            text_div.style.margin = '5%';
+
+            div1.append(img_div, text_div);
+            filter_div.append(div1, div2);
+            menu.appendChild(filter_div);
+
+        }
+    }
+
+    console.log(filter);
+
+    let checklist_div = document.createElement('div');
+
+    let selectedfilter = {};
+
+    function addcategories(category){
+
+
+
+
+        let checklist_div = document.getElementById(category + 'chcklst');
+        // document.getElementsByTagName('ul').innerHTML = null;
+        console.log(checklist_div.innerHTML);
+        
+
+       
+
+        if (checklist_div.textContent != ''){
+            checklist_div.textContent = '';
+        } else {
+            console.log('this works')
+            let checklist = document.createElement('ul');
+        
+            for (let key in filter[category]){
+
+                if(key != 'icon'){
+
+                    let list = document.createElement('li');
+                    list.innerHTML = key;
+                    list.onclick = () => {
+                        showfiltereddata(key);
+                    }
+                    checklist.appendChild(list);
+                }
+            }   
+
+            checklist_div.appendChild(checklist);
+
+            // filter_div.appendChild(checklist_div);
+        }
+
+        
+        // filter_div.removeEventListener('onclick', addcategories());
+    };
+
+    
+    console.log(Object.keys(selectedfilter).length);
+    function showfiltereddata(value){
+        console.log(value);
+        // for (let key in selectedfilter){
+        //     console.log('it enters')
+        //     if (selectedfilter[value] == undefined){
+        //         selectedfilter[value] = 1;
+                
+        //     } else {
+        //         delete selectedfilter.key;
+        //     }
+        // }
+
+        for (let i = -1; i < Object.keys(selectedfilter).length; i++){
+            
+            if (selectedfilter[value] == undefined){
+                selectedfilter[value] = 1;
+                console.log('in if')
+            } else{
+                console.log(selectedfilter[value]);
+                selectedfilter[value]++;
+                console.log(selectedfilter[value]);
+                
+            }
+        }
+        console.log(selectedfilter);
+    }
+</script>
