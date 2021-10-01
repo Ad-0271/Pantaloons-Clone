@@ -264,7 +264,7 @@
             <div id="secondPart">
                 <div id="menuPart">
                     <div id="menu_Bar" style="border: 1px solid red;">
-                        <button class="menu_btn">
+                        <!-- <button class="menu_btn">
                             <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
                             <div class="btn_header">GENDER</div>
                         </button>
@@ -295,7 +295,7 @@
                         <button class="menu_btn">
                             <div class="btn_img"><img class="btnI" src="https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg"></div>
                             <div class="btn_header">GENDER</div>
-                        </button>
+                        </button> -->
                     </div>
                 </div>
                 <div id="productPart">
@@ -408,7 +408,6 @@
     let menu = document.getElementById('menu_Bar');
     menu.innerHTML = null;
 
-    // let emptyglobalvariable;
 
     let arr = [];
     for(let key in filter){
@@ -416,16 +415,9 @@
         if (Object.keys(filter[key]).length > 2){
 
             let filter_div = document.createElement('div');
-            // filter_div.style.display = 'flex';
             filter_div.style.height = 'fit-content'
             filter_div.style.border = '1px solid black';
             filter_div.setAttribute('id', key);
-            // filter_div.onclick = function(){
-            //     addcategories(key);
-            // };
-            // filter_div.ondblclick = function(){
-            //     removecategories(key);
-            // };
 
             let div1 = document.createElement('div');
             div1.style.display = 'flex';
@@ -459,11 +451,9 @@
         }
     }
 
-    console.log(filter);
 
     let checklist_div = document.createElement('div');
 
-    let selectedfilter = {};
 
     function addcategories(category){
 
@@ -471,8 +461,6 @@
 
 
         let checklist_div = document.getElementById(category + 'chcklst');
-        // document.getElementsByTagName('ul').innerHTML = null;
-        console.log(checklist_div.innerHTML);
         
 
        
@@ -480,7 +468,6 @@
         if (checklist_div.textContent != ''){
             checklist_div.textContent = '';
         } else {
-            console.log('this works')
             let checklist = document.createElement('ul');
         
             for (let key in filter[category]){
@@ -498,39 +485,19 @@
 
             checklist_div.appendChild(checklist);
 
-            // filter_div.appendChild(checklist_div);
         }
 
         
-        // filter_div.removeEventListener('onclick', addcategories());
     };
-
     
-    console.log(Object.keys(selectedfilter).length);
-    function showfiltereddata(value){
-        console.log(value);
-        // for (let key in selectedfilter){
-        //     console.log('it enters')
-        //     if (selectedfilter[value] == undefined){
-        //         selectedfilter[value] = 1;
-                
-        //     } else {
-        //         delete selectedfilter.key;
-        //     }
-        // }
-
-        for (let i = -1; i < Object.keys(selectedfilter).length; i++){
-            
-            if (selectedfilter[value] == undefined){
-                selectedfilter[value] = 1;
-                console.log('in if')
-            } else{
-                console.log(selectedfilter[value]);
-                selectedfilter[value]++;
-                console.log(selectedfilter[value]);
-                
-            }
+    let mySet = new Set();
+    
+    function showfiltereddata(input) {
+        if(mySet.has(input)) {
+            mySet.delete(input);
+        } else {
+            mySet.add(input);
         }
-        console.log(selectedfilter);
+        console.log(Array.from(mySet.values()));
     }
 </script>
