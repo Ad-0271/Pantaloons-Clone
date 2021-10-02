@@ -65,7 +65,7 @@
             box-sizing: border-box;
         }
         .colour1{
-            color: #00aa8a;
+            color: #00a88e;
         }
 
        
@@ -320,8 +320,82 @@
             padding: 10px 0 0 0;
         }
 
-        div{
+        
+
+        .orderSum{
+            margin: 10px 0 0 0 ;
+            background-color: #f5f5f5;
+            height: 300px;
+            width: 95%;
+        }
+
+        .osText{
+            padding-top: 25px ;
+            text-align: center;
+            font-size: 16px;
+        }
+        .ov{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            height: 20px;
+            margin: 20px auto auto auto ;
+            width: 93%;
+            font-size: 15px;
+            font-weight: 300;
+        }
+        .pd{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            height: 20px;
+            margin: 10px auto auto auto ;
+            width: 93%;
+            font-size: 15px;
+            font-weight: 300;
+        }
+        .ship{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            height: 30px;
+            margin: 10px auto auto auto ;
+            width: 93%;
+            font-size: 15px;
+            font-weight: 300;
+            border-bottom: 1px solid #ddd;
+            
+        }
+        .texta{
+            text-align: right;
+        }
+        .ot{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            height: 20px;
+            margin: 10px auto auto auto ;
+            width: 93%;
+            font-size: 17px;
+            font-weight: 400;
+        }
+        /* div{
             border: 1px solid black;
+        } */
+
+        .save{
+            width: 100%;
+            height: 20px;
+            margin: 15px auto auto auto ;
+            font-size: 14px;
+            color: #00a88e;
+            font-weight: 400;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        
+        .re{
+            font-size: 12px;
+            font-weight: 300;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: -3px;
         }
 </style>
 </head>
@@ -442,8 +516,38 @@
                     </div>
                  </div>
 
-                 <div class="">
+                 <div class="orderSum">
+                        <div class="osText">
+                            Order Summary
+                        </div>
+                        <div class="ov">
+                            <div> Order Value</div>
+                            <div class="texta"><b>₹</b> 899.00</div>
+                        </div>
+                        <div class="pd">
+                            <div class="colour1"> Product Discount</div>
+                            <div  class="colour1 texta">- &nbsp;<b>₹</b> 539.00 </div>
+                        </div>
+                        <div class="ship">
+                            <div>Shipping</div>
+                            <div class="texta"><b>₹</b> 100.00</div>
+                        </div>
 
+                        <div class="ot">
+                            <div>ORDER TOTAL</div>
+                            <div class="texta"><b>₹</b> 460.00</div>
+                        </div>
+
+                        <div class="save">
+                            YOU HAVE SAVED <span class="weight">539.00</span> ON THIS ORDER.
+                        </div>
+
+                        <div class="re">
+                                90 DAYS RETURN EXCLUSIVELY FOR
+                        </div>
+                        <div class="re">
+                            GREENCARD MEMBER
+                        </div>
                  </div>
             </div>
 
