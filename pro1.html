@@ -150,9 +150,40 @@
         }
 
         #menuPart {
-            flex-basis: 25%;
+            flex-basis: 23%;
             background-color: #e6eeee;
+            overflow: scroll;
+            margin: 0 5px 0 20px
+            
         }
+        #menuPart::-webkit-scrollbar{
+           display: none;
+        }
+        /* width */
+        #menu_Bar::-webkit-scrollbar {
+            width: 7px;
+            height: 7px;
+            }
+
+/* Track */
+#menu_Bar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px white; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+#menu_Bar::-webkit-scrollbar-thumb {
+  background: gray; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+#menu_Bar::-webkit-scrollbar-thumb:hover {
+  background: rgb(100, 100, 100); 
+}
+
+        
+        
 
         #productPart {
             flex-basis: 75%;
@@ -165,13 +196,18 @@
             overflow: scroll;
             margin: auto;
             margin-top: 15px;
-            border: 1px solid rgb(185, 184, 184);
+            /* border: 1px solid red; */
             background-color: #f5f5f5;
+             
             
+        }
+        #menuPart{
+            box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
         }
         .produc::-webkit-scrollbar{
            display: none;
         }
+        
 
         
         button {
@@ -188,12 +224,14 @@
             background-color: #00aa8a;
             transition: all 0.5s linear;
             color: white;
+            
         }
         #menu_Bar > div:hover{
             background-color: #00aa8a;
             transition: all 0.5s linear;
             color: white;
             cursor: pointer;
+            font-size: 700;
         }
         #menu_Bar > div > div:nth-child(2){
             height: fit-content;
@@ -221,14 +259,14 @@
 
         #proflex{
             display:flex;
-            gap: 15px;
+            gap: 5px;
         }
         #total_items{
-            flex-basis: 5%;
+            flex-basis: auto;
         }
 
         #productflex{
-            flex-basis: 80%;
+            flex-basis: auto;
         }
 
 
@@ -237,14 +275,19 @@
             display:flex;
             gap: 5px;
             margin-top: 30px;
+            /* border: 1px solid black; */
         }
         #textalign{
             flex-basis:80% ;
             text-align: right;
+            font-weight: 300;
+            font-size: 16px;
         }
         #sort_options
         {
-         flex-basis: 20%;
+         /* flex-basis: 20%; */
+         margin: 0 0 0 10px;
+         
         }
         .menu::-webkit-scrollbar {
             width: 5px;
@@ -264,11 +307,19 @@
         .custscroll menu_Bar:hover{
             background-color: #01a58d;
             cursor: pointer;
+            /* font-weight: 700; */
         }
         #products {
             display: grid;
             grid-template-columns: 30.5% 30.5% 30.5%;
-            gap: 10px;
+           gap: 25px;
+           margin-left: 10px;
+        }
+
+        #products >div:hover {
+            /* border: 1px solid gray; */
+           cursor: pointer;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
         #products img {
             width: 100%;
@@ -279,19 +330,134 @@
         }
         #products > div > h3, #products > div > p {
             text-align: center;
+            font-weight: 300;
         }
         #products > div > div {
             justify-content: center;
         }
         #hr_div {
-            width: 93.5%;
+            width: 95%;
             background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAgMAAAC5YVYYAAAACVBMVEX19fXW1tb///8fnNXZAAAAIElEQVQIHWPK0mIySGDikWBiZmNqPMSUYMAkwcPExgwALdwDYi1m//oAAAAASUVORK5CYII=");
             background-repeat: repeat-x;
             display: block;
             height: 5px;
             margin-top: 25px;
             margin-bottom: 25px;
+            margin-left: 10px;
         }
+
+        /* .#menu_Bar{
+            background-color: white;
+            border: 1px solid red;
+        } */
+
+        #BRAND, #TYPE, #FIT, #WASH_INSTRUCTION, #MATERIAL, #PATTERN, #WAIST_RISE{
+            background-color: white;
+        }
+
+        #menu_Bar>div>div:nth-child(2){
+            background-color: white;
+            color: black;
+            margin: 0  -50px -35px -20px;
+        }
+        
+         
+        /* #menu_Bar>div>div:nth-child(1)>div:nth-child(1){
+            margin: 0px 0 0 25px;
+        } */
+
+        #menu_Bar>div>div:nth-child(1)>div:nth-child(2){
+            margin: 0px 0 0 25px;
+        }
+        #menu_Bar>div{
+            padding: 20px;
+        }
+        #BRAND>div>div:nth-child(1){
+            margin: 0px 0 0 10px;
+            /* border: 1px solid black; */
+        }
+        #TYPE>div>div:nth-child(1){
+            margin: 0px 0 0 12px;
+        }
+
+        #FIT>div>div:nth-child(1){
+            margin: -10px 0 0 10px;
+        }
+
+         #WASH_INSTRUCTION>div>div:nth-child(1){
+            margin:  4px 0 0 5px;
+        }
+
+        #MATERIAL>div>div:nth-child(1){
+            margin:  -9px 0 0 14px;
+        }
+
+        #PATTERN>div>div:nth-child(1){
+            margin:  -5px 0 0 12px;
+        }
+        #WAIST_RISE>div>div:nth-child(1){
+            margin:  -5px 0 0 12px;
+        }
+
+         #WAIST_RISE>div>div:nth-child(1){
+            margin:  -5px 0 0 12px;
+        }
+
+        #menu_Bar>div>div:nth-child(1)>div:nth-child(2){
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        #menu_Bar>div>div:nth-child(2){
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 25px;
+            
+        }
+
+        /* #menu_Bar>div>div:nth-child(2):hover{
+            color: #00aa8a;
+        } */
+
+        #proflex{
+            /* border: 1px solid black; */
+            margin: 10px 0 0 30px;
+        }
+        #total_items{
+            /* border: 1px solid black; */
+            color: #999;
+            font-size: 18px;
+        }
+        #productflex{
+            /* border: 1px solid black; */
+            color: #999;
+            font-size: 18px;
+        }
+
+
+        #Sort{
+            height: 33px;
+            width: 160px;
+            margin: -10px 0 0 0;
+            border: 1.5px solid rgb(182, 182, 182);
+            outline: none;
+            font-weight: 300;
+        }
+        
+        #Sort:hover{
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+        }
+
+        #menu_Bar>div>div:nth-child(2)>ul>li:hover{
+            color: #01a58d;
+            
+        }
+
+        li{
+            list-style: none;
+        }
+       
         .wrapper {
             margin: auto;
             background-color: #f5f5f5;
@@ -380,7 +546,7 @@
             
             <div id="secondPart">
                 <div id="menuPart" class="custscroll">
-                    <div id="menu_Bar" style="border: 1px solid red;">
+                    <div id="menu_Bar">
                     </div>
                 </div>
                 <div class="produc" id="productPart">
@@ -754,8 +920,9 @@
 
             let filter_div = document.createElement('div');
             filter_div.style.height = 'fit-content'
-            filter_div.style.border = '1px solid black';
+            filter_div.style.border = '1px solid rgb(214, 214, 214)';
             filter_div.setAttribute('id', key);
+            
 
             let div1 = document.createElement('div');
             div1.style.display = 'flex';
@@ -767,20 +934,21 @@
             div2.setAttribute('id', key + 'chcklst');
 
             let img_div = document.createElement('div');
-            img_div.style.flexBasis = '20%';
+            img_div.style.flexBasis = '25%';
             img_div.style.height = '90%';
-            img_div.style.margin = '1% 3%';
-            img_div.style.border = '1px solid black';
+            // img_div.style.margin = '1% 3%';
+            // img_div.style.border = '1px solid black';
 
             let img = document.createElement('img');
             img.src = filter[key].icon;
-            img.style.width = '100%';
-            img.style.height = '100%';
+            // img.style.width = '100%';
+            // img.style.height = '100%';
             img_div.appendChild(img);
 
             let text_div = document.createElement('div');
             text_div.innerHTML = key;
-            text_div.style.margin = '5%';
+            text_div.style.margin = '0 0 5% 0';
+            text_div.style.padding= " 0 0 5% 0"
 
             div1.append(img_div, text_div);
             filter_div.append(div1, div2);
