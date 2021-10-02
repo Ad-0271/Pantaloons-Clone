@@ -848,39 +848,38 @@
         let anotheruselesvar = [];
         for (let i = 0; i < setarr.length; i++){
             filterdata(setarr[i]);
-            anotheruselesvar.push(arr5[0]);
+            for(let j = 0; j < arr5.length; j++) {
+                anotheruselesvar.push(arr5[j]);
+            }
         };
 
         let anotherset = new Set();
         for (let i = 0; i < anotheruselesvar.length; i++){
             anotherset.add(anotheruselesvar[i]);
         }
-        console.log(anotherset);
         
         let arr6 = Array.from(anotherset.values());
 
         //jugaad for sort + filter : ----->;
 
         database = arr6;
-
         showProducts(arr6);
-        
-        
     }
+
+    let new_var;
 
     let arr5 = [];
     function filterdata(parameter){
-        
-        arr5 = data.filter(el => {
-            if(el.type == parameter || el.gender == parameter || el.brand == parameter || el.features.pattern == parameter || el.features.fit == parameter || el.features.wash_instruction == parameter || el.features.material == parameter || el.features.waist_rise == parameter){
-
-                return true;
-            } else {
-            return false;
-            }
-        });
-        
-        
-
+        new_var = parameter;
+        arr5 = data.filter(checker);
     }
+        
+    function checker(el) {
+        if(el.type == new_var || el.gender == new_var || el.brand == new_var || el.features.pattern == new_var || el.features.fit == new_var || el.features.wash_instruction == new_var || el.features.material == new_var || el.features.waist_rise == new_var){
+
+            return true;
+            } else {
+                return false;
+            }
+        }        
 </script>
