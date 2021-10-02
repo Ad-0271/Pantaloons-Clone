@@ -861,9 +861,13 @@
         let arr6 = Array.from(anotherset.values());
 
         //jugaad for sort + filter : ----->;
-
-        database = arr6;
-        showProducts(arr6);
+        if(setarr.length > 0) {
+            database = arr6;
+            showProducts(arr6);
+        } else {
+            showProducts(data);
+        }
+        
     }
 
     let new_var;
