@@ -351,7 +351,7 @@
             border: 1px solid red;
         } */
 
-        #BRAND, #TYPE, #FIT, #WASH_INSTRUCTION, #MATERIAL, #PATTERN, #WAIST_RISE{
+        #BRAND, #TYPE, #FIT, #WASH_INSTRUCTION, #MATERIAL, #PATTERN, #WAIST_RISE, #GENDER{
             background-color: white;
         }
 
@@ -373,9 +373,18 @@
             padding: 20px;
         }
         #BRAND>div>div:nth-child(1){
-            margin: 0px 0 0 10px;
+            margin: -3px 0 0 10px;
             /* border: 1px solid black; */
         }
+        #GENDER>div>div:nth-child(1){
+            margin: -10px 0 0 10px;
+            /* border: 1px solid black; */
+        }
+        #GENDER>div>div:nth-child(1) img {
+            width: 30px;
+            height: 30px;
+        }
+
         #TYPE>div>div:nth-child(1){
             margin: 0px 0 0 12px;
         }
@@ -827,7 +836,7 @@
 
 
         GENDER : {
-            icon : 'https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg',
+            icon : 'https://cdn0.iconfinder.com/data/icons/gender-outline-set/144/GenderSymbol001-512.png',
                    },
         check_genders : function(){
             data.forEach(el => {
