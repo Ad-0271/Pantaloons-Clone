@@ -729,7 +729,9 @@ function showCart(database) {
         div3_2_1.textContent = "-";
         div3_2_1.style.cursor = "pointer";
         div3_2_1.onclick = function() {
-            subFunc(element);
+            if(element.quantity > 1) {
+                subFunc(element);
+            }
         }
         let div3_2_2 = document.createElement("div");
         div3_2_2.textContent = element.quantity;
