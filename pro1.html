@@ -144,9 +144,17 @@
 
         #secondPart {
             height: 100%;
-            display: flex;
+            overflow: scroll;
             margin-top: 30px;
+            
+        }
+        #secondPart::-webkit-scrollbar{
+           display: none;
+        }
+        #proMenu{
+            display: flex;
             gap: 20px;
+            height: 705px;
         }
 
         #menuPart {
@@ -672,6 +680,9 @@
             color: #5e5e5e;
             text-align: center;
         }
+        /* #secondPart{
+            border: 1px solid black;
+        } */
 
         </style>
     </head>
@@ -726,6 +737,7 @@
             </div>
             
             <div id="secondPart">
+                <div id="proMenu">
                 <div id="menuPart" class="custscroll">
                     <div id="menu_Bar">
                     </div>
@@ -748,8 +760,8 @@
                     <div id="hr_div"></div>
                     <div id="products"></div>
                 </div>
-
-            </div>
+                </div>
+            
             <div class="emailBox">
                 <div class="emailText">
                     <div>GETS <span class="fontWeight">LATEST OFFERS </span> AND <span class="fontWeight">DEALS</span> </div>
@@ -868,7 +880,7 @@
                     </div>
             
                 </div>
-            
+            </div>
             
             
             </div>
