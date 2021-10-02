@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product description</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Rubik', sans-serif;
+        }
+    
+        #outerBox{
+                height: 705px;
+            }
+    
+         #firstPart {
+                margin: -10px -10px 0px -10px;
+                border-bottom: 1px solid rgba(128, 128, 128, 0.281);
+            }
+
+            #discountBar{
+                width: 100%;
+                height: 50px;
+                box-sizing: border-box;
+                text-align: center;
+                font-size: 15px;
+                background-color: #00aa8a;
+                color: white;
+                padding: 22px 0 0 0;
+                font-weight: 300;
+            }
+
+            .secondbar{
+                display: grid;
+                width: 100%;
+                height: 100px;
+                grid-template-columns: 22% 42%  36%;
+                /* border: 1px solid black; */
+            }
+
+            .align{
+           margin: 40px 0 0 80px ;
+            cursor: pointer;
+       }
+       .select{
+           display: grid;
+           grid-template-columns: auto auto auto auto auto auto auto;
+           height: 40px;
+           margin: 40px 0 0 0 ;
+       }
+       .select>div{
+           font-weight: 400;
+           box-sizing: border-box;
+           padding: 20px 0 0 0;
+           font-size: 15px;
+           color: rgb(77, 77, 77);
+       }
+       #red{
+           color: red;
+       }
+       .grid1{
+           width: 80%;
+           height: 20px;
+           display: grid;
+           grid-template-columns: auto auto auto auto;
+           font-size: 12px;
+           font-weight: 200;
+           /* text-align: right; */
+            margin: 15px 0 0 40px;
+           
+       }
+       .grid2{
+           width: 80%;
+           margin: 10px 0 0 40px;
+           height: 40px;
+       }
+       .grid2 > div:nth-child(1){
+           width: 60%;
+           height: 40px;
+           border: 1px solid #00aa8a;
+           border-radius: 5px;
+           display: inline-block;
+           vertical-align: top;
+       }
+       
+       .grid2 > div>div{
+           width: 30px;
+           height: 30px;
+           display: inline-block;
+           margin: 5px 0 0 40px ;
+           vertical-align: top;
+       }
+       #search{
+         border: 1px solid #f5f5f5; ;
+         margin: 10px 0 0 10px;
+         vertical-align: top;
+         width: 60%;
+         outline: none;
+         color: rgb(109, 109, 109);
+         box-sizing: border-box;
+         font-family: 'Roboto', sans-serif;
+         background-color: #f5f5f5;
+       }
+
+       #search:focus {
+           outline: none;
+       }
+
+       .addToCart{
+           width: 30px;
+           height: 30px;
+           display: inline-block;
+           vertical-align: top;
+            margin: 5px 0 0 20px;
+       }
+       .img{
+           width: 100%;
+           height: 100%;
+           cursor : pointer;
+
+       }
+
+       #outerPart {
+           display: flex;
+           flex-direction: column;
+           height: 780px;
+           margin: -10px -10px 0px -10px;
+       }
+       *{
+            font-family: 'Rubik', sans-serif;
+        }
+
+        .wrapper {
+            margin: auto;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.15);
+            position: relative;
+        }
+
+        #womenTop, #menTop, #kidsTop, #homeD, #accE, #brandsTop, #red , .mainImg , .sizeNo>div, .sizeImg, .text3, .iteams>div:nth-child(1), .iteams>div:nth-child(3), .addToCartBox {
+            cursor: pointer;
+        }
+        #womenTop:hover, #menTop:hover, #kidsTop:hover, #homeD:hover, #accE:hover, #brandsTop:hover {
+            color: #00aa8a;
+            transition: all 0.5s linear;
+        }
+
+        .smallImg>div:hover{
+             border: 1px solid #00aa8a;
+             
+        }
+
+        .sizeNo>div:hover{
+             border: 1px solid #00aa8a;
+             
+        }
+
+        #secondPart{
+            overflow: scroll;
+        }
+
+       
+      
+       ::-webkit-scrollbar{
+           display: none;
+      }
+
+      #outerPart{
+           display: flex;
+           flex-direction: column;
+            height: 718px;
+       }
+
+       #descBox{
+           height: 570px;
+           width: 65%;
+           margin: auto;
+           
+       }
+       
+
+       .location{
+           display: grid;
+           grid-template-columns: auto auto auto auto;
+           width: 45%;
+           height: 20px;
+           margin: 5px 0 0 5px;
+       }
+
+       .location>div{
+        font-size: 11px;
+        font-weight: 350;
+        
+
+       }
+       .color{
+           color:#00aa8a ;
+           padding: 3px 0 0 0;
+       }
+       .text{
+           font-size: 15px;
+           font-weight: 400;
+           padding: 3px 0 0 0;
+       }
+
+       
+
+        .mainBox{
+            display: grid;
+            grid-template-columns: 10% 35.5% 54.25%;
+            grid-template-rows: 100%;
+            width: 100%;
+            height: 95%;
+            /* border: 1px solid black; */
+        }
+
+        .smallImg{
+            display: grid;
+            grid-template-rows: 23.57% 23.57% 23.57% 23.57%;
+            /* grid-row-gap: 15px; */
+            gap: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+            /* border: 1px solid black; */
+        }
+        
+        .smallImg > div {
+            
+            /* margin: 10px 10px 5px 0; */
+            /* border: 1px solid black; */
+        }
+
+        .mainImg{
+            width: 100%;
+           height: 100%;
+
+        }
+        
+
+        .bigImg{
+            margin: 10px 0 0 0;
+            background-image: url("https://pantaloons.imgix.net/img/app/product/5/594403-5494031.jpg");
+            background-size: contain;
+            cursor: pointer;
+        }
+        
+
+        .heartImg{
+            width: 30px;
+            height: 30px;
+            margin: 5px 0 0 313px;
+
+        }
+        .circle{
+            
+            border-radius: 50%;
+        }
+        
+
+        .textDesc{
+            padding: 8px 0 0 25px;
+            
+        }
+        .names{
+            width: 50%;
+            
+        }
+
+        .brandName{
+            font-size: 21px;
+            font-weight: 400;
+
+        }
+
+        .shirtName{
+            font-size: 21px;
+            font-weight: 300;
+            color: #81d0c4;
+        }
+        
+
+        .price{
+            font-size: 40px;
+            font-weight: 500;
+            margin: 15px 0 0 0;
+            color: rgba(0,0,0,.8);
+        }
+
+        .discount{
+
+            font-size: 27px;
+            font-weight: 400;
+            
+        }
+        .gray{
+            color: #c1c1c1;
+        }
+        .color1{
+            color: #4ed2bd;
+        }
+
+       
+
+        .priceDesc1{
+            font-size: 13px;
+            font-weight: 300;
+            margin: 5px 0 0 0;
+        }
+        .priceDesc2{
+            font-size: 13px;
+            font-weight: 300;
+            margin: 3px 0 0 0;
+            border-bottom: 1px solid rgb(236, 236, 236);
+            height: 35px;
+        }
+        .color2{
+            color: #81d0c4;
+            font-size: 15px;
+        }
+        
+        .size{
+            margin: 15px 0 0 0;
+        }
+        .sizeText{
+            font-size: 16px;
+            font-weight: 300;
+
+        }
+
+        .sizeNo{
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            height: 50px;
+            width: 60%;
+            grid-column-gap: 15px;
+            margin-top: 15px;
+        }
+
+        .sizeNo>div{
+            border-radius: 50%;
+            border: 1px solid rgb(228, 228, 228);
+            font-size: 11px;
+             color: #81d0c4;
+             text-align: center;
+             font-weight: 500;
+             padding-top: 17px;
+        }
+        
+        .sizeText2{
+            display: grid;
+            grid-template-columns: 40px auto;
+            /* height: 20px; */
+            margin: 5px 0 0 0;
+            border-bottom: 1px solid rgb(236, 236, 236);
+            padding-bottom: 18px;
+        }
+        .sizeImg{
+            width: 100%;
+            height: 100%;
+        }
+        .text3{
+            margin: 2px 0 0 5px;
+            font-weight: 300;
+            font-size: 14.5px;
+            
+        }
+        
+
+        .quantity{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            height: 80px;
+            margin: 20px 0 0 0;
+        }
+
+        .iteams{
+            display: grid;
+            grid-template-columns: auto 45px auto;
+            width: 50%;
+            height: 37px;
+            margin: 20px 0 0 0 ;
+        }
+
+        .iteams>div:nth-child(1),
+        .iteams>div:nth-child(3){
+            font-size: 30px;
+            color: #0daa8b;
+            box-sizing: border-box;
+            text-align: center;
+            box-shadow: 1px 1px #888888;
+            border: 1px solid rgb(236, 236, 236);
+            border-radius: 7px;
+        
+        }
+        .iteams>div:nth-child(2){
+             text-align: center;
+             font-size: 20px;
+             padding: 8px 0 0 0;
+        }
+        
+
+        .addToCartBox{
+            width: 75%;
+            height: 50px;
+            margin: 0 0 0 15%;
+            border: 2px solid #81d0c4;
+            border-radius: 2px;
+            color: #81d0c4;
+            text-align: center;
+            padding: 14px;
+            box-sizing: border-box;
+            font-size: 17px;
+        }
+        .addToCartBox:hover{
+            background-color: #81d0c4;
+            color: white;
+        }
+
+        
+
+        .smallText1{
+            font-size: 11px;
+            font-weight: 300;
+            margin: 20px 0 0 0;
+            
+
+        }
+        .smallText2{
+            font-size: 11px;
+            font-weight: 300;
+            margin: 4px 0 0 0;
+             border-bottom: 1px solid rgb(236, 236, 236);
+             padding-bottom: 29px;
+
+        }
+        .freeColor{
+            color: #9b9b9b;
+        }
+
+       
+
+        .prodDescBox{
+            width: 65%;
+            /* height: 200px; */
+            margin: 70px auto auto auto;
+            border-top: 1px solid rgb(236, 236, 236);
+           
+        }
+
+        .descNames{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                width: 35%;
+                height: 30px;
+                margin: 30px 0 0 30px;
+        }
+        .descNames>div{
+            font-size: 16px;
+            font-weight: 300;
+
+        }
+        .fullDesc{
+            width: 90%;
+            margin: 15px 0 0 30px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        .similarProd{
+            width: 65%;
+            margin: 80px auto auto auto;
+            height: 500px;
+
+        }
+
+        .similarText{
+            font-size: 50px;
+            text-align: center;
+            font-weight: 400;
+            color: #b3b3b3;
+        }
+        .colour{
+            color: #81d0c4;
+        }
+        .similarText1{
+            font-size: 15px;
+            font-weight: 300;
+            text-align: center;
+            margin-top: 10px;
+            
+        }
+        .types{
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            width: 80%;
+            height: 30px;
+            margin: 20px auto auto auto ;
+            grid-gap: 10px;
+            
+        }
+        .types>div{
+            border-radius: 20px;
+            display: grid;
+            grid-template-columns: 20% 80%;
+            border: 1px solid black;
+
+        }
+        .types>div>div:nth-child(1){
+            border-radius: 50%;
+            border: 1px solid black;
+            /* margin: 7px 0 0 11px; */
+            height: 11px;
+            font-size: 10px;
+            text-align: center;
+            font-weight: 500;
+            /* padding: -1px 0 0 0; */
+            color: #ccc;
+        }
+        .types>div:nth-child(1)>div:nth-child(1){
+            margin: 8px 5px 0 12px;
+            
+        }
+        .types>div:nth-child(2)>div:nth-child(1){
+            margin: 8px 5px 0 11px;
+            
+        }
+        .types>div:nth-child(3)>div:nth-child(1){
+            margin: 8px 5px 0 3px;
+            
+        }
+        .types>div:nth-child(4)>div:nth-child(1){
+            margin: 8px 5px 0 -3px;
+            
+        }
+        .types>div:nth-child(5)>div:nth-child(1){
+            margin: 8px 5px 0 1px;
+            
+        }
+        .types>div:nth-child(6)>div:nth-child(1){
+            margin: 8px 5px 0 16px;
+            
+        }
+        .types>div>div:nth-child(2){
+            border-radius: 20px;
+            
+            padding: 2px 0 0 0;
+            box-sizing: border-box;
+            color: #ccc;
+           
+        }
+
+        /* div{
+            border: 0.5px solid black;
+        } */
+        
+
+
+            /* fromHereSameInAllPages */
+        .emailBox{
+            width: 100%;
+            height: 180px;
+            background-image: url("https://assets.trendin.com/resources/img/pantaloons/home/newsletter_bg.png");
+            background-size: contain;
+            margin: 80px 0 0 0;
+        }
+
+        .emailText{
+            width: 30%;
+            height: 50px;
+            padding: 20px 0 0 0 ;
+            margin: auto;
+            color: white;
+            font-size: 21px;
+            text-align: center;
+            font-weight: 300;
+        }
+        .fontWeight{
+            font-weight: 500;
+        }
+
+        .enterEmailBox{
+            width: 28%;
+            height: 45px;
+            margin: 15px auto auto auto;
+            display: grid;
+            grid-template-columns: 85% 12%;
+            grid-gap: 8px ;
+        }
+
+        .input{
+            margin: 15px 0 0 15px;
+            width: 80%;
+            outline: none;
+            border: white;
+        }
+        .enterEmailBox>div:nth-child(1){
+            background-color: white;
+        }
+        .enterEmailBox>div:nth-child(2){
+            background-color: #f4ba0c;
+            border-radius: 5px;
+            font-size: 30px;
+            font-weight: 600;
+            text-align: center;
+            padding: 3px;
+            box-sizing: border-box;
+        }
+
+         
+
+        .otherDetails{
+            background-color: #f1f1f1;
+            width: 100%;
+            height: 550px;
+            padding-top: 50px;
+        }
+
+        .otherfirstBox{
+            width: 90%;
+            /* height: 140px; */
+            margin: auto ;
+            display: grid;
+            grid-template-columns: 150px 150px 150px 150px 150px 150px   250px 150px;
+            grid-gap: 10px;
+        }
+        .img1{
+            width: 90%;
+            height: 80%;
+            margin: 0 0 0 15px;
+        }
+
+        .img2{
+            width: 80%;
+            height: 70%;
+            margin: 16px 0 0 15PX;
+        }
+        .img3{
+            width: 90%;
+            height: 80%;
+            margin: 0px 0 0 10px;
+        }
+        
+        .otherfirstBox>div>div{
+            font-size: 12px;
+            font-weight: 300;
+            text-align: center;
+            
+        }
+        
+
+        .returnPolicyBox{
+            border: 1px solid grey;
+            width: 90%;
+            height: 40px;
+            padding: 12px 0 0 3px;
+            box-sizing: border-box;
+            margin: 30px 0 0 10px;
+            font-weight: 400;
+        }
+
+        .otherSecondBox{
+             border-top: 1px solid rgb(214, 214, 214);
+             border-bottom: 1px solid rgb(214, 214, 214);
+             margin: 70px auto auto auto;
+             width: 90%;
+             display: grid;
+             grid-template-columns: 60% 40%;
+             height: 300px;
+
+        }
+
+        .oSB1{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            height: 100%;
+           padding: 60px 0 0 25px;
+           box-sizing: border-box;
+           border-right: 1px solid rgb(214, 214, 214);
+        }
+        .oSB2{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            height: 100%;
+           padding: 60px 0 0 25px;
+           box-sizing: border-box;
+          
+        }
+
+        .otherSecondBox>div>div>div:nth-child(2),
+        .otherSecondBox>div>div>div:nth-child(3),
+        .otherSecondBox>div>div>div:nth-child(4),
+        .otherSecondBox>div>div>div:nth-child(5),
+        .otherSecondBox>div>div>div:nth-child(6){
+            font-size: 12px;
+            font-weight: 300;
+            margin: 20px 0 0 0;
+            color: #a7a7a7;
+
+        }
+        .headingText{
+            font-size: 13px;
+            font-weight: 400;
+            color: #5e5e5e;
+        }
+
+        .oSB2>div>div:nth-child(2),
+        .oSB2>div>div:nth-child(3),
+        .oSB2>div>div:nth-child(4),
+        .oSB2>div>div:nth-child(5),
+        .oSB2>div>div:nth-child(6){
+            text-align: center;
+            font-size: 12px;
+            font-weight: 300;
+           margin: 20px 0 0 0;
+            color: #a7a7a7;
+        }
+        .headingText1{
+            font-size: 13px;
+            font-weight: 400;
+            color: #5e5e5e;
+            text-align: center;
+        }
+
+       /* div{
+           border: 1px solid black;
+       } */
+        
+
+    </style>
+</head>
+<body>
+<div id="outerPart">
+
+    <div id="firstPart">
+        <div id="discountBar">
+            <span> Extra 20% OFF* on All your Orders above ₹3500. Use Code: PTDTRA20 | * T & Cs Apply > </span>
+        </div>
+        <div class="secondbar">
+            <div class="align">
+                <div> <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/v2/PT_D_logo.png"
+                        title="Pantaloons" onclick="toHomepage()" style="cursor: pointer;" /> </div>
+
+            </div>
+            <div>
+                <div class="select">
+                    <div id="womenTop">WOMEN</div>
+                    <div id="menTop" style="cursor: pointer;">MEN</div>
+                    <div id="kidsTop" style="cursor: pointer;">KIDS</div>
+                    <div id="homeD">HOME DECORE</div>
+                    <div id="accE">ACCESSORIES</div>
+                    <div id="brandsTop">BRANDS</div>
+                    <div id="red">SALE</div>
+                </div>
+            </div>
+            <div>
+                <div class="grid1">
+                    <div>GREENCARD</div>
+                    <div>TRACK ORDER</div>
+                    <div>STORE LOCATOR</div>
+                    <div>CONTACT US</div>
+                </div>
+                <div class="grid2">
+                    <div class="wrapper">
+                        <input type="text" id="search" value="" placeholder="Search Here" />
+                        <div> <img src="https://i.pinimg.com/736x/80/37/08/803708a2135c22ec40826c306b00e933.jpg"
+                                class="img" , style="border-radius: 50%;" id="searchImg" /> </div>
+                        <div class="results"></div>
+                    </div>
+                    <div class="addToCart">
+                        <img src="https://icon-library.com/images/add-user-icon/add-user-icon-23.jpg" class="img" />
+                    </div>
+                    <div class="addToCart">
+                        <img src="https://pantaloons.imgix.net/img/app/others/heart_bordered.png" class="img" />
+                    </div>
+                    <div class="addToCart">
+                        <img src="https://thumbs.dreamstime.com/b/add-to-cart-icon-adding-shopping-cart-well-organized-fully-editable-add-to-cart-icon-adding-shopping-cart-any-use-like-167547952.jpg"
+                            class="img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="secondPart">
+        <div id="descBox">
+
+            <div class="location">
+                <div> PANTALOONS &nbsp; <span class="text">/</span>  </div>
+                <div>MEN &nbsp; <span class="text">/</span></div>
+                <div>FORMAL SHIRTS &nbsp;<span class="text">/</span></div>
+                <div class="color">PETER ENGLAND BLUE CHECK SHIRT</div>
+            </div>
+
+            <div class="mainBox">
+                <div class="smallImg">
+                        <div >   
+                            <img src="https://pantaloons.imgix.net/img/app/product/5/594403-5494031.jpg?w=83&auto=format" class="mainImg"/>
+                        </div>
+                        <div>
+                            <img src="https://pantaloons.imgix.net/img/app/product/5/594403-5494031.jpg?w=83&auto=format" class="mainImg" />
+                        </div>
+                        <div>
+                            <img src="https://pantaloons.imgix.net/img/app/product/5/594403-5494031.jpg?w=83&auto=format" class="mainImg" />
+                        </div>
+                        <div>
+                            <img src="https://pantaloons.imgix.net/img/app/product/5/594403-5494031.jpg?w=83&auto=format" class="mainImg" />
+                        </div>
+                        
+                </div>
+                <div class="bigImg">
+                        <div class="heartImg">
+                            <img src="https://thumbs.dreamstime.com/b/wish-list-icon-heart-plus-wishlist-add-to-favorites-vector-illustration-isolated-white-background-editable-stroke-225978932.jpg" class="mainImg circle" >
+                        </div>
+                </div>
+                <div class="textDesc">
+
+                    <div class="names">
+                        <div class="brandName">
+                            Peter England
+                        </div>
+                        <div class="shirtName">
+                            Blue Check Shirt
+                        </div>
+                    </div>
+
+                    <div class="price">
+                            ₹999
+                    </div>
+                    
+                    <div class="discount">
+                        <span class="gray"> ₹<s>1,499&nbsp;</s></span> <span class="color1"> &nbsp;33% off</span>
+                    </div>
+
+                    <div class="priceDesc">
+                        <div class="priceDesc1">
+                            MRP &nbsp; (Inclusive of all taxes)
+                        </div>
+                        <div class="priceDesc2">
+                                More By <span class="color2"><b>Peter England</b></span>
+                        </div>
+                    </div>
+
+                    <div class="size">
+                        <div class="sizeText">
+                            Select Size
+                        </div>
+                        <div class="sizeNo">
+                            <div>38</div>
+                            <div>39</div>
+                            <div>40</div>
+                            <div>42</div>
+                            <div>44</div>
+
+                        </div>
+                        <div class="sizeText2">
+                            <div>
+                                <img src="https://www.primeai3.in/PICS/perfectsizebutton-alone2.png" class="sizeImg" >
+                            </div>
+                            <div class="text3">
+                               <u> Find my recommended size </u>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quantity">
+                        <div class="quantityText">
+                                <div class="sizeText">
+                                    Qty
+                                </div>
+                                <div class="iteams">
+                                    <div>-</div>
+                                    <div>1</div>
+                                    <div>+</div>
+
+                                </div>
+                        </div>
+                        <div>
+                            <div class="addToCartBox">
+                                ADD TO CART
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="smallText">
+                            <div class="smallText1">
+                                30 days Return* | 90 Days exclusively for Greencard members |
+
+                            </div>
+                            <div class="smallText2">
+                                All India <b class="freeColor">FREE</b> Shipping on Orders above Rs. 1000*
+                            
+                            </div>
+                            
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+        <div class="prodDescBox">
+            <div class="descNames">
+                <div>DESCRIPTION</div>
+                <div>FEATURE</div>
+                <div>DETAILS</div>
+            </div>
+            <div class="fullDesc">
+                A well fitted formal shirt always makes you look sharp. Make an impression in this blue print Super Slim Fit shirt from
+                Peter England.
+            </div>
+            
+        </div>
+
+
+        <div class="similarProd">
+            <div class="similarText">Similar <span class="colour">Products</span> </div>
+            <div class="similarText1">What similarities are you interested in?</div>
+
+            <div class="types">
+                <div>
+                    <div>✔</div>
+                    <div>Neck style</div>
+                </div>
+                <div>
+                    <div>✔</div>
+                    <div>Print type</div>
+                </div>
+                <div>
+                    <div>✔</div>
+                    <div>Color</div>
+                </div>
+                <div>
+                    <div>✔</div>
+                    <div>Fit</div>
+                </div>
+                <div>
+                    <div>✔</div>
+                    <div>Type</div>
+                </div>
+                <div>
+                    <div>✔</div>
+                    <div>Sleeve length</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /* fromHereSameInAllPages */ -->
+        <div class="emailBox">
+            <div class="emailText">
+                <div>GETS <span class="fontWeight">LATEST OFFERS </span> AND <span class="fontWeight">DEALS</span> </div>
+                <div>RIGHT IN YOUR <span class="fontWeight">INBOX.</span></div>
+            </div>
+
+            <div class="enterEmailBox">
+                <div>
+                        <input type="text" class="input" placeholder="Enter your email address"/>
+                </div>
+                <div>
+                    →
+                </div>
+            </div>
+
+        </div>
+
+        <div class="otherDetails">
+            <div class="otherfirstBox">
+                <div>
+                    <img src="https://www.ethnicmusical.com/wp-content/uploads/2019/12/easy-returns-logo-1536x1536.png" class="img1">
+                    <div>EASY RETURNS </div>
+                </div>
+                <div>
+                    <img src="https://icon-library.com/images/contact-us-icon/contact-us-icon-16.jpg" class="img2">
+                    <div>CUSTOMER SUPPORT </div>
+                </div>
+                <div>
+                    <img src="https://pngimg.com/uploads/free_shipping/free_shipping_PNG2.png" class="img1">
+                    <div>FREE SHIPPING </div>
+                </div>
+                <div>
+                    <img src="https://cdn1.iconfinder.com/data/icons/marketplace-and-shipping/64/COD_cash_on_delivery_shipping_payment_delivery-512.png" class="img1">
+                    <div>CASH ON DELIVERY AVAILABLE </div>
+                </div>
+                <div>
+                    <img src="https://www.freeiconspng.com/thumbs/payment-icon/cash-payment-icon-5.png" class="img2">
+                    <div>SECURE PAYMENT</div>
+                </div>
+                <div>
+                    <img src="https://www.primeai3.in/PICS/waiting001.gif" class="img3">
+                    <div>FREE ALTERATION </div>
+                </div>
+                <div>
+                    <div class="returnPolicyBox">
+                        RETURN & REFUND POLICY
+                    </div>
+
+                </div>
+                <div>
+                    <img src="https://assets.abfrlcdn.com/img/app/others/birlalogo.jpg" class="img2">
+                </div>
+
+            </div>
+
+            <div class="otherSecondBox">
+
+                <div class="oSB1">
+                    <div>
+                            <div class="headingText">MY ACCOUNT</div>
+                            <div>MY ORDERS</div>
+                            <div>RETURNS / REFUNDS</div>
+                            <div>MY ADDRESSES</div>
+                            <div>MY PERSONAL INFO</div>
+                            <div>CHANGE PASSWORD</div>
+                    </div>
+                    <div>   
+                            <div class="headingText">ABOUT US</div>
+                            <div>OFFICIAL BRAND STORE</div>
+                            <div>FAQS</div>
+                            <div>PAYMENT OPTIONS</div>
+                            <div>ABOUT US</div>
+                            <div>INVESTOR RELATIONS</div>
+                    </div>
+                    <div>
+                            <div class="headingText">POLICIES</div>
+                            <div>RETURNS & EXCHANGE POLICY</div>
+                            <div>SHIPPING POLICY</div>
+                            <div>TERMS & CONDITIONS OF USE</div>
+                            <div>PROMOTIONAL T & C</div>
+                            <div>PRIVACY POLICY</div>
+                    </div>
+                    <div>
+                            <div class="headingText">CONTACT US</div>
+                            <div>STORE LOCATOR</div>
+                            <div>CUSTOMER SUPPORT</div>
+                           
+                    </div>
+                </div>
+                <div class="oSB2">
+                    <div>
+                            <div class="headingText1">MEN</div>
+                            <div>SHIRTS</div>
+                            <div>T-SHIRTS</div>
+                            <div>JACKETS</div>
+                            <div>ACTIVEWEAR</div>
+                            <div>TROUSERS</div>
+                    </div>
+                    <div>
+                            <div class="headingText1">WOMEN</div>
+                            <div>TEES & TOPS</div>
+                            <div>DRESSES</div>
+                            <div>SHIRTS AND BLOUSES</div>
+                            <div>KURTAS & KURTIS</div>
+                            <div>JEANS & JEGGINGS</div>
+                    </div>
+                    <div>
+                            <div class="headingText1">KIDS</div>
+                            <div>TEES & TOPS</div>
+                            <div>BOTTOMS & LEGGINGS</div>
+                            <div>SHORTS & BERMUDAS</div>
+                            
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+</div>
+</body>
+</html>
