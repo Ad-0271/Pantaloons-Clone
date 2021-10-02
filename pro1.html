@@ -385,7 +385,7 @@
                 </div>
                 <div class="produc" id="productPart">
                     <div id="proflex">
-                        <div id="total_items">1234</div>
+                        <div id="total_items">0</div>
                         <div id="productflex">Products</div>
                     </div>
                     <div id="sortflex">
@@ -633,6 +633,7 @@
     showProducts(database);
 
     function sortFunction(value) {
+
         if(value == "low") {
             let arr = database.sort(function(a, b) {
                 return a.price - b.price;
@@ -656,10 +657,8 @@
     let data = JSON.parse(localStorage.getItem('categoryPage'));
     let anotherdata = [];
 
-    // console.log(data);
     let filter = {
 
-        // data : JSON.parse(localStorage.getItem('categoryPage')),
 
         GENDER : {
             icon : 'https://img.favpng.com/12/18/14/gender-symbol-female-clip-art-png-favpng-u0BjG3Fga24KFwu5wqLAE4pUm.jpg',
@@ -859,6 +858,10 @@
         console.log(anotherset);
         
         let arr6 = Array.from(anotherset.values());
+
+        //jugaad for sort + filter : ----->;
+
+        database = arr6;
 
         showProducts(arr6);
         
