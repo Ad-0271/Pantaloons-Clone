@@ -21,7 +21,7 @@
 
         #firstPart {
             margin: -10px -10px -10px -10px;
-            border-bottom: 1px solid rgba(128, 128, 128, 0.281);
+             border-bottom: 1px solid rgba(128, 128, 128, 0.281);
         }
         
         #discountBar{
@@ -147,7 +147,7 @@
        #secondPart{
             overflow: scroll;
             margin: 10px -10px -10px -10px;
-        }
+          }
         
 
         .color{
@@ -522,6 +522,177 @@
             color: #00aa8a;
             transition: all 0.5s linear;
         }
+        /* div{
+            border: 1px solid black
+        } */
+
+        .emailBox{
+            width: 100%;
+            height: 180px;
+            background-image: url("https://assets.trendin.com/resources/img/pantaloons/home/newsletter_bg.png");
+            background-size: contain;
+            margin: 80px 0 0 0;
+        }
+
+        .emailText{
+            width: 30%;
+            height: 50px;
+            padding: 20px 0 0 0 ;
+            margin: auto;
+            color: white;
+            font-size: 21px;
+            text-align: center;
+            font-weight: 300;
+        }
+        .fontWeight{
+            font-weight: 500;
+        }
+
+        .enterEmailBox{
+            width: 28%;
+            height: 45px;
+            margin: 15px auto auto auto;
+            display: grid;
+            grid-template-columns: 85% 12%;
+            grid-gap: 8px ;
+        }
+
+        .input{
+            margin: 15px 0 0 15px;
+            width: 80%;
+            outline: none;
+            border: white;
+        }
+        .enterEmailBox>div:nth-child(1){
+            background-color: white;
+        }
+        .enterEmailBox>div:nth-child(2){
+            background-color: #f4ba0c;
+            border-radius: 5px;
+            font-size: 30px;
+            font-weight: 600;
+            text-align: center;
+            padding: 3px;
+            box-sizing: border-box;
+        }
+
+         
+
+        .otherDetails{
+            background-color: #f1f1f1;
+            width: 100%;
+            height: 550px;
+            padding-top: 50px;
+        }
+
+        .otherfirstBox{
+            width: 90%;
+            /* height: 140px; */
+            margin: auto ;
+            display: grid;
+            grid-template-columns: 150px 150px 150px 150px 150px 150px   250px 150px;
+            grid-gap: 10px;
+        }
+        .img1{
+            width: 90%;
+            height: 80%;
+            margin: 0 0 0 15px;
+        }
+
+        .img2{
+            width: 80%;
+            height: 70%;
+            margin: 16px 0 0 15PX;
+        }
+        .img3{
+            width: 90%;
+            height: 80%;
+            margin: 0px 0 0 10px;
+        }
+        
+        .otherfirstBox>div>div{
+            font-size: 12px;
+            font-weight: 300;
+            text-align: center;
+            
+        }
+        
+
+        .returnPolicyBox{
+            border: 1px solid grey;
+            width: 90%;
+            height: 40px;
+            padding: 12px 0 0 3px;
+            box-sizing: border-box;
+            margin: 30px 0 0 10px;
+            font-weight: 400;
+        }
+
+        .otherSecondBox{
+             border-top: 1px solid rgb(214, 214, 214);
+             border-bottom: 1px solid rgb(214, 214, 214);
+             margin: 70px auto auto auto;
+             width: 90%;
+             display: grid;
+             grid-template-columns: 60% 40%;
+             height: 300px;
+
+        }
+
+        .oSB1{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            height: 100%;
+           padding: 60px 0 0 25px;
+           box-sizing: border-box;
+           border-right: 1px solid rgb(214, 214, 214);
+        }
+        .oSB2{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            height: 100%;
+           padding: 60px 0 0 25px;
+           box-sizing: border-box;
+          
+        }
+
+        .otherSecondBox>div>div>div:nth-child(2),
+        .otherSecondBox>div>div>div:nth-child(3),
+        .otherSecondBox>div>div>div:nth-child(4),
+        .otherSecondBox>div>div>div:nth-child(5),
+        .otherSecondBox>div>div>div:nth-child(6){
+            font-size: 12px;
+            font-weight: 300;
+            margin: 20px 0 0 0;
+            color: #a7a7a7;
+
+        }
+        .headingText{
+            font-size: 13px;
+            font-weight: 400;
+            color: #5e5e5e;
+        }
+
+        .oSB2>div>div:nth-child(2),
+        .oSB2>div>div:nth-child(3),
+        .oSB2>div>div:nth-child(4),
+        .oSB2>div>div:nth-child(5),
+        .oSB2>div>div:nth-child(6){
+            text-align: center;
+            font-size: 12px;
+            font-weight: 300;
+           margin: 20px 0 0 0;
+            color: #a7a7a7;
+        }
+        .headingText1{
+            font-size: 13px;
+            font-weight: 400;
+            color: #5e5e5e;
+            text-align: center;
+        }
+
+
+
     </style>
 </head>
 
@@ -531,15 +702,18 @@
 <div id="outerBox">
 
 
-    <div id="firstPart" >
-        <div id="discountBar"> 
-             <span> Extra 20% OFF* on All your Orders above ₹3500. Use Code: PTDTRA20 | * T & Cs Apply > </span>
+    <div id="firstPart">
+        <div id="discountBar">
+            <span> Extra 20% OFF* on All your Orders above ₹3500. Use Code: PTDTRA20 | * T & Cs Apply > </span>
         </div>
-         <div class="secondbar">
-                <div class="align">
-                    <div> <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/v2/PT_D_logo.png" title="Pantaloons" onclick="toHomepage()" style="cursor: pointer;"/> </div>
-                    
-                </div>
+        <div class="secondbar">
+            <div class="align">
+                <div> <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/v2/PT_D_logo.png"
+                        title="Pantaloons" onclick="toHomepage()" style="cursor: pointer;" /> </div>
+
+            </div>
+            
+
                 <div >
                         <div class="select">
                             <div id="womenTop">WOMEN</div>
@@ -550,78 +724,81 @@
                             <div id="brandsTop">BRANDS</div>
                             <div id="red">SALE</div>
                         </div>
+
+            </div>
+            <div>
+                <div class="grid1">
+                    <div>GREENCARD</div>
+                    <div>TRACK ORDER</div>
+                    <div>STORE LOCATOR</div>
+                    <div>CONTACT US</div>
+
                 </div>
-                <div>
-                        <div class="grid1">
-                            <div>GREENCARD</div>
-                            <div>TRACK ORDER</div>
-                            <div>STORE LOCATOR</div>
-                            <div>CONTACT US</div>
-                        </div>
-                        <div class="grid2">
-                            <div class="wrapper">
-                                <input type="text" id="search" value="" placeholder="Search Here"/>
-                                <div> <img src="https://i.pinimg.com/736x/80/37/08/803708a2135c22ec40826c306b00e933.jpg" class="img" , style="border-radius: 50%;" id="searchImg" /> </div>
-                                <div class="results"></div>
-                            </div>
-                              <div class="addToCart">
-                                    <img src="https://icon-library.com/images/add-user-icon/add-user-icon-23.jpg" class="img" />
-                              </div>  
-                              <div class="addToCart"> 
-                                    <img src="https://pantaloons.imgix.net/img/app/others/heart_bordered.png" class="img" />
-                              </div>
-                            <div class="addToCart">
-                                    <img src="https://thumbs.dreamstime.com/b/add-to-cart-icon-adding-shopping-cart-well-organized-fully-editable-add-to-cart-icon-adding-shopping-cart-any-use-like-167547952.jpg" class="img" />
-                            </div>
-                        </div>
+                <div class="grid2">
+                    <div class="wrapper">
+                        <input type="text" id="search" value="" placeholder="Search Here" />
+                        <div> <img src="https://i.pinimg.com/736x/80/37/08/803708a2135c22ec40826c306b00e933.jpg"
+                                class="img" , style="border-radius: 50%;" id="searchImg" /> </div>
+                        <div class="results"></div>
+                    </div>
+                    <div class="addToCart">
+                        <img src="https://icon-library.com/images/add-user-icon/add-user-icon-23.jpg" class="img" />
+                    </div>
+                    <div class="addToCart">
+                        <img src="https://pantaloons.imgix.net/img/app/others/heart_bordered.png" class="img" />
+                    </div>
+                    <div class="addToCart" id="toCart">
+                        <img src="https://thumbs.dreamstime.com/b/add-to-cart-icon-adding-shopping-cart-well-organized-fully-editable-add-to-cart-icon-adding-shopping-cart-any-use-like-167547952.jpg"
+                            class="img" />
+                    </div>
                 </div>
+            </div>
         </div>
     </div>
 
 
     <div id="secondPart">
         <div class="firstBox" id="mySlideshow" style="cursor: pointer;">
-            
+
         </div>
         <div class="secondBox">
+
                 <div class="text"> <span class="color">TOP </span> DEALS  </div>
                 <div class="topDeals">
-                    <div>
+                    <div onclick="filterdata('45%')">
                         <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8466.jpg" class="img" title="Pantaloon Junior Upto 45% off"/>
                     </div>
-                    <div>
-                        <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8467.jpg" class="img" title="Style at Rs 999" />
+                    <div onclick="filterdata('999')">
+                        <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8467.jpg" class="img" title="Style at Rs 999"/>
                     </div>
-                    <div>
-                        <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8469.jpg" class="img" title="Zink London" />
+                    <div onclick="filterdata('50%')">
+                        <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8469.jpg" class="img" title="Zink London"/>
                     </div>
-                    <div>
-                        <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8473.jpg" class="img" title="Cushion Covers at Flat 35% off" />
-                    </div>
-                    
+                    <div onclick="filterdata('35%')">
+                        <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-8473.jpg" class="img" title="Cushion Covers at Flat 35% off"/>
+                    </div>                    
                 </div>
         </div>
 
         <div class="thirdBox">
                 <div class="text"> <span class="color">FASHION </span> STEALS </div>
                 <div class="under">
-                    <div>
-                        <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/399.png?w=960&auto=format" class="img"  title="399 offers pantaloons" />
+                    <div onclick="filterdata('u399')">
+                        <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/399.png?w=960&auto=format" class="img" title="399 offers pantaloons" />
                     </div>
-                    <div>
-                        <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/699.png?w=960&auto=format" class="img" title="699 offers pantaloons" />
+                    <div onclick="filterdata('u699')">
+                        <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/699.png?w=960&auto=format" class="img" title="699 offers pantaloons"/>
                     </div>
-                    <div>
+                    <div onclick="filterdata('u999')">
                         <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/999.png?w=960&auto=format" class="img" title="999 offers pantaloons"/>
                     </div>
                 </div>
-
         </div>
 
         <div class="fourthBox">
                 <div class="text"> <span class="color">WHAT'S </span> HOT </div>
                 <div id="hot">
-                       <div>
+                       <div onclick="filterdata('dresses')">
                            <div> 
                                <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-6949.jpg" class="img" title="Dresses"/>
                            </div>
@@ -634,7 +811,7 @@
                                </div>
                            </div>
                        </div>
-                       <div>
+                       <div onclick="filterdata('soft_snuggles')">
                            <div>
                             <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-6959.jpg" class="img" title="Soft Snuggles"/>
                            </div>
@@ -648,7 +825,7 @@
                         </div>
                            
                        </div>
-                       <div>
+                       <div onclick="filterdata('easy_tees')">
                             <div>
                                 <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-6960.jpg" class="img" title="Easy Tees" />
                             </div>
@@ -661,7 +838,7 @@
                                 </div>
                             </div>
                        </div>
-                       <div>
+                       <div onclick="filterdata('sunny_days')">
                              <div>
                                 <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-6961.jpg" class="img" title="Sunny Days" />
                              </div>
@@ -674,7 +851,7 @@
                                 </div>
                             </div>
                        </div>
-                       <div>
+                       <div onclick="filterdata('ethnic_vibes')">
                             <div>
                                 <img src="https://pantaloons.imgix.net/img/app/shopmedia/production/8/8-30-6962.jpg" class="img" title="Ethnic Vibes" />
                             </div>
@@ -687,21 +864,25 @@
                                 </div>
                             </div>
                        </div>
+                    </div>
                 </div>
-        </div>
-        
+            
+
         <div class="fifthBox">
             <div class="text"> <span class="color">TOP </span> CATEGORIES </div>
             <div class="top">
                 <div>
+
                     
                     <img id="kurtasTC" src="https://pantaloons.imgix.net/img/app/brands/pantaloons/MEn & WOmen Kurtas 180.jpg?w=180.938&auto=format" class="imgc" title="Kurtas pantaloons" />
                     
+
                     <div class="toptext">
                         Kurtas
                     </div>
                 </div>
                 <div>
+
                     <img id="menT-shirtTC" src="https://pantaloons.imgix.net/img/app/brands/pantaloons/Mens Tshirts 208_28052021.jpg?w=180.938&auto=format" title="Tshirts pantaloons"
                         class="imgc" />
                         <div class="toptext">
@@ -764,170 +945,318 @@
                         <div class="toptext">
                             Shorts
                         </div>
+
                 </div>
-                
+
 
             </div>
         </div>
 
         <div class="sixthBox">
-                <div class="text"> <span class="color">TRENDING </span> NOW </div>
-                <div class="trend">
-                    <div>
-                        <img src="https://pantaloons.imgix.net/resources/img/pantaloons/banner-prev-arrow.png?w=35&auto=format"
-                            class="arrowimg" />
-                        
+            <div class="text"> <span class="color">TRENDING </span> NOW </div>
+            <div class="trend">
+                <div>
+                    <img src="https://pantaloons.imgix.net/resources/img/pantaloons/banner-prev-arrow.png?w=35&auto=format"
+                        class="arrowimg" />
+
+                </div>
+                <div>
+                    <div class="trendimg">
+                        <img src="https://pantaloons.imgix.net/img/app/product/5/552638-4522793.jpg?w=370&auto=format"
+                            class="img" />
                     </div>
-                    <div>
-                        <div class="trendimg">
-                            <img src="https://pantaloons.imgix.net/img/app/product/5/552638-4522793.jpg?w=370&auto=format" class="img" />
-                        </div>
-                        <div class="fix">
-                            <div class="trendtext1">Pantaloon Baby </div>
-                            <div class="trendtext2" > Navy Printed Sweater</div>
-                            <div class="trendtext3">₹<span class="lighttext">599</span></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="trendimg">
-                            <img src="https://pantaloons.imgix.net/img/app/product/5/552665-4522913.jpg?w=370&auto=format" class="img" />
-                        </div>
-                        <div class="fix">
-                            <div class="trendtext1">Pantaloon Baby </div>
-                            <div class="trendtext2"> Navy Printed Sweater</div>
-                            <div class="trendtext3">₹<span class="lighttext">599</span></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="trendimg">
-                            <img src="https://pantaloons.imgix.net/img/app/product/5/552666-4522917.jpg?w=370&auto=format" class="img"  />
-                        </div>
-                        <div class="fix">
-                            <div class="trendtext1">Pantaloon Baby </div>
-                            <div class="trendtext2"> Navy Printed Sweater</div>
-                            <div class="trendtext3">₹<span class="lighttext">599</span></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="trendimg">
-                            <img src="https://pantaloons.imgix.net/img/app/product/5/552680-4522998.jpg?w=370&auto=format" class="img" />
-                        </div>
-                        <div class="fix">
-                            <div class="trendtext1">Pantaloon Baby </div>
-                            <div class="trendtext2"> Navy Printed Sweater</div>
-                            <div class="trendtext3">₹<span class="lighttext">599</span></div>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="https://pantaloons.imgix.net/resources/img/pantaloons/banner-next-arrow.png?w=35&auto=format"
-                            class="arrowimg" />
+                    <div class="fix">
+                        <div class="trendtext1">Pantaloon Baby </div>
+                        <div class="trendtext2"> Navy Printed Sweater</div>
+                        <div class="trendtext3">₹<span class="lighttext">599</span></div>
                     </div>
                 </div>
-                <div class="viewall ">
-                    <div>View All ➔</div>
+                <div>
+                    <div class="trendimg">
+                        <img src="https://pantaloons.imgix.net/img/app/product/5/552665-4522913.jpg?w=370&auto=format"
+                            class="img" />
+                    </div>
+                    <div class="fix">
+                        <div class="trendtext1">Pantaloon Baby </div>
+                        <div class="trendtext2"> Navy Printed Sweater</div>
+                        <div class="trendtext3">₹<span class="lighttext">599</span></div>
+                    </div>
                 </div>
+                <div>
+                    <div class="trendimg">
+                        <img src="https://pantaloons.imgix.net/img/app/product/5/552666-4522917.jpg?w=370&auto=format"
+                            class="img" />
+                    </div>
+                    <div class="fix">
+                        <div class="trendtext1">Pantaloon Baby </div>
+                        <div class="trendtext2"> Navy Printed Sweater</div>
+                        <div class="trendtext3">₹<span class="lighttext">599</span></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="trendimg">
+                        <img src="https://pantaloons.imgix.net/img/app/product/5/552680-4522998.jpg?w=370&auto=format"
+                            class="img" />
+                    </div>
+                    <div class="fix">
+                        <div class="trendtext1">Pantaloon Baby </div>
+                        <div class="trendtext2"> Navy Printed Sweater</div>
+                        <div class="trendtext3">₹<span class="lighttext">599</span></div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://pantaloons.imgix.net/resources/img/pantaloons/banner-next-arrow.png?w=35&auto=format"
+                        class="arrowimg" />
+                </div>
+            </div>
+            <div class="viewall ">
+                <div>View All ➔</div>
+            </div>
         </div>
-         <div class="seventhBox">
-                <div class="text"> <span class="color">TOP </span> BRANDS </div>
-                <div id="brands">
-                    <div  class="brandimg" title="Rangmanch"  >
-                        <div >
-                            
-                            <div title="Rangmanch Kurta collections" >Kurta</div>
-                            <div title="Rangmanch Ethnic Bottoms collections" >Ethnic Bottoms</div>
-                            <div title="Rangmanch Ethnic Sleepwear collections" >Ethnic Sleepwear</div>
-                        </div>
-                    </div>
-                    <div  class="brandimg" title="Dreamz" >
-                        <div>
-                            <div title="Dreamz Sleepwear collections ">Sleepwear Sets</div>
-                            <div title="Dreamz Tees & Tops collections ">Tees & Tops</div>
-                            <div title="Dreamz Nighty collections ">Nighty</div>
-                            <div title="Dreamz Bottoms collections ">Bottoms</div>
-                        </div>
-                    </div>
-                    <div  class="brandimg" title="Ajile" >
-                        <div>
-                            <div title="Ajile T-shirts collections">T-shirts</div>
-                            <div title="Ajile Tracks & Joggers collections">Tracks & Joggers</div>
-                            <div title="Ajile Shorts collections">Shorts</div>
-                            <div title="Ajile Boxer Shorts collections">Boxer Shorts</div>
-                        </div>
-                    </div>
-                    <div  class="brandimg" title="Byford" >
-                         <div>
-                                <div title="Byford T-shirts collections" >T-shirts</div>
-                                <div title="Byford Shirts collections">Shirts</div>
-                                <div title="Byford Shorts collections" >Shorts</div>
-                                <div title="Byford Shoes collections" >Shoes</div>
-                        </div>
-                    </div>
-                    <div  class="brandimg" title="Honey"  >
-                        <div>
-                                <div title="Honey Tees & Tops collections" >Tees & Tops</div>
-                                <div title="Honey Dress collections"  > Dress</div>
-                                <div title="Honey Trousers & Leggings collections"  >Trousers & Leggings</div>
-                                <div  title="Honey  Shirt & Blouses collections" > Shirt & Blouses</div>
-                        </div>
-                    </div>
-                    <div  class="brandimg" title="Pantaloons junior"  >
-                        <div>
-                                <div title="Pantaloons junior Top & T-shirts collections" >Top & T-shirts</div>
-                                <div  title="Pantaloons junior Shirts collections" >Shirts</div>
-                                <div title="Pantaloons junior Bottomwear collections"  >Bottomwear</div>
-                        </div>
+        <div class="seventhBox">
+            <div class="text"> <span class="color">TOP </span> BRANDS </div>
+            <div id="brands">
+                <div class="brandimg" title="Rangmanch">
+                    <div>
+
+                        <div title="Rangmanch Kurta collections">Kurta</div>
+                        <div title="Rangmanch Ethnic Bottoms collections">Ethnic Bottoms</div>
+                        <div title="Rangmanch Ethnic Sleepwear collections">Ethnic Sleepwear</div>
                     </div>
                 </div>
+                <div class="brandimg" title="Dreamz">
+                    <div>
+                        <div title="Dreamz Sleepwear collections ">Sleepwear Sets</div>
+                        <div title="Dreamz Tees & Tops collections ">Tees & Tops</div>
+                        <div title="Dreamz Nighty collections ">Nighty</div>
+                        <div title="Dreamz Bottoms collections ">Bottoms</div>
+                    </div>
+                </div>
+                <div class="brandimg" title="Ajile">
+                    <div>
+                        <div title="Ajile T-shirts collections">T-shirts</div>
+                        <div title="Ajile Tracks & Joggers collections">Tracks & Joggers</div>
+                        <div title="Ajile Shorts collections">Shorts</div>
+                        <div title="Ajile Boxer Shorts collections">Boxer Shorts</div>
+                    </div>
+                </div>
+                <div class="brandimg" title="Byford">
+                    <div>
+                        <div title="Byford T-shirts collections">T-shirts</div>
+                        <div title="Byford Shirts collections">Shirts</div>
+                        <div title="Byford Shorts collections">Shorts</div>
+                        <div title="Byford Shoes collections">Shoes</div>
+                    </div>
+                </div>
+                <div class="brandimg" title="Honey">
+                    <div>
+                        <div title="Honey Tees & Tops collections">Tees & Tops</div>
+                        <div title="Honey Dress collections"> Dress</div>
+                        <div title="Honey Trousers & Leggings collections">Trousers & Leggings</div>
+                        <div title="Honey  Shirt & Blouses collections"> Shirt & Blouses</div>
+                    </div>
+                </div>
+                <div class="brandimg" title="Pantaloons junior">
+                    <div>
+                        <div title="Pantaloons junior Top & T-shirts collections">Top & T-shirts</div>
+                        <div title="Pantaloons junior Shirts collections">Shirts</div>
+                        <div title="Pantaloons junior Bottomwear collections">Bottomwear</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="eighthBox">
-            <div class="text"> <span class="color">CATEGORIES  </span> IN FOCUS </div>
-             <div class="focusBox">
-                    <div title="Bedsheets pantaloons">
-                            <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/bedsheets.jpg?w=247.5&auto=format" class="focusImgBox" />
-                            <div>Bed Sheets</div>
-                    </div>
-                    <div title="Cushion Cover pantaloons">
-                            <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/cushion%20cover.jpg?w=247.5&auto=format" class="focusImgBox" />
-                                <div>Cushion Cover</div>
-                     </div>
-                    <div  title="Towels pantaloons">
-                            <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/towel.jpg?w=247.5&auto=format" class="focusImgBox" />
-                            <div>Towels</div>
-                    </div>
-                    <div title="Home Decore pantaloons">
-                            <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/home%20decor.jpg?w=247.5&auto=format" class="focusImgBox" />
-                            <div>Home Decore</div>
-                    </div>
-                    <div title="Hand bags pantaloons">
-                            <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/bags.jpg?w=247.5&auto=format" class="focusImgBox" />
-                            <div>Hand bags</div>
-                    </div>
-                    <div title="Shoes pantaloons">
-                            <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/shoes.jpg?w=247.5&auto=format" class="focusImgBox" />
-                            <div>Shoes</div>
-                    </div>
-                    <div title="Kids shoes pantaloons">
-                            <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/kids%20shoes.jpg?w=247.5&auto=format" class="focusImgBox" />
-                            <div>Kids shoes</div>
-                    </div>
-                    <div title="Face Mask pantaloons">
-                            <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/masks.jpg?w=247.5&auto=format" class="focusImgBox" />
-                            <div>Face Mask</div>
-                    </div>
-             </div>
+            <div class="text"> <span class="color">CATEGORIES </span> IN FOCUS </div>
+            <div class="focusBox">
+                <div title="Bedsheets pantaloons">
+                    <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/bedsheets.jpg?w=247.5&auto=format"
+                        class="focusImgBox" />
+                    <div>Bed Sheets</div>
+                </div>
+                <div title="Cushion Cover pantaloons">
+                    <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/cushion%20cover.jpg?w=247.5&auto=format"
+                        class="focusImgBox" />
+                    <div>Cushion Cover</div>
+                </div>
+                <div title="Towels pantaloons">
+                    <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/towel.jpg?w=247.5&auto=format"
+                        class="focusImgBox" />
+                    <div>Towels</div>
+                </div>
+                <div title="Home Decore pantaloons">
+                    <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/home%20decor.jpg?w=247.5&auto=format"
+                        class="focusImgBox" />
+                    <div>Home Decore</div>
+                </div>
+                <div title="Hand bags pantaloons">
+                    <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/bags.jpg?w=247.5&auto=format"
+                        class="focusImgBox" />
+                    <div>Hand bags</div>
+                </div>
+                <div title="Shoes pantaloons">
+                    <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/shoes.jpg?w=247.5&auto=format"
+                        class="focusImgBox" />
+                    <div>Shoes</div>
+                </div>
+                <div title="Kids shoes pantaloons">
+                    <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/kids%20shoes.jpg?w=247.5&auto=format"
+                        class="focusImgBox" />
+                    <div>Kids shoes</div>
+                </div>
+                <div title="Face Mask pantaloons">
+                    <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/masks.jpg?w=247.5&auto=format"
+                        class="focusImgBox" />
+                    <div>Face Mask</div>
+                </div>
+            </div>
         </div>
 
         <div class="ninthBox" title="greencard pantaloons">
-                <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/Greencard_banner.png?w=1920&auto=format" class="lastImg" />
+            <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/Greencard_banner.png?w=1920&auto=format"
+                class="lastImg" />
         </div>
+
+        <div class="emailBox">
+            <div class="emailText">
+                <div>GETS <span class="fontWeight">LATEST OFFERS </span> AND <span class="fontWeight">DEALS</span> </div>
+                <div>RIGHT IN YOUR <span class="fontWeight">INBOX.</span></div>
+            </div>
+        
+            <div class="enterEmailBox">
+                <div>
+                    <input type="text" class="input" placeholder="Enter your email address" />
+                </div>
+                <div>
+                    →
+                </div>
+            </div>
+        
+        </div>
+        
+        <div class="otherDetails">
+            <div class="otherfirstBox">
+                <div>
+                    <img src="https://www.ethnicmusical.com/wp-content/uploads/2019/12/easy-returns-logo-1536x1536.png"
+                        class="img1">
+                    <div>EASY RETURNS </div>
+                </div>
+                <div>
+                    <img src="https://icon-library.com/images/contact-us-icon/contact-us-icon-16.jpg" class="img2">
+                    <div>CUSTOMER SUPPORT </div>
+                </div>
+                <div>
+                    <img src="https://pngimg.com/uploads/free_shipping/free_shipping_PNG2.png" class="img1">
+                    <div>FREE SHIPPING </div>
+                </div>
+                <div>
+                    <img src="https://cdn1.iconfinder.com/data/icons/marketplace-and-shipping/64/COD_cash_on_delivery_shipping_payment_delivery-512.png"
+                        class="img1">
+                    <div>CASH ON DELIVERY AVAILABLE </div>
+                </div>
+                <div>
+                    <img src="https://www.freeiconspng.com/thumbs/payment-icon/cash-payment-icon-5.png" class="img2">
+                    <div>SECURE PAYMENT</div>
+                </div>
+                <div>
+                    <img src="https://www.primeai3.in/PICS/waiting001.gif" class="img3">
+                    <div>FREE ALTERATION </div>
+                </div>
+                <div>
+                    <div class="returnPolicyBox">
+                        RETURN & REFUND POLICY
+                    </div>
+        
+                </div>
+                <div>
+                    <img src="https://assets.abfrlcdn.com/img/app/others/birlalogo.jpg" class="img2">
+                </div>
+        
+            </div>
+        
+            <div class="otherSecondBox">
+        
+                <div class="oSB1">
+                    <div>
+                        <div class="headingText">MY ACCOUNT</div>
+                        <div>MY ORDERS</div>
+                        <div>RETURNS / REFUNDS</div>
+                        <div>MY ADDRESSES</div>
+                        <div>MY PERSONAL INFO</div>
+                        <div>CHANGE PASSWORD</div>
+                    </div>
+                    <div>
+                        <div class="headingText">ABOUT US</div>
+                        <div>OFFICIAL BRAND STORE</div>
+                        <div>FAQS</div>
+                        <div>PAYMENT OPTIONS</div>
+                        <div>ABOUT US</div>
+                        <div>INVESTOR RELATIONS</div>
+                    </div>
+                    <div>
+                        <div class="headingText">POLICIES</div>
+                        <div>RETURNS & EXCHANGE POLICY</div>
+                        <div>SHIPPING POLICY</div>
+                        <div>TERMS & CONDITIONS OF USE</div>
+                        <div>PROMOTIONAL T & C</div>
+                        <div>PRIVACY POLICY</div>
+                    </div>
+                    <div>
+                        <div class="headingText">CONTACT US</div>
+                        <div>STORE LOCATOR</div>
+                        <div>CUSTOMER SUPPORT</div>
+        
+                    </div>
+                </div>
+                <div class="oSB2">
+                    <div>
+                        <div class="headingText1">MEN</div>
+                        <div>SHIRTS</div>
+                        <div>T-SHIRTS</div>
+                        <div>JACKETS</div>
+                        <div>ACTIVEWEAR</div>
+                        <div>TROUSERS</div>
+                    </div>
+                    <div>
+                        <div class="headingText1">WOMEN</div>
+                        <div>TEES & TOPS</div>
+                        <div>DRESSES</div>
+                        <div>SHIRTS AND BLOUSES</div>
+                        <div>KURTAS & KURTIS</div>
+                        <div>JEANS & JEGGINGS</div>
+                    </div>
+                    <div>
+                        <div class="headingText1">KIDS</div>
+                        <div>TEES & TOPS</div>
+                        <div>BOTTOMS & LEGGINGS</div>
+                        <div>SHORTS & BERMUDAS</div>
+        
+                    </div>
+                </div>
+        
+            </div>
+        
+        
+        
+        </div>
+        
+    
+    
+    
     
     </div>
 </div>
+</div>
+</div>
 </body>
+
 </html>
 
+
+    
+
 <script>
+
     let database = [
     {
         brand: "H&M",
@@ -6130,6 +6459,9 @@
         discount: "35%"
     }
 ];
+    
+    localStorage.setItem("database", JSON.stringify(database));
+
     function toHomepage() {
         window.location.href="homePage.html";
     }
@@ -6153,6 +6485,7 @@
             }
         });
         localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        window.location = 'pro1.html';
     }
 
 
@@ -6174,6 +6507,7 @@
             }
         });
         localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        window.location = 'pro1.html';
     }
 
 
@@ -6195,6 +6529,7 @@
             }
         });
         localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        window.location = 'pro1.html';
     }
 
 
@@ -6216,6 +6551,7 @@
             }
         });
         localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        window.location = 'pro1.html';
     }
 
     
@@ -6287,6 +6623,7 @@
                 productPage = database;
             }
             localStorage.setItem("categoryPage", JSON.stringify(productPage));
+            window.location = 'pro1.html';
         }
 
 
@@ -6354,6 +6691,7 @@
                 }
             });
             localStorage.setItem("categoryPage", JSON.stringify(productPage));
+            window.location = 'pro1.html';
         }
 
 
@@ -6370,6 +6708,7 @@
                 }
             });
             localStorage.setItem("categoryPage", JSON.stringify(productPage));
+            window.location = 'pro1.html';
         }
 
 
@@ -6386,6 +6725,7 @@
                 }
             });
             localStorage.setItem("categoryPage", JSON.stringify(productPage));
+            window.location = 'pro1.html';
         }
         
 
@@ -6402,6 +6742,7 @@
                 }
             });
             localStorage.setItem("categoryPage", JSON.stringify(productPage));
+            window.location = 'pro1.html';
         }
         
 
@@ -6418,6 +6759,7 @@
                 }
             });
             localStorage.setItem("categoryPage", JSON.stringify(productPage));
+            window.location = 'pro1.html';
         }
         
 
@@ -6434,6 +6776,7 @@
                 }
             });
             localStorage.setItem("categoryPage", JSON.stringify(productPage));
+            window.location = 'pro1.html';
         }
         
 
@@ -6450,6 +6793,7 @@
                 }
             });
             localStorage.setItem("categoryPage", JSON.stringify(productPage));
+            window.location = 'pro1.html';
         }
 
 
@@ -6466,6 +6810,7 @@
                 }
             });
             localStorage.setItem("categoryPage", JSON.stringify(productPage));
+            window.location = 'pro1.html';
         }
 
 
@@ -6482,6 +6827,7 @@
                 }
             });
             localStorage.setItem("categoryPage", JSON.stringify(productPage));
+            window.location = 'pro1.html';
         }
 
 
@@ -6497,6 +6843,7 @@
                 }
             });
             localStorage.setItem("categoryPage", JSON.stringify(productPage));
+            window.location = 'pro1.html';
         }
         
 
@@ -6513,6 +6860,111 @@
                 }
             });
             localStorage.setItem("categoryPage", JSON.stringify(productPage));
+            window.location = 'pro1.html';
         }
         
+
+    if (localStorage.getItem('database') === null){
+        localStorage.setItem('database', JSON.stringify(database));
+    }
+
+
+    function filterdata(value){
+
+        if (localStorage.getItem('categoryPage') === null){
+            localStorage.setItem('categoryPage', JSON.stringify([]));
+        }
+
+        var filtered_data = [];
+
+        if (value == '50%'){
+            filtered_data = database.filter(el => {
+                return el.discount == '35%' || el.discount == '50%';
+            });
+
+            localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
+
+        } else if (value == '45%'){
+            filtered_data = database.filter(el => {
+                return el.discount <= '45%';
+            });
+
+            localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
+
+        } else if (value == '35%'){      
+            filtered_data = database.filter(el => {
+                return el.discount == '35%';
+            });
+
+            localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
+
+        } else if (value == '999' || value == 'u999'){
+            filtered_data = database.filter(el => {
+                return el.price <= '999';
+            });
+
+            localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
+
+        } else if(value == 'u399'){
+            filtered_data = database.filter(el => {
+                return el.price <= '399';
+            });
+
+            localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
+
+        } else if(value == 'u699'){
+            filtered_data = database.filter(el => {
+                return el.price <= '699';
+            });
+
+            localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
+
+        } else if(value == 'dresses' || value == 'ethnic_vibes'){
+            filtered_data = database.filter(el => {
+                return (el.gender == 'women' || (el.gender == 'girls')) && (el.type == 'kurti' || el.type == 'kurta' || el.type == 'saree');
+            });
+
+            localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
+
+        } else if(value == 'soft_snuggles'){
+            filtered_data = database.filter(el => {
+                return (el.gender == 'women' || el.gender == 'girls') && (el.type == 'skirt' || el.type == 'top');
+            });
+
+            localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
+
+        } else if(value == 'easy_tees'){
+            filtered_data = database.filter(el => {
+                return (el.gender == 'men' || el.gender == 'boys') && el.type == 't-shirt';
+            });
+
+            localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
+
+        } else if(value == 'sunny_days'){
+            filtered_data = database.filter(el => {
+                return el.gender == 'kids';
+            });
+
+            localStorage.setItem('categoryPage', JSON.stringify(filtered_data));
+
+        }
+
+        console.log(filtered_data);
+        window.location = 'pro1.html';
+    };
+
+    let toCart = document.getElementById("toCart");
+        toCart.addEventListener("click", toCartPage);
+
+        function toCartPage() {
+            window.location.href = "Cart.html";
+        }
+
+    let brandsTop = document.getElementById("brandsTop");
+        brandsTop.addEventListener("click", toBrands);
+
+        function toBrands() {
+            window.location.href = "brands.html";
+        }
+
 </script>
