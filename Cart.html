@@ -747,6 +747,7 @@ function addFunc(input) {
     let new_price = input.quantity * input.price;
     orderVal = orderVal - old_price + new_price;
     discountVal = discountVal - old_disc + new_disc;
+    localStorage.setItem("cartProducts", JSON.stringify(database));
     saved();
     discTot();
     orderTot();
@@ -763,6 +764,7 @@ function subFunc(input) {
     let new_price = input.quantity * input.price;
     orderVal = orderVal - old_price + new_price;
     discountVal = discountVal - old_disc + new_disc;
+    localStorage.setItem("cartProducts", JSON.stringify(database));
     saved();
     discTot();
     orderTot();
@@ -774,6 +776,7 @@ function subFunc(input) {
 function remProd(input) {
     var ind = database.indexOf(input);
     database.splice(ind, 1);
+    localStorage.setItem("cartProducts", JSON.stringify(database));
     showCart(database);
     orderTot();
     discTot();
