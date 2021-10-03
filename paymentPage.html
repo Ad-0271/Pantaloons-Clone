@@ -239,7 +239,7 @@
             <div id="cardNo">
                 <div class="cardText">Card Number</div>
                 <div>
-                    <input type="number"  id="inputCardNo" />
+                    <input type="number" onkeydown="limitc(this);" onkeyup="limitc(this);"  id="inputCardNo" />
                 </div>
             </div>
 
@@ -260,12 +260,13 @@
                     <div class="dates">
                         <div class="mm">
                             <div>mm</div>
-                            <input type="number"  max="2"  id="inputmm" />
+                            <input type="number" onkeydown="limit(this);" onkeyup="limit(this);" id="inputmm">
+
 
                         </div>
                         <div class="yy">
                             <div>yy</div>
-                            <input type="number" id="inputyy" />
+                            <input type="number" onkeydown="limit(this);" onkeyup="limit(this);" id="inputyy" />
 
                         </div>
 
@@ -273,7 +274,7 @@
                     <div class="cvv">
                         <div class="cvvText">cvv</div>
                         <div>
-                            <input type="password" id="cvvNu" />
+                            <input type="password"  onkeydown="limit1(this);" onkeyup="limit1(this);"  id="cvvNu" />
                         </div>
 
                     </div>
@@ -304,3 +305,34 @@
         </div>
 </body>
 </html>
+<script>
+
+        function limit(element) {
+                var max_chars = 2;
+
+                if (element.value.length > max_chars) {
+                    element.value = element.value.substr(0, max_chars);
+                }
+                console.log(element);
+            }
+
+            function limit1(element) {
+                    var max_chars = 3;
+
+                    if (element.value.length > max_chars) {
+                        element.value = element.value.substr(0, max_chars);
+                    }
+                    console.log(element);
+                }
+
+            function limitc(element) {
+                    var max_chars = 16;
+
+                    if (element.value.length > max_chars) {
+                        element.value = element.value.substr(0, max_chars);
+                    }
+                    console.log(element);
+                }
+
+    
+</script>

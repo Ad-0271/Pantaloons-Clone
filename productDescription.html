@@ -456,6 +456,15 @@
            
         }
 
+        .prodDescBox>div:nth-child(1)>div:hover{
+            cursor: pointer;
+            color: #81d0c4;
+            border-bottom: 4px solid #81d0c4;
+            
+        }
+
+        
+
         .descNames{
                 display: grid;
                 grid-template-columns: auto auto auto;
@@ -471,8 +480,10 @@
         .fullDesc{
             width: 90%;
             margin: 15px 0 0 30px;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 400;
+            line-height: 18px;
+            font-weight: 300;
         }
 
         .similarProd{
@@ -680,10 +691,9 @@
             text-align: center;
         }
 
-        .prodDescBox>div>div:hover{
-            cursor: pointer;
-            color: #81d0c4;
-        }
+        
+
+        
        
         
        .wrapper {
@@ -1193,7 +1203,8 @@
         parentdiv.style.gap = '10%';
 
         let colour = document.createElement('div');
-        colour.innerHTML = 'Color : ' + data[0].features.colour;
+        colour.innerHTML = ' Color : ' + data[0].features.colour;
+        
 
         let fit = document.createElement('div');
         fit.innerHTML = 'Fit : ' + data[0].features.fit;
@@ -1223,18 +1234,22 @@
         parentdiv.style.gridTemplateColumns = '30% 70%';
 
         let productType = document.createElement('div');
+        productType.style.fontWeight = "500"
         productType.innerHTML = 'Product Type:';
 
         let productTypeVal = document.createElement('div');
+        
         productTypeVal.innerHTML = data[0].type;
 
         let mrp = document.createElement('div');
         mrp.innerHTML = 'MRP:';
+        mrp.style.fontWeight = "500"
 
         let mrpVal = document.createElement('div');
         mrpVal.innerHTML = '₹ ' + data[0].price + ' (inclucsive of all taxes and excluding of discounts)';
 
         let netqty = document.createElement('div');
+        netqty.style.fontWeight = "500"
         netqty.innerHTML = 'Net Quantity:';
 
         let netqtyVal = document.createElement('div');
@@ -1242,18 +1257,21 @@
 
         let manufacturer = document.createElement('div');
         manufacturer.innerHTML = 'Manufactured By:'
+        manufacturer.style.fontWeight = "500"
 
         let manufacturerVal = document.createElement('div');
         manufacturerVal.innerHTML = data[0].seller_name;
 
         let marketby = document.createElement('div');
         marketby.innerHTML = 'Marketed By:';
+        marketby.style.fontWeight = "500"
 
         let marketbyVal = document.createElement('div');
         marketbyVal.innerHTML = data[0].details.marketed_by;
 
         let customercare = document.createElement('div');
         customercare.innerHTML = 'Customer care details:';
+        customercare.style.fontWeight = "500"
 
         let customercareVal = document.createElement('div');
 
