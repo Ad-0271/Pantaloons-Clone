@@ -31,7 +31,7 @@
         width: 350px;
         background:#F8F4F4;
         border-radius: 7px;
-        border: none;
+        border: 1px solid rgba(128, 128, 128, 0.281);
     }
 .signbtn{
     color:white;
@@ -120,11 +120,20 @@ hr{
 
             let arr = JSON.parse(localStorage.getItem('pantaloon_users'));
 
-            arr.push(data);
+            let flag = true;
 
-            localStorage.setItem('pantaloon_users', JSON.stringify(arr));
+            arr.forEach(function(users) {
+                if(email == users.email) {
+                    flag = false;
+                    alert("Email already exists");
+                }
+            });
 
-            window.location.href = "signin.html"
+            if(flag) {
+                arr.push(data);
+                localStorage.setItem('pantaloon_users', JSON.stringify(arr));
+                window.location.href = "signin.html"
+            }
         };
     };
 </script>

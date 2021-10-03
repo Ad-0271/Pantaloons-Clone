@@ -727,7 +727,7 @@
                                         <div class="results"></div>
                                     </div>
                                       <div class="addToCart">
-                                            <img src="https://icon-library.com/images/add-user-icon/add-user-icon-23.jpg" class="img" />
+                                            <img src="https://icon-library.com/images/add-user-icon/add-user-icon-23.jpg" class="img" id="toLogin"/>
                                       </div>  
                                       <div class="addToCart"> 
                                             <img src="https://pantaloons.imgix.net/img/app/others/heart_bordered.png" class="img" />
@@ -1437,4 +1437,10 @@
             window.location.href = "brands.html";
         }
 
+        let toLogin = document.getElementById("toLogin");
+        toLogin.addEventListener("click", toLoginPage);
+
+        function toLoginPage() {
+            window.location.href= "signin.html";
+        }
 </script>
