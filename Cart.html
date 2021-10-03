@@ -415,6 +415,11 @@
             margin-top: 10px;
             margin-bottom: -3px;
         }
+        @media (min-height: 760px) {
+        #outerPart {
+            height: 800px;
+            }
+        }
       
 </style>
 </head>
@@ -851,9 +856,9 @@ function promoCodeApply() {
     // discAmt = Number(discAmt.split("").splice(0, discAmt.length - 3).join(""));
     if(ainput == "masai10" && counter < 1) {
         counter++;
-        discountVal += orderAmt * 0.10;
+        discountVal += Math.round(orderAmt * 0.10);
         document.getElementById("discAmt").textContent = discountVal + ".00";
-        orderVal = (orderAmt * 0.90);
+        orderVal = Math.round(orderAmt * 0.90);
         document.getElementById("orderAmt").textContent = orderVal + ".00";
         cartTot();
         saved();
@@ -863,5 +868,8 @@ function promoCodeApply() {
         alert("Invalid Promocode");
     }
 }
+function toHomepage() {
+        window.location.href="homePage.html";
+    }
 
 </script>
