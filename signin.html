@@ -50,7 +50,18 @@ hr{
     margin-left: 0px;
     width: 408px;
 }
-
+.white{
+    color: white;
+}
+.alaccount{
+    color: white;
+}
+a {
+    color: white;
+}
+#btn {
+    cursor: pointer;
+}
 
 
 </style>
@@ -60,11 +71,12 @@ hr{
         <form onsubmit="checker(event)" action="">
         <h1>Login</h1>
         <hr>
-                <input type="Email" class="inputbox" id="email" placeholder="Please Enter Your Email">
-                <input type= "password" class="inputbox" id="pass" placeholder="Please Enter Your Password">
+                <input type="Email" class="inputbox" id="email" placeholder="Please Enter Your Email" required>
+                <input type= "password" class="inputbox" id="pass" placeholder="Please Enter Your Password" required>
                 <button type="submit" class="signbtn" id="btn">Login</button>
             </form>
     </div>  
+    <p class="alaccount">Don't have an account?&nbsp;<a href="signup.html"  ><span class="white">Sign Up here.</span></a></p>
 </body>
 
 <script>
