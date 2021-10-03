@@ -687,7 +687,9 @@
             height: 800px;
             }
         }
-
+        #email_btn3 {
+            cursor: pointer;
+        }
         </style>
     </head>
     <body>
@@ -774,9 +776,9 @@
             
                 <div class="enterEmailBox">
                     <div>
-                        <input type="text" class="input" placeholder="Enter your email address" />
+                        <input type="text" class="input" placeholder="Enter your email address" id="email_enter"/>
                     </div>
-                    <div>
+                    <div id="email_btn3">
                         →
                     </div>
                 </div>
@@ -1442,5 +1444,17 @@
 
         function toLoginPage() {
             window.location.href= "signin.html";
+        }
+
+        let email_btn3 = document.getElementById("email_btn3");
+        email_btn3.addEventListener("click", mailChecker);
+
+        function mailChecker() {
+            let email_enter = document.getElementById("email_enter").value;
+            if(email_enter.length > 0) {
+                alert("Confirmation Mail Sent");
+            } else {
+                alert("Please Enter Valid Email Address");
+            }
         }
 </script>
