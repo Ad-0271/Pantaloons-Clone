@@ -1122,7 +1122,7 @@
 
 <script>
 
-    let data = JSON.parse(localStorage.getItem('categoryPage'));
+    let data = JSON.parse(localStorage.getItem('productDescription'));
 
     let display = document.getElementById('displayimg');
     display.style.backgroundImage = 'url("'+ data[0].image1 + '")';
@@ -1231,7 +1231,7 @@
 
             let cart = JSON.parse(localStorage.getItem('cartProducts'));
 
-            cart[cart.length - 1].quantity++;
+            cart[cart.length - 1].quantity += data[0].quantity;
 
             localStorage.setItem('cartProducts', JSON.stringify(cart));
 
