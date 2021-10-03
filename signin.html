@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignIn</title>
+    <title>Sign In</title>
 </head>
 <style>
     body
@@ -77,7 +77,7 @@ hr{
         let flag = true;
 
         users.forEach(function(el) {
-            if(el.email == email && el.pass == pass) {
+            if(el.email == email && el.password == pass) {
                 flag = false;
                 window.location.href = "homePage.html"
             }

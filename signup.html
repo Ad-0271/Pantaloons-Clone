@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign Up</title>
 </head>
 <style>
     body
@@ -81,7 +81,7 @@ hr{
                 <button type="submit" class="signbtn" ">Sign Up</button>
             </form>
     </div>
-            <p class="alaccount">Already have an account?&nbsp;<a href="#"  ><span class="white">Login here.</span></a></p>
+            <p class="alaccount">Already have an account?&nbsp;<a href="#"  ><span class="white" onclick="toSignin()">Login here.</span></a></p>
 </body>
 </html>
 
@@ -107,7 +107,7 @@ hr{
         let confirmpassword = myform.confirmpassword.value;
 
         if (password != confirmpassword){
-            alert('Password and confirmpassword should be same');
+            alert('Password and Confirm Password should be same');
         } else {
 
             let data = {
@@ -123,7 +123,13 @@ hr{
             arr.push(data);
 
             localStorage.setItem('pantaloon_users', JSON.stringify(arr));
+
+            window.location.href = "signin.html"
         };
     };
+
+    function toSignin() {
+        window.location.href = "signin.html"
+    }
     
 </script>
