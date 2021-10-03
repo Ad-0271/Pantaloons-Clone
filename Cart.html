@@ -554,7 +554,7 @@
                         </div>
                         <div class="ship">
                             <div>Shipping</div>
-                            <div class="texta"><b>₹</b> 100.00</div>
+                            <div class="texta"><b>₹</b> <span id="shippinG">100</span>.00</div>
                         </div>
 
                         <div class="ot">
@@ -595,6 +595,8 @@ let parent = document.getElementById("iteamsList");
 var orderVal = 0;
 
 var discountVal = 0;
+
+let shippinG = document.getElementById("shippinG");
 
 function showCart(database) {
     parent.innerHTML = null;
@@ -787,6 +789,7 @@ function remProd(input) {
     discTot();
     saved();
     counter = 0;
+    shippinGCheck()
     cartTot();
 }
 
@@ -797,6 +800,7 @@ function addToWish(input) {
     discTot();
     saved();
     counter = 0;
+    shippinGCheck()
     cartTot();
 }
 
@@ -806,7 +810,7 @@ var toPayment = document.getElementById("toPayment");
 toPayment.addEventListener("click", paymentPage);
 
 function paymentPage() {
-    window.location.href = "payment.html";
+    window.location.href = "paymentPage.html";
 }
 
 var toHome = document.getElementById("toHome");
@@ -835,9 +839,11 @@ function saved() {
 }
 saved();
 
+shippinGCheck();
+
 function cartTot() {
     let cartVal = document.getElementById("cartVal");
-    cartVal.textContent = orderVal - discountVal + 100 + ".00";
+    cartVal.textContent = orderVal - discountVal + Number(shippinG.textContent) + ".00";
 }
 cartTot();
 
@@ -872,4 +878,11 @@ function toHomepage() {
         window.location.href="homePage.html";
     }
 
+    function shippinGCheck() {
+        if(database.length <= 0) {
+            shippinG.textContent = 0;
+        } else {
+            shippinG.textContent = 100;
+        }
+    }
 </script>

@@ -334,5 +334,23 @@
                     console.log(element);
                 }
 
+                let payNow = document.getElementById("payNow");
+                payNow.addEventListener("click", toSuccess);
+
+                function toSuccess() {
+                    let ccVal = document.getElementById("inputCardNo").value;
+                    let mmVal = document.getElementById("inputmm").value;
+                    let yyVal = document.getElementById("inputyy").value;
+                    let cvvVal = document.getElementById("cvvNu").value;
+                    let billAddVal = document.getElementById("billAdd").value;
+                    let shipAddVal = document.getElementById("ShipAdd").value;
+
+                    if(ccVal.length == 16 && mmVal.length == 2 && yyVal.length == 2 && cvvVal.length == 3 && billAddVal.length != 0 && shipAddVal.length != 0) {
+                        alert("Payment Recieved");
+                        window.location.href = "success.html";
+                    } else {
+                        alert("Please Enter Valid Details");
+                    }
+                }
     
 </script>
