@@ -201,7 +201,6 @@
         font-size: 11px;
         font-weight: 350;
         letter-spacing: 2px;
-
        }
        .color{
            color:#00aa8a ;
@@ -477,7 +476,7 @@
         }
 
         .similarProd{
-            width: 65%;
+            width: 100%;
             margin: 80px auto auto auto;
             height: 500px;
 
@@ -502,67 +501,17 @@
         .types{
             display: grid;
             grid-template-columns: auto auto auto auto auto auto;
-            width: 80%;
-            height: 30px;
+            width: 100%;
+            height: 400px;
             margin: 20px auto auto auto ;
             grid-gap: 10px;
             
         }
-        .types>div{
-            border-radius: 20px;
-            display: grid;
-            grid-template-columns: 20% 80%;
-            border: 1px solid black;
-
-        }
-        .types>div>div:nth-child(1){
-            border-radius: 50%;
-            border: 1px solid black;
-            /* margin: 7px 0 0 11px; */
-            height: 11px;
-            font-size: 10px;
-            text-align: center;
-            font-weight: 500;
-            /* padding: -1px 0 0 0; */
-            color: #ccc;
-        }
-        .types>div:nth-child(1)>div:nth-child(1){
-            margin: 8px 5px 0 12px;
-            
-        }
-        .types>div:nth-child(2)>div:nth-child(1){
-            margin: 8px 5px 0 11px;
-            
-        }
-        .types>div:nth-child(3)>div:nth-child(1){
-            margin: 8px 5px 0 3px;
-            
-        }
-        .types>div:nth-child(4)>div:nth-child(1){
-            margin: 8px 5px 0 -3px;
-            
-        }
-        .types>div:nth-child(5)>div:nth-child(1){
-            margin: 8px 5px 0 1px;
-            
-        }
-        .types>div:nth-child(6)>div:nth-child(1){
-            margin: 8px 5px 0 16px;
-            
-        }
-        .types>div>div:nth-child(2){
-            border-radius: 20px;
-            
-            padding: 2px 0 0 0;
-            box-sizing: border-box;
-            color: #ccc;
-           
-        }
-
+       
         /* div{
             border: 0.5px solid black;
         } */
-        
+         
 
 
             /* fromHereSameInAllPages */
@@ -731,9 +680,11 @@
             text-align: center;
         }
 
-       /* div{
-           border: 1px solid black;
-       } */
+        .prodDescBox>div>div:hover{
+            cursor: pointer;
+            color: #81d0c4;
+        }
+       
         
        .wrapper {
             margin: auto;
@@ -835,7 +786,9 @@
         <div id="descBox">
 
             <div class="location">
-                <div> <span id="brand">PANTALOONS</span> &nbsp; <span class="text">/</span>  </div>
+
+                <div> <span id="brand">PANTALOONS</span> &nbsp; <span class="text">/</span></div>
+
                 <div> <span id="gender">MEN</span>  &nbsp; <span class="text">/</span></div>
                 <div> <span id="type">FORMAL SHIRTS</span>  &nbsp;<span class="text">/</span></div>
                 <div class="color" id="productname">PETER ENGLAND BLUE CHECK SHIRT</div>
@@ -963,37 +916,14 @@
         </div>
 
 
-        <div class="similarProd">
+        <!-- <div class="similarProd">
             <div class="similarText">Similar <span class="colour">Products</span> </div>
             <div class="similarText1">What similarities are you interested in?</div>
 
             <div class="types">
-                <div>
-                    <div>✔</div>
-                    <div>Neck style</div>
-                </div>
-                <div>
-                    <div>✔</div>
-                    <div>Print type</div>
-                </div>
-                <div>
-                    <div>✔</div>
-                    <div>Color</div>
-                </div>
-                <div>
-                    <div>✔</div>
-                    <div>Fit</div>
-                </div>
-                <div>
-                    <div>✔</div>
-                    <div>Type</div>
-                </div>
-                <div>
-                    <div>✔</div>
-                    <div>Sleeve length</div>
-                </div>
+                <img src="https://drive.google.com/file/d/1tjwPlpFagGAQJy6-rL6GvOHi0oHxR9uy/view" class="img" />
             </div>
-        </div>
+        </div> -->
 
         <!-- /* fromHereSameInAllPages */ -->
         <div class="emailBox">
@@ -1326,12 +1256,18 @@
         customercare.innerHTML = 'Customer care details:';
 
         let customercareVal = document.createElement('div');
-        customercareVal.innerHTML = data[0].details.company_address + ' ' + data[0].details.email;
+
+        customercareVal.innerHTML = data[0].details.company_address;
+        let email_div = document.createElement('div');
+        email_div.innerHTML = data[0].details.email;
+        customercareVal.appendChild(email_div);
+
 
         parentdiv.append(productType, productTypeVal, mrp, mrpVal, netqty, netqtyVal, manufacturer, manufacturerVal, marketby, marketbyVal, customercare, customercareVal);
 
         otherDetails.appendChild(parentdiv);
     }
+
 
 
     // My FirstPart Codes : -------->
@@ -1507,4 +1443,5 @@
         function toCartPage() {
             window.location.href = "Cart.html";
         }
+
 </script>
