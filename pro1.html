@@ -728,7 +728,7 @@
                                       <div class="addToCart"> 
                                             <img src="https://pantaloons.imgix.net/img/app/others/heart_bordered.png" class="img" />
                                       </div>
-                                    <div class="addToCart">
+                                    <div class="addToCart" id="toCart">
                                             <img src="https://thumbs.dreamstime.com/b/add-to-cart-icon-adding-shopping-cart-well-organized-fully-editable-add-to-cart-icon-adding-shopping-cart-any-use-like-167547952.jpg" class="img" />
                                     </div>
                                 </div>
@@ -1418,5 +1418,10 @@
         window.location = 'productDescription.html';
     };
 
+    let toCart = document.getElementById("toCart");
+        toCart.addEventListener("click", toCartPage);
 
+        function toCartPage() {
+            window.location.href = "Cart.html";
+        }
 </script>

@@ -735,6 +735,40 @@
            border: 1px solid black;
        } */
         
+       .wrapper {
+            margin: auto;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.15);
+            position: relative;
+        }
+
+        .results ul {
+             width: 200px;
+             margin-top: 12px;
+        }
+        .results ul li {
+            box-sizing: border-box;
+            background-color: white;
+            list-style: none;
+            border-radius: 3px;
+            display: none;
+            transition: all .5s linear;
+            padding: 10px;
+            width: 100%;
+            margin-left: -70px;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .show .results ul li {
+            opacity: 1;
+            display: block;
+        }
+
+        .results ul li:hover {
+            background: #ececec
+        }
 
     </style>
 </head>
@@ -782,7 +816,7 @@
                     <div class="addToCart">
                         <img src="https://pantaloons.imgix.net/img/app/others/heart_bordered.png" class="img" />
                     </div>
-                    <div class="addToCart">
+                    <div class="addToCart" id="toCart">
                         <img src="https://thumbs.dreamstime.com/b/add-to-cart-icon-adding-shopping-cart-well-organized-fully-editable-add-to-cart-icon-adding-shopping-cart-any-use-like-167547952.jpg"
                             class="img" />
                     </div>
@@ -1088,7 +1122,7 @@
 
 <script>
 
-    let data = JSON.parse(localStorage.getItem('productDescription'));
+    let data = JSON.parse(localStorage.getItem('categoryPage'));
 
     let display = document.getElementById('displayimg');
     display.style.backgroundImage = 'url("'+ data[0].image1 + '")';
@@ -1292,4 +1326,179 @@
 
         otherDetails.appendChild(parentdiv);
     }
+
+
+    // My FirstPart Codes : -------->
+
+    function toHomepage() {
+        window.location.href="homePage.html";
+    }
+
+    let database = JSON.parse(localStorage.getItem("database"));
+
+
+    let womenTop = document.getElementById("womenTop");
+    womenTop.addEventListener("click", toProductpage);
+
+    if(localStorage.getItem("categoryPage") == null) {
+        localStorage.setItem("categoryPage", JSON.stringify([]));
+    }
+
+    function toProductpage() {
+        let productPage = JSON.parse(localStorage.getItem("categoryPage"));
+        productPage = [];
+
+        database.forEach(function(el) {
+            if(el.gender == "women") {
+                productPage.push(el);
+            }
+        });
+        localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        window.location = 'pro1.html';
+    }
+
+
+
+    let menTop = document.getElementById("menTop");
+    menTop.addEventListener("click", toPP);
+
+    if(localStorage.getItem("categoryPage") == null) {
+        localStorage.setItem("categoryPage", JSON.stringify([]));
+    }
+
+    function toPP() {
+        let productPage = JSON.parse(localStorage.getItem("categoryPage"));
+        productPage = [];
+
+        database.forEach(function(el) {
+            if(el.gender == "men") {
+                productPage.push(el);
+            }
+        });
+        localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        window.location = 'pro1.html';
+    }
+
+
+
+    let kidTop = document.getElementById("kidsTop");
+    kidTop.addEventListener("click", toproPage);
+
+    if(localStorage.getItem("categoryPage") == null) {
+        localStorage.setItem("categoryPage", JSON.stringify([]));
+    }
+
+    function toproPage() {
+        let productPage = JSON.parse(localStorage.getItem("categoryPage"));
+        productPage = [];
+
+        database.forEach(function(el) {
+            if(el.gender == "kids") {
+                productPage.push(el);
+            }
+        });
+        localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        window.location = 'pro1.html';
+    }
+
+
+
+    let saleRed = document.getElementById("red");
+    saleRed.addEventListener("click", toprPage);
+
+    if(localStorage.getItem("categoryPage") == null) {
+        localStorage.setItem("categoryPage", JSON.stringify([]));
+    }
+
+    function toprPage() {
+        let productPage = JSON.parse(localStorage.getItem("categoryPage"));
+        productPage = [];
+
+        database.forEach(function(el) {
+            if(el.discount == "45%" || el.discount == "50%") {
+                productPage.push(el);
+            }
+        });
+        localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        window.location = 'pro1.html';
+    }
+
+    
+        let searchable = ["men", "women", "kids", "boys", "girls", "shirt", "jeans", "chinos", "t-shirt", "sandals", "shoes", "boots", "crocs", "skirt", "top", "suit", "blazer", "trackpant", "trousers", "kurti", "saree", "boxers", "kurta", "checkers", "plain", "print", "stripes", "solid", "slim-fit", "narrow-bottom", "ankle-length", "turtle-neck", "skinny-fit", "regular-fit", "cotton", "polyester", "knit-wear", "Viscose Polyester", "linen", "georgette", "Mid-rise", "high-rise", "low-rise", "machine-wash", "hand-wash", "Levis", "Peter England", "Roadster", "Biba", "Zara", "Richard Parker", "Maanywar", "Wrogn", "One", "Fcuk", "H&M", "Mast & Harbor", "Denim", "Raymond", "Allen Solly", "Van Heusen"];
+
+
+        const searchInput = document.getElementById("search");
+        const searchWrapper = document.querySelector(".wrapper");
+        const resultsWrapper = document.querySelector(".results");
+
+        searchInput.addEventListener("keyup", searchInp);
+
+        function searchInp() {
+            let results = [];
+            let input = searchInput.value;
+
+            if(input.length) {
+                results = searchable.filter((item) => {
+                    return item.toLowerCase().includes(input.toLowerCase());
+                });
+            }
+            renderResults(results.slice(0, 5));
+        }
+
+
+        function renderResults(results) {
+            if(!results.length) {
+                return searchWrapper.classList.remove('show');
+            }
+
+            const content = results.map((item) => {
+                return `<li>${item}</li>`
+            }).join("");
+
+            searchWrapper.classList.add('show');
+            resultsWrapper.innerHTML = `<ul>${content}</ul>`;
+            var list1 = (document.getElementsByTagName("li"));
+
+            for(var i = 0; i < list1.length; i++) {
+                let element = list1[i].innerText;
+                list1[i].onclick = function() {
+                    inputVal(element);
+                }
+            }
+
+        }
+
+        function inputVal(el) {
+            searchInput.value = el;
+            return searchWrapper.classList.remove('show');
+        }
+
+        var submitSearch = document.getElementById("searchImg");
+        submitSearch.addEventListener("click", submitVal);
+
+        function submitVal() {
+            let value = searchInput.value;
+            let productPage = JSON.parse(localStorage.getItem("categoryPage"));
+            productPage = [];
+            let flag = true;
+
+            database.forEach(function(el) {
+                if(el.type == value || el.brand == value || el.features.pattern == value || el.features.fit == value || el.features.material == value || el.features.waist_rise == value || el.features.wash_instruction == value || el.gender == value) {
+                    flag = false;
+                    productPage.push(el);
+                }
+            });
+            if(flag) {
+                productPage = database;
+            }
+            localStorage.setItem("categoryPage", JSON.stringify(productPage));
+            window.location = 'pro1.html';
+        }
+
+        let toCart = document.getElementById("toCart");
+        toCart.addEventListener("click", toCartPage);
+
+        function toCartPage() {
+            window.location.href = "Cart.html";
+        }
 </script>
