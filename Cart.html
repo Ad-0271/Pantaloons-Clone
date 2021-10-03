@@ -306,6 +306,18 @@
             box-sizing: border-box;
             padding: 12px 0 0 13px
         }
+        .ainput{
+            border: 1px solid white;
+            outline: none;
+            height: 20px;
+            font-size: 17px;
+            margin: -2px 0 0 0;
+            
+        }
+
+        /* div{
+            border: 1px solid black;
+        } */
         
         .abox{
             border: 1px solid #00a88e;
@@ -375,9 +387,7 @@
             font-size: 17px;
             font-weight: 400;
         }
-        /* div{
-            border: 1px solid black;
-        } */
+        
 
         .save{
             width: 100%;
@@ -397,6 +407,7 @@
             margin-top: 10px;
             margin-bottom: -3px;
         }
+        
 </style>
 </head>
 <body>
@@ -505,7 +516,7 @@
                                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAF3WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKFdpbmRvd3MpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAxOC0wMi0xOVQxNTozNTo0MSswNTozMCIgeG1wOk1vZGlmeURhdGU9IjIwMTgtMDItMjJUMTI6NTk6NTYrMDU6MzAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMTgtMDItMjJUMTI6NTk6NTYrMDU6MzAiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiBwaG90b3Nob3A6SUNDUHJvZmlsZT0ic1JHQiBJRUM2MTk2Ni0yLjEiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6YjQ3MTdjM2ItM2UyNC04NTQ0LTk4YWQtNjYxYzliMjZiODM1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOmQzZGM5YzlkLWI3N2UtOGI0ZS04NWNjLTgwZjM0Y2IzNjQzMSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmQzZGM5YzlkLWI3N2UtOGI0ZS04NWNjLTgwZjM0Y2IzNjQzMSI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZDNkYzljOWQtYjc3ZS04YjRlLTg1Y2MtODBmMzRjYjM2NDMxIiBzdEV2dDp3aGVuPSIyMDE4LTAyLTE5VDE1OjM1OjQxKzA1OjMwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpiNDcxN2MzYi0zZTI0LTg1NDQtOThhZC02NjFjOWIyNmI4MzUiIHN0RXZ0OndoZW49IjIwMTgtMDItMjJUMTI6NTk6NTYrMDU6MzAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+l+VixwAAA21JREFUSImV1luMXWMUB/BfZwyibQzKZOjQ0NI0KSWHUJcHTRqCilLEJYSou5BUIxW3ivCiNOo2hFL10OlLK+oSI0pM+lCpRDIqGioTYVRHIyYlR2c8rLU7u9ucdLqSnbPPt/e3/mv913+tb48bHh5Wq9UcgM3Gs+jC8xgay6amA0FAC67E2ViA48a6sRFQK64W0beU1i/AjXl/ZoIVPprQhjnoqDo8qAHQOejM+0+xEr24GxOxDJfh1ny+JwO7BCfiBTwyFqDy8wsxD/04FqvwIHbiKazBMTgE/+BwHFZ11Ii6Hfn7sajJqvy/Ba8IAazBJkHzZtyJpfnen6NFPJr1YzCj7M6rkObm/N2GezODTfn+dYLG3/cH1IpJOAvj0Z5ru0oAZSuvNWFK3k8SwvgrA9gLNBPzcRpOwYxc/wX1UQAKq2VAPZkJNOMBob4+/ISPCqD5eDzve/EatgpFDWZWcwWlG0vZL8GHCTSE93AUpmMazs93pxdA63CRaMTvsFjQRfTRLXgUP2ChoOwu7MYHpay/wUOZ5Vy8JZS4tlDd16IRu3ExnhMcF3aEKPrk3FjDuXgx6SlbXfTaPRnkUnSVxbANdwgp34zteFJw34k/8p3f8EwG1eP/1orlgrZlonnrVdVNw/GiLt8aGZh9YoDC/aLgqzOzo/F57pHZzMr/GzPDfebUPLwu+F2ItZUghkQN54imbce7QgDXl3z9LOhqFgKbWQa6FC+LEbNYiKO5AtQmKP1SUNaeQdUxoRLQ24L2U/EE2grqFiXIHtyQlGzHZ6Lr4SrRiMWw/AQP40hB45Coz1QhnL8xgCuwtQB6R9ShQyjrjIz2C6FCYv4tF70kM1lZyqRJTPDHMmgJtgOTC6DOvFoz6vOwouRkUAzR/VktQTYIVQ7ktaWqul15TcC/YjoMivpcjl+xvuK4GEF1I8N4hWjkvdZoes/KZ/1CjYtEX/TiRzEBpooeOQnvCxoLAU2sOmx0Hp2Qm64REp4tzqIZQnlwk5B7Pde6cG2jBBplNAWHigbuxtPiRF0tVLRT9E4vbsPJuA+nC+UePFag74Wsu9J5obSXBP9LRG1uF/XpyYAWiMn9VdXhuAbfdeOFIAbsex514E0xHTaIqd5fet6S2exW+d5rlNGgkdlVtj68IZr01QqIDGrUg/I/QDjazBUV+8IAAAAASUVORK5CYII=" class="cimg" />
                             </div>
                             <div class="atext"> 
-                                Apply Coupon
+                               <input type="text" class="ainput" placeholder="Apply Coupon" />
                             </div>
                         </div>
                     </div>
