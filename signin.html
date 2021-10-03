@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>signin</title>
+    <title>Sign In</title>
 </head>
 <style>
     body
@@ -31,7 +31,7 @@
         width: 350px;
         background:#F8F4F4;
         border-radius: 7px;
-        border: none;
+        border: 1px solid rgba(128, 128, 128, 0.281);
     }
 .signbtn{
     color:white;
@@ -50,20 +50,53 @@ hr{
     margin-left: 0px;
     width: 408px;
 }
-
+.white{
+    color: white;
+}
+.alaccount{
+    color: white;
+}
+a {
+    color: white;
+}
+#btn {
+    cursor: pointer;
+}
 
 
 </style>
 
 <body>
     <div class="sign-up">
-        <form>
+        <form onsubmit="checker(event)" action="">
         <h1>Login</h1>
         <hr>
-                <input type="Email" class="inputbox" placeholder="Email">
-                <input type= "password" class="inputbox" placeholder="Password">
-                <button type="button" class="signbtn">Login</button>
+                <input type="Email" class="inputbox" id="email" placeholder="Please Enter Your Email" required>
+                <input type= "password" class="inputbox" id="pass" placeholder="Please Enter Your Password" required>
+                <button type="submit" class="signbtn" id="btn">Login</button>
             </form>
     </div>  
+    <p class="alaccount">Don't have an account?&nbsp;<a href="signup.html"  ><span class="white">Sign Up here.</span></a></p>
 </body>
+
+<script>
+    function checker(el) {
+        el.preventDefault();
+
+        let email = document.getElementById("email").value;
+        let pass = document.getElementById("pass").value;
+        let users = JSON.parse(localStorage.getItem("pantaloon_users"));
+        let flag = true;
+
+        users.forEach(function(el) {
+            if(el.email == email && el.password == pass) {
+                flag = false;
+                window.location.href = "homePage.html"
+            }
+        });
+        if(flag) {
+            alert("Please Enter Valid Credentials");
+        }
+    }
+</script>
 </html>

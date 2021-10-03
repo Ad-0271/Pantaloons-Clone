@@ -691,7 +691,9 @@
             text-align: center;
         }
 
-
+        #email_btn3 {
+            cursor: pointer;
+        }
 
     </style>
 </head>
@@ -742,7 +744,7 @@
                         <div class="results"></div>
                     </div>
                     <div class="addToCart">
-                        <img src="https://icon-library.com/images/add-user-icon/add-user-icon-23.jpg" class="img" />
+                        <img src="https://icon-library.com/images/add-user-icon/add-user-icon-23.jpg" class="img" id="toLogin"/>
                     </div>
                     <div class="addToCart">
                         <img src="https://pantaloons.imgix.net/img/app/others/heart_bordered.png" class="img" />
@@ -1125,9 +1127,9 @@
         
             <div class="enterEmailBox">
                 <div>
-                    <input type="text" class="input" placeholder="Enter your email address" />
+                    <input type="text" class="input" placeholder="Enter your email address" id="email_enter"/>
                 </div>
-                <div>
+                <div id="email_btn3">
                     →
                 </div>
             </div>
@@ -6965,6 +6967,26 @@
 
         function toBrands() {
             window.location.href = "brands.html";
+        }
+
+        let toLogin = document.getElementById("toLogin");
+        toLogin.addEventListener("click", toLoginPage);
+
+        function toLoginPage() {
+            window.location.href= "signin.html";
+        }
+
+
+        let email_btn3 = document.getElementById("email_btn3");
+        email_btn3.addEventListener("click", mailChecker);
+
+        function mailChecker() {
+            let email_enter = document.getElementById("email_enter").value;
+            if(email_enter.length > 0) {
+                alert("Confirmation Mail Sent");
+            } else {
+                alert("Please Enter Valid Email Address");
+            }
         }
 
 </script>
