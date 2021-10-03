@@ -1067,10 +1067,20 @@
         
         data.forEach(function(el) {
             let div = document.createElement("div");
+            div.setAttribute('id', el.price + ' ' + el.discount);
+            div.onclick = () => {
+                productdescription(el.brand, el.gender, el.price, el.discount, el.type);
+            };
 
             let img = document.createElement("img");
-
             img.src = el.image1;
+            img.setAttribute('id', el.brand + el.gender + el.price + el.discount + el.type);
+            img.onmouseenter = () => {
+                imgslide(el.image1, el.image2, el.image3, el.image4, el.brand, el.gender, el.price, el.discount, el.type);
+            };
+            img.onmouseleave = () => {
+                clearInterval(interval);
+            };
 
             let brand_name = document.createElement("h3");
 
@@ -1112,7 +1122,7 @@
         });
 
         document.getElementById("total_items").textContent = data.length;
-    }
+    };
     showProducts(database);
 
     function sortFunction(value) {
@@ -1362,7 +1372,7 @@
     function filterdata(parameter){
         new_var = parameter;
         arr5 = data.filter(checker);
-    }
+    };
         
     function checker(el) {
         if(el.type == new_var || el.gender == new_var || el.brand == new_var || el.features.pattern == new_var || el.features.fit == new_var || el.features.wash_instruction == new_var || el.features.material == new_var || el.features.waist_rise == new_var){
@@ -1371,5 +1381,42 @@
             } else {
                 return false;
             }
-        }        
+    };
+
+    let interval;
+    function imgslide(img1, img2, img3, img4, brand, gender, price, discount, type){
+
+        let images = [img1, img2, img3, img4];
+
+        let imgdiv = document.getElementById(brand + gender + price + discount + type)
+
+        let count = 0;
+
+        interval = setInterval(function() {
+            // console.log(images[count]);
+            imgdiv.src = null;
+            imgdiv.src = images[count];
+            count++;
+            if (count == images.length){
+                count = 0;
+            }          
+        }, 1000);
+    };
+    
+    function productdescription(brand, gender, price, discount, type){
+        
+        let productdetails = data.filter(el => {
+            return el.brand == brand && el.gender == gender && el.price == price && el.discount == discount && el.type == type;
+        });
+
+        if (localStorage.getItem('productDescription') == null){
+            localStorage.setItem('productDescription', JSON.stringify());
+        };
+
+        localStorage.setItem('productDescription', JSON.stringify(productdetails));
+
+        window.location = 'productDescription.html';
+    };
+
+
 </script>

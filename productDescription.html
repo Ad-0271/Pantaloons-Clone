@@ -200,7 +200,7 @@
        .location>div{
         font-size: 11px;
         font-weight: 350;
-        
+        letter-spacing: 3px;
 
        }
        .color{
@@ -250,7 +250,7 @@
         .bigImg{
             margin: 10px 0 0 0;
             background-image: url("https://pantaloons.imgix.net/img/app/product/5/594403-5494031.jpg");
-            background-size: contain;
+            background-size: 100% 100%;
             cursor: pointer;
         }
         
@@ -743,29 +743,29 @@
         <div id="descBox">
 
             <div class="location">
-                <div> PANTALOONS &nbsp; <span class="text">/</span>  </div>
-                <div>MEN &nbsp; <span class="text">/</span></div>
-                <div>FORMAL SHIRTS &nbsp;<span class="text">/</span></div>
-                <div class="color">PETER ENGLAND BLUE CHECK SHIRT</div>
+                <div> <span id="brand">PANTALOONS</span> &nbsp; <span class="text">/</span></div>
+                <div> <span id="gender">MEN</span>  &nbsp; <span class="text">/</span></div>
+                <div> <span id="type">FORMAL SHIRTS</span>  &nbsp;<span class="text">/</span></div>
+                <div class="color" id="productname">PETER ENGLAND BLUE CHECK SHIRT</div>
             </div>
 
             <div class="mainBox">
                 <div class="smallImg">
                         <div >   
-                            <img src="https://pantaloons.imgix.net/img/app/product/5/594403-5494031.jpg?w=83&auto=format" class="mainImg"/>
+                            <img src="https://pantaloons.imgix.net/img/app/product/5/594403-5494031.jpg?w=83&auto=format" class="mainImg" id="img1"/>
                         </div>
                         <div>
-                            <img src="https://pantaloons.imgix.net/img/app/product/5/594403-5494031.jpg?w=83&auto=format" class="mainImg" />
+                            <img src="https://pantaloons.imgix.net/img/app/product/5/594403-5494031.jpg?w=83&auto=format" class="mainImg" id="img2"/>
                         </div>
                         <div>
-                            <img src="https://pantaloons.imgix.net/img/app/product/5/594403-5494031.jpg?w=83&auto=format" class="mainImg" />
+                            <img src="https://pantaloons.imgix.net/img/app/product/5/594403-5494031.jpg?w=83&auto=format" class="mainImg" id="img3"/>
                         </div>
                         <div>
-                            <img src="https://pantaloons.imgix.net/img/app/product/5/594403-5494031.jpg?w=83&auto=format" class="mainImg" />
+                            <img src="https://pantaloons.imgix.net/img/app/product/5/594403-5494031.jpg?w=83&auto=format" class="mainImg" id="img4"/>
                         </div>
                         
                 </div>
-                <div class="bigImg">
+                <div class="bigImg" id="displayimg">
                         <div class="heartImg">
                             <img src="https://thumbs.dreamstime.com/b/wish-list-icon-heart-plus-wishlist-add-to-favorites-vector-illustration-isolated-white-background-editable-stroke-225978932.jpg" class="mainImg circle" >
                         </div>
@@ -773,20 +773,20 @@
                 <div class="textDesc">
 
                     <div class="names">
-                        <div class="brandName">
+                        <div class="brandName" id="displayName">
                             Peter England
                         </div>
-                        <div class="shirtName">
+                        <div class="shirtName" id="productName">
                             Blue Check Shirt
                         </div>
                     </div>
 
-                    <div class="price">
+                    <div class="price" id="price">
                             ₹999
                     </div>
                     
                     <div class="discount">
-                        <span class="gray"> ₹<s>1,499&nbsp;</s></span> <span class="color1"> &nbsp;33% off</span>
+                        <span class="gray"> ₹<s id="actualprice">1,499&nbsp;</s></span> <span class="color1" id="discount"> &nbsp;33% off</span>
                     </div>
 
                     <div class="priceDesc">
@@ -794,7 +794,7 @@
                             MRP &nbsp; (Inclusive of all taxes)
                         </div>
                         <div class="priceDesc2">
-                                More By <span class="color2"><b>Peter England</b></span>
+                                More By <span class="color2"><b id="brandName">Peter England</b></span>
                         </div>
                     </div>
 
@@ -826,14 +826,14 @@
                                     Qty
                                 </div>
                                 <div class="iteams">
-                                    <div>-</div>
-                                    <div>1</div>
-                                    <div>+</div>
+                                    <div onclick="changeqty('-')">-</div>
+                                    <div id="qty">1</div>
+                                    <div onclick="changeqty('+')">+</div>
 
                                 </div>
                         </div>
                         <div>
-                            <div class="addToCartBox">
+                            <div class="addToCartBox" onclick="addtocart()">
                                 ADD TO CART
                             </div>
 
@@ -859,11 +859,11 @@
 
         <div class="prodDescBox">
             <div class="descNames">
-                <div>DESCRIPTION</div>
-                <div>FEATURE</div>
-                <div>DETAILS</div>
+                <div onclick="description()">DESCRIPTION</div>
+                <div onclick="feature()">FEATURE</div>
+                <div onclick="details()">DETAILS</div>
             </div>
-            <div class="fullDesc">
+            <div class="fullDesc" id="otherdetails">
                 A well fitted formal shirt always makes you look sharp. Make an impression in this blue print Super Slim Fit shirt from
                 Peter England.
             </div>
@@ -1010,3 +1010,214 @@
 </div>
 </body>
 </html>
+
+<script>
+
+    let data = JSON.parse(localStorage.getItem('productDescription'));
+
+    let display = document.getElementById('displayimg');
+    display.style.backgroundImage = 'url("'+ data[0].image1 + '")';
+
+    let img1 = document.getElementById('img1');
+    img1.src = data[0].image1;
+    img1.onclick = () => {
+        showbigimg(img1.src);
+    };
+
+    let img2 = document.getElementById('img2');
+    img2.src = data[0].image2;
+    img2.onclick = () => {
+        showbigimg(img2.src);
+    };
+
+    let img3 = document.getElementById('img3');
+    img3.src = data[0].image3;
+    img3.onclick = () => {
+        showbigimg(img3.src);
+    };
+
+    let img4 = document.getElementById('img4');
+    img4.src = data[0].image4;
+    img4.onclick = () => {
+        showbigimg(img4.src);
+    };
+
+    function showbigimg(url){
+        
+        display.style.backgroundImage = 'url("'+ url + '")';
+        console.log(display.style.backgroundImage);
+    };
+
+    let brand = document.getElementById('brand');
+    brand.innerHTML = data[0].brand.toUpperCase();
+
+    let gender = document.getElementById('gender');
+    gender.innerHTML = data[0].gender.toUpperCase();
+
+    let type = document.getElementById('type');
+    type.innerHTML = data[0].type.toUpperCase();
+
+    let productname = document.getElementById('productname');
+    productname.innerHTML = data[0].features.colour.toUpperCase() + ' ' + data[0].features.pattern.toUpperCase() + ' ' + data[0].type.toUpperCase();
+
+    let displayName = document.getElementById('displayName');
+    displayName.innerHTML = data[0].brand.toUpperCase();
+
+    let productName = document.getElementById('productName');
+    productName.innerHTML = data[0].features.colour.toUpperCase() + ' ' + data[0].features.pattern.toUpperCase() + ' ' + data[0].type.toUpperCase();
+
+    let price = document.getElementById('price');
+
+    let disc = Number(data[0].discount.split("").splice(0, 2).join(""));
+    disc = Math.round((data[0].price) * (disc / 100));
+    let discPrice = data[0].price - disc;
+
+    price.innerHTML = '₹'+ discPrice;
+
+    let actualprice = document.getElementById('actualprice');
+    actualprice.innerHTML = data[0].price;
+
+    let discount = document.getElementById('discount');
+    discount.innerHTML = data[0].discount;
+
+    let brandName = document.getElementById('brandName');
+    brandName.innerHTML = data[0].brand;
+
+    let qty = document.getElementById('qty');
+    let quantity = 1;
+    qty.innerHTML = quantity;
+
+    data[0].quantity = quantity;
+    
+    function changeqty(sign){
+        
+        if (sign == '-' && quantity > 1){
+            quantity--;
+        } else if(sign == '+'){
+            quantity++;
+        }
+
+        qty.innerHTML = quantity;
+        data[0].quantity = quantity;
+    }
+
+    if (localStorage.getItem('cartProducts') == null){
+        localStorage.setItem('cartProducts', JSON.stringify([]));
+    };
+
+    let clickcount = 1;
+
+    function addtocart(){
+
+        if (clickcount == 1){
+
+            let cart = JSON.parse(localStorage.getItem('cartProducts'));
+
+            cart.push(data[0]);
+
+            localStorage.setItem('cartProducts', JSON.stringify(cart));
+
+            clickcount++;
+        } else {
+
+            let cart = JSON.parse(localStorage.getItem('cartProducts'));
+
+            cart[cart.length - 1].quantity += data[0].quantity;
+
+            localStorage.setItem('cartProducts', JSON.stringify(cart));
+
+            clickcount++;
+        }; 
+    }
+
+    let otherDetails = document.getElementById('otherdetails');
+    otherDetails.innerHTML = data[0].description;
+    
+    function description(){
+        otherDetails.innerHTML = null;
+        otherDetails.innerHTML = data[0].description;
+    };
+
+    function feature(){
+
+        otherDetails.innerHTML = null;
+
+        let parentdiv = document.createElement('div');
+        parentdiv.style.display = 'grid';
+        parentdiv.style.gridTemplateColumns = '25% 25% 25%';
+        parentdiv.style.gap = '10%';
+
+        let colour = document.createElement('div');
+        colour.innerHTML = 'Color : ' + data[0].features.colour;
+
+        let fit = document.createElement('div');
+        fit.innerHTML = 'Fit : ' + data[0].features.fit;
+
+        let material = document.createElement('div');
+        material.innerHTML = 'Material : ' + data[0].features.material;
+
+        let pattern = document.createElement('div');
+        pattern.innerHTML = 'Pattern : ' + data[0].features.pattern;
+
+        let waist_rise = document.createElement('div');
+        waist_rise.innerHTML = 'Waist Rise : ' + data[0].features.waist_rise;
+
+        let wash_instruction = document.createElement('div');
+        wash_instruction.innerHTML = 'Wash Instruction' + data[0].features.wash_instruction;
+
+        parentdiv.append(colour, fit, material, pattern, waist_rise, wash_instruction);
+        otherDetails.appendChild(parentdiv);
+    }
+
+    function details(){
+
+        otherDetails.innerHTML = null;
+        
+        let parentdiv = document.createElement('div');
+        parentdiv.style.display = 'grid';
+        parentdiv.style.gridTemplateColumns = '30% 70%';
+
+        let productType = document.createElement('div');
+        productType.innerHTML = 'Product Type:';
+
+        let productTypeVal = document.createElement('div');
+        productTypeVal.innerHTML = data[0].type;
+
+        let mrp = document.createElement('div');
+        mrp.innerHTML = 'MRP:';
+
+        let mrpVal = document.createElement('div');
+        mrpVal.innerHTML = '₹ ' + data[0].price + ' (inclucsive of all taxes and excluding of discounts)';
+
+        let netqty = document.createElement('div');
+        netqty.innerHTML = 'Net Quantity:';
+
+        let netqtyVal = document.createElement('div');
+        netqtyVal.innerHTML = '1N';
+
+        let manufacturer = document.createElement('div');
+        manufacturer.innerHTML = 'Manufactured By:'
+
+        let manufacturerVal = document.createElement('div');
+        manufacturerVal.innerHTML = data[0].seller_name;
+
+        let marketby = document.createElement('div');
+        marketby.innerHTML = 'Marketed By:';
+
+        let marketbyVal = document.createElement('div');
+        marketbyVal.innerHTML = data[0].details.marketed_by;
+
+        let customercare = document.createElement('div');
+        customercare.innerHTML = 'Customer care details:';
+
+        let customercareVal = document.createElement('div');
+        customercareVal.innerHTML = data[0].details.company_address;
+        let email_div = document.createElement('div');
+        email_div.innerHTML = data[0].details.email;
+        customercareVal.appendChild(email_div);
+
+        parentdiv.append(productType, productTypeVal, mrp, mrpVal, netqty, netqtyVal, manufacturer, manufacturerVal, marketby, marketbyVal, customercare, customercareVal);
+
+        otherDetails.appendChild(parentdiv);
+    }
+</script>
