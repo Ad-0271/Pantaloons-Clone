@@ -415,6 +415,11 @@
             margin-top: 10px;
             margin-bottom: -3px;
         }
+        @media (min-height: 760px) {
+        #outerPart {
+            height: 800px;
+            }
+        }
       
 </style>
 </head>
@@ -549,7 +554,7 @@
                         </div>
                         <div class="ship">
                             <div>Shipping</div>
-                            <div class="texta"><b>₹</b> 100.00</div>
+                            <div class="texta"><b>₹</b> <span id="shippinG">100</span>.00</div>
                         </div>
 
                         <div class="ot">
@@ -590,6 +595,8 @@ let parent = document.getElementById("iteamsList");
 var orderVal = 0;
 
 var discountVal = 0;
+
+let shippinG = document.getElementById("shippinG");
 
 function showCart(database) {
     parent.innerHTML = null;
@@ -782,6 +789,7 @@ function remProd(input) {
     discTot();
     saved();
     counter = 0;
+    shippinGCheck()
     cartTot();
 }
 
@@ -792,6 +800,7 @@ function addToWish(input) {
     discTot();
     saved();
     counter = 0;
+    shippinGCheck()
     cartTot();
 }
 
@@ -801,7 +810,7 @@ var toPayment = document.getElementById("toPayment");
 toPayment.addEventListener("click", paymentPage);
 
 function paymentPage() {
-    window.location.href = "payment.html";
+    window.location.href = "paymentPage.html";
 }
 
 var toHome = document.getElementById("toHome");
@@ -830,9 +839,11 @@ function saved() {
 }
 saved();
 
+shippinGCheck();
+
 function cartTot() {
     let cartVal = document.getElementById("cartVal");
-    cartVal.textContent = orderVal - discountVal + 100 + ".00";
+    cartVal.textContent = orderVal - discountVal + Number(shippinG.textContent) + ".00";
 }
 cartTot();
 
@@ -851,9 +862,9 @@ function promoCodeApply() {
     // discAmt = Number(discAmt.split("").splice(0, discAmt.length - 3).join(""));
     if(ainput == "masai10" && counter < 1) {
         counter++;
-        discountVal += orderAmt * 0.10;
+        discountVal += Math.round(orderAmt * 0.10);
         document.getElementById("discAmt").textContent = discountVal + ".00";
-        orderVal = (orderAmt * 0.90);
+        orderVal = Math.round(orderAmt * 0.90);
         document.getElementById("orderAmt").textContent = orderVal + ".00";
         cartTot();
         saved();
@@ -863,5 +874,15 @@ function promoCodeApply() {
         alert("Invalid Promocode");
     }
 }
+function toHomepage() {
+        window.location.href="homePage.html";
+    }
 
+    function shippinGCheck() {
+        if(database.length <= 0) {
+            shippinG.textContent = 0;
+        } else {
+            shippinG.textContent = 100;
+        }
+    }
 </script>

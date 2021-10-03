@@ -6459,7 +6459,9 @@
         discount: "35%"
     }
 ];
-  
+    
+    localStorage.setItem("database", JSON.stringify(database));
+
     function toHomepage() {
         window.location.href="homePage.html";
     }
@@ -6956,6 +6958,13 @@
 
         function toCartPage() {
             window.location.href = "Cart.html";
+        }
+
+    let brandsTop = document.getElementById("brandsTop");
+        brandsTop.addEventListener("click", toBrands);
+
+        function toBrands() {
+            window.location.href = "brands.html";
         }
 
 </script>

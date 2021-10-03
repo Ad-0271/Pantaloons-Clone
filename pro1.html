@@ -145,8 +145,6 @@
         #secondPart {
             height: 100%;
             overflow: scroll;
-            margin-top: 30px;
-            
         }
         #secondPart::-webkit-scrollbar{
            display: none;
@@ -683,6 +681,12 @@
         /* #secondPart{
             border: 1px solid black;
         } */
+
+        @media (min-height: 760px) {
+        #outerPart {
+            height: 800px;
+            }
+        }
 
         </style>
     </head>
@@ -1424,6 +1428,13 @@
 
         function toCartPage() {
             window.location.href = "Cart.html";
+        }
+
+    let brandsTop = document.getElementById("brandsTop");
+        brandsTop.addEventListener("click", toBrands);
+
+        function toBrands() {
+            window.location.href = "brands.html";
         }
 
 </script>
