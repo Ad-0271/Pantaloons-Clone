@@ -200,7 +200,7 @@
        .location>div{
         font-size: 11px;
         font-weight: 350;
-        letter-spacing: 3px;
+        
 
        }
        .color{
@@ -829,7 +829,7 @@
         <div id="descBox">
 
             <div class="location">
-                <div> <span id="brand">PANTALOONS</span> &nbsp; <span class="text">/</span></div>
+                <div> <span id="brand">PANTALOONS</span> &nbsp; <span class="text">/</span>  </div>
                 <div> <span id="gender">MEN</span>  &nbsp; <span class="text">/</span></div>
                 <div> <span id="type">FORMAL SHIRTS</span>  &nbsp;<span class="text">/</span></div>
                 <div class="color" id="productname">PETER ENGLAND BLUE CHECK SHIRT</div>
@@ -1231,7 +1231,7 @@
 
             let cart = JSON.parse(localStorage.getItem('cartProducts'));
 
-            cart[cart.length - 1].quantity += data[0].quantity;
+            cart[cart.length - 1].quantity++;
 
             localStorage.setItem('cartProducts', JSON.stringify(cart));
 
@@ -1320,10 +1320,7 @@
         customercare.innerHTML = 'Customer care details:';
 
         let customercareVal = document.createElement('div');
-        customercareVal.innerHTML = data[0].details.company_address;
-        let email_div = document.createElement('div');
-        email_div.innerHTML = data[0].details.email;
-        customercareVal.appendChild(email_div);
+        customercareVal.innerHTML = data[0].details.company_address + ' ' + data[0].details.email;
 
         parentdiv.append(productType, productTypeVal, mrp, mrpVal, netqty, netqtyVal, manufacturer, manufacturerVal, marketby, marketbyVal, customercare, customercareVal);
 
