@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+</head>
+<style>
+    body
+    {
+    font-family: 'Rubik', sans-serif;
+    background-color: #00AA8A;
+    text-align: center;
+    padding-top: 5px;
+    overflow: scroll;
+    }
+.sign-up{
+    width: 400px;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    background: #fff;
+    padding: 20px 20px 20px 20px;
+    margin: 5% auto 0;
+    border-radius: 1px;
+    text-align: left;
+}
+
+    .inputbox{
+        padding:10px;
+        margin:10px 0px;
+        width: 350px;
+        background:#F8F4F4;
+        border-radius: 7px;
+        border: 1px solid rgba(128, 128, 128, 0.281);
+    }
+.signbtn{
+    color:white;
+    background: #00AA8A;
+    border: solid #00AA8A thick;
+    width:100px;
+    height: 30px;
+    margin-top: 10px;
+
+}
+form{
+    margin-left: 10px;
+} 
+hr{
+    padding-left: 0px;
+    margin-left: 0px;
+    width: 408px;
+}
+.white{
+    color: white;
+}
+.alaccount{
+    color: white;
+}
+a {
+    color: white;
+}
+#btn {
+    cursor: pointer;
+}
+
+
+</style>
+
+<body>
+    <div class="sign-up">
+        <form onsubmit="checker(event)" action="">
+        <h1>Login</h1>
+        <hr>
+                <input type="Email" class="inputbox" id="email" placeholder="Please Enter Your Email" required>
+                <input type= "password" class="inputbox" id="pass" placeholder="Please Enter Your Password" required>
+                <button type="submit" class="signbtn" id="btn">Login</button>
+            </form>
+    </div>  
+    <p class="alaccount">Don't have an account?&nbsp;<a href="signup.html"  ><span class="white">Sign Up here.</span></a></p>
+</body>
+
+<script>
+    function checker(el) {
+        el.preventDefault();
+
+        let email = document.getElementById("email").value;
+        let pass = document.getElementById("pass").value;
+        let users = JSON.parse(localStorage.getItem("pantaloon_users"));
+        let flag = true;
+
+        users.forEach(function(el) {
+            if(el.email == email && el.password == pass) {
+                flag = false;
+                window.location.href = "homePage.html"
+            }
+        });
+        if(flag) {
+            alert("Please Enter Valid Credentials");
+        }
+    }
+</script>
+</html>
