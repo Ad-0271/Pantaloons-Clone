@@ -1320,6 +1320,29 @@
     }
 
 
+    let size_div = document.getElementsByClassName('size_div');
+
+    for (let i = 0; i < size_div.length; i++){
+        size_div[i].addEventListener('click', () => {changebg(size_div[i])});
+    }
+
+    let size_count = 0;
+
+    function changebg(div){
+        console.log(div, 'Hey');
+        if (div.style.backgroundColor === 'rgb(129, 208, 196)'){
+                div.style.backgroundColor = 'white';
+                div.style.color = '#81d0c4';
+                size_count--;
+                
+                console.log(div);
+            } else {
+                div.style.backgroundColor = '#81d0c4';
+                div.style.color = 'white';
+                size_count++;
+            }
+    }
+
 
     // My FirstPart Codes : -------->
 
