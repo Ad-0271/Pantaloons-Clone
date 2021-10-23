@@ -349,9 +349,18 @@
                     if(ccVal.length == 16 && mmVal.length == 2 && yyVal.length == 2 && cvvVal.length == 3 && cvvVal >= 000 && cvvVal <= 999 && billAddVal.length != 0 && shipAddVal.length != 0) {
                         alert("Payment Recieved");
                         window.location.href = "success.html";
-                    } else {
-                        alert("Please Enter Valid Details");
-                    }
+                    } else if(ccVal.length != 16) {
+                        alert("Please Enter Valid Card Number");
+                    } else if(mmVal.length != 2) {
+                        alert("Please Enter Valid Expiry Month");
+                    } else if(yyVal.length != 2) {
+                        alert("Please Enter Valid Expiry Year");
+                    } else if(cvvVal.length != 3 || cvvVal < 000 || cvvVal > 999) {
+                        alert("Please Enter Valid CVV Number");
+                    } else if(billAddVal.length == 0) {
+                        alert("Please Enter Valid Billing Address");
+                    } else if(shipAddVal.length == 0) {
+                        alert("Please Enter Valid Shipping Address");
+                    } 
                 }
-    
 </script>
