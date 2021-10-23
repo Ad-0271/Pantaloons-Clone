@@ -5,6 +5,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
     rel="stylesheet">
         <title>Product Page</title>
+        <link rel="shortcut icon" type="image/jpg" href="https://www.pantaloons.com/favicon.ico">
         <style>
             #firstPart {
                 margin: -10px -10px 0px -10px;
@@ -144,9 +145,15 @@
 
         #secondPart {
             height: 100%;
+            overflow: scroll;
+        }
+        #secondPart::-webkit-scrollbar{
+           display: none;
+        }
+        #proMenu{
             display: flex;
-            margin-top: 30px;
             gap: 20px;
+            height: 705px;
         }
 
         #menuPart {
@@ -672,7 +679,18 @@
             color: #5e5e5e;
             text-align: center;
         }
+        /* #secondPart{
+            border: 1px solid black;
+        } */
 
+        @media (min-height: 760px) {
+        #outerPart {
+            height: 800px;
+            }
+        }
+        #email_btn3 {
+            cursor: pointer;
+        }
         </style>
     </head>
     <body>
@@ -712,12 +730,12 @@
                                         <div class="results"></div>
                                     </div>
                                       <div class="addToCart">
-                                            <img src="https://icon-library.com/images/add-user-icon/add-user-icon-23.jpg" class="img" />
+                                            <img src="https://icon-library.com/images/add-user-icon/add-user-icon-23.jpg" class="img" id="toLogin"/>
                                       </div>  
                                       <div class="addToCart"> 
                                             <img src="https://pantaloons.imgix.net/img/app/others/heart_bordered.png" class="img" />
                                       </div>
-                                    <div class="addToCart">
+                                    <div class="addToCart" id="toCart">
                                             <img src="https://thumbs.dreamstime.com/b/add-to-cart-icon-adding-shopping-cart-well-organized-fully-editable-add-to-cart-icon-adding-shopping-cart-any-use-like-167547952.jpg" class="img" />
                                     </div>
                                 </div>
@@ -726,6 +744,7 @@
             </div>
             
             <div id="secondPart">
+                <div id="proMenu">
                 <div id="menuPart" class="custscroll">
                     <div id="menu_Bar">
                     </div>
@@ -748,8 +767,8 @@
                     <div id="hr_div"></div>
                     <div id="products"></div>
                 </div>
-
-            </div>
+                </div>
+            
             <div class="emailBox">
                 <div class="emailText">
                     <div>GETS <span class="fontWeight">LATEST OFFERS </span> AND <span class="fontWeight">DEALS</span> </div>
@@ -758,9 +777,9 @@
             
                 <div class="enterEmailBox">
                     <div>
-                        <input type="text" class="input" placeholder="Enter your email address" />
+                        <input type="text" class="input" placeholder="Enter your email address" id="email_enter"/>
                     </div>
-                    <div>
+                    <div id="email_btn3">
                         →
                     </div>
                 </div>
@@ -868,7 +887,7 @@
                     </div>
             
                 </div>
-            
+            </div>
             
             
             </div>
@@ -1302,7 +1321,7 @@
                         if(document.getElementById(key).style.fontWeight < 700){
                             document.getElementById(key).style.fontWeight = '700';
                         } else {
-                            document.getElementById(key).style.fontWeight = '400';
+                            document.getElementById(key).style.fontWeight = '200';
                         }
                         showfiltereddata(key);
                         
@@ -1407,4 +1426,36 @@
     };
 
 
+    let toCart = document.getElementById("toCart");
+        toCart.addEventListener("click", toCartPage);
+
+        function toCartPage() {
+            window.location.href = "Cart.html";
+        }
+
+    let brandsTop = document.getElementById("brandsTop");
+        brandsTop.addEventListener("click", toBrands);
+
+        function toBrands() {
+            window.location.href = "brands.html";
+        }
+
+        let toLogin = document.getElementById("toLogin");
+        toLogin.addEventListener("click", toLoginPage);
+
+        function toLoginPage() {
+            window.location.href= "signin.html";
+        }
+
+        let email_btn3 = document.getElementById("email_btn3");
+        email_btn3.addEventListener("click", mailChecker);
+
+        function mailChecker() {
+            let email_enter = document.getElementById("email_enter").value;
+            if(email_enter.length > 0) {
+                alert("Confirmation Mail Sent");
+            } else {
+                alert("Please Enter Valid Email Address");
+            }
+        }
 </script>

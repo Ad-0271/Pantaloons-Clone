@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Pantaloon Offical Online Store-Lightining Deals Like Never Before</title>
-    
+    <link rel="shortcut icon" type="image/jpg" href="https://www.pantaloons.com/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
@@ -691,7 +691,9 @@
             text-align: center;
         }
 
-
+        #email_btn3 {
+            cursor: pointer;
+        }
 
     </style>
 </head>
@@ -742,12 +744,12 @@
                         <div class="results"></div>
                     </div>
                     <div class="addToCart">
-                        <img src="https://icon-library.com/images/add-user-icon/add-user-icon-23.jpg" class="img" />
+                        <img src="https://icon-library.com/images/add-user-icon/add-user-icon-23.jpg" class="img" id="toLogin"/>
                     </div>
                     <div class="addToCart">
                         <img src="https://pantaloons.imgix.net/img/app/others/heart_bordered.png" class="img" />
                     </div>
-                    <div class="addToCart">
+                    <div class="addToCart" id="toCart">
                         <img src="https://thumbs.dreamstime.com/b/add-to-cart-icon-adding-shopping-cart-well-organized-fully-editable-add-to-cart-icon-adding-shopping-cart-any-use-like-167547952.jpg"
                             class="img" />
                     </div>
@@ -1125,9 +1127,9 @@
         
             <div class="enterEmailBox">
                 <div>
-                    <input type="text" class="input" placeholder="Enter your email address" />
+                    <input type="text" class="input" placeholder="Enter your email address" id="email_enter"/>
                 </div>
-                <div>
+                <div id="email_btn3">
                     →
                 </div>
             </div>
@@ -6459,7 +6461,9 @@
         discount: "35%"
     }
 ];
-  
+    
+    localStorage.setItem("database", JSON.stringify(database));
+
     function toHomepage() {
         window.location.href="homePage.html";
     }
@@ -6950,5 +6954,39 @@
         console.log(filtered_data);
         window.location = 'pro1.html';
     };
+
+    let toCart = document.getElementById("toCart");
+        toCart.addEventListener("click", toCartPage);
+
+        function toCartPage() {
+            window.location.href = "Cart.html";
+        }
+
+    let brandsTop = document.getElementById("brandsTop");
+        brandsTop.addEventListener("click", toBrands);
+
+        function toBrands() {
+            window.location.href = "brands.html";
+        }
+
+        let toLogin = document.getElementById("toLogin");
+        toLogin.addEventListener("click", toLoginPage);
+
+        function toLoginPage() {
+            window.location.href= "signin.html";
+        }
+
+
+        let email_btn3 = document.getElementById("email_btn3");
+        email_btn3.addEventListener("click", mailChecker);
+
+        function mailChecker() {
+            let email_enter = document.getElementById("email_enter").value;
+            if(email_enter.length > 0) {
+                alert("Confirmation Mail Sent");
+            } else {
+                alert("Please Enter Valid Email Address");
+            }
+        }
 
 </script>

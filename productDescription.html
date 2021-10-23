@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product description</title>
-
+    <link rel="shortcut icon" type="image/jpg" href="https://www.pantaloons.com/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
@@ -200,8 +200,7 @@
        .location>div{
         font-size: 11px;
         font-weight: 350;
-        letter-spacing: 3px;
-
+        letter-spacing: 2px;
        }
        .color{
            color:#00aa8a ;
@@ -234,11 +233,11 @@
             /* border: 1px solid black; */
         }
         
-        .smallImg > div {
+        /* .smallImg > div { */
             
             /* margin: 10px 10px 5px 0; */
             /* border: 1px solid black; */
-        }
+        /* } */
 
         .mainImg{
             width: 100%;
@@ -258,7 +257,7 @@
         .heartImg{
             width: 30px;
             height: 30px;
-            margin: 5px 0 0 313px;
+            margin: 5px 0 0 299px;
 
         }
         .circle{
@@ -457,6 +456,15 @@
            
         }
 
+        .prodDescBox>div:nth-child(1)>div:hover{
+            cursor: pointer;
+            color: #81d0c4;
+            border-bottom: 4px solid #81d0c4;
+            
+        }
+
+        
+
         .descNames{
                 display: grid;
                 grid-template-columns: auto auto auto;
@@ -472,12 +480,14 @@
         .fullDesc{
             width: 90%;
             margin: 15px 0 0 30px;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 400;
+            line-height: 18px;
+            font-weight: 300;
         }
 
         .similarProd{
-            width: 65%;
+            width: 100%;
             margin: 80px auto auto auto;
             height: 500px;
 
@@ -502,67 +512,17 @@
         .types{
             display: grid;
             grid-template-columns: auto auto auto auto auto auto;
-            width: 80%;
-            height: 30px;
+            width: 100%;
+            height: 400px;
             margin: 20px auto auto auto ;
             grid-gap: 10px;
             
         }
-        .types>div{
-            border-radius: 20px;
-            display: grid;
-            grid-template-columns: 20% 80%;
-            border: 1px solid black;
-
-        }
-        .types>div>div:nth-child(1){
-            border-radius: 50%;
-            border: 1px solid black;
-            /* margin: 7px 0 0 11px; */
-            height: 11px;
-            font-size: 10px;
-            text-align: center;
-            font-weight: 500;
-            /* padding: -1px 0 0 0; */
-            color: #ccc;
-        }
-        .types>div:nth-child(1)>div:nth-child(1){
-            margin: 8px 5px 0 12px;
-            
-        }
-        .types>div:nth-child(2)>div:nth-child(1){
-            margin: 8px 5px 0 11px;
-            
-        }
-        .types>div:nth-child(3)>div:nth-child(1){
-            margin: 8px 5px 0 3px;
-            
-        }
-        .types>div:nth-child(4)>div:nth-child(1){
-            margin: 8px 5px 0 -3px;
-            
-        }
-        .types>div:nth-child(5)>div:nth-child(1){
-            margin: 8px 5px 0 1px;
-            
-        }
-        .types>div:nth-child(6)>div:nth-child(1){
-            margin: 8px 5px 0 16px;
-            
-        }
-        .types>div>div:nth-child(2){
-            border-radius: 20px;
-            
-            padding: 2px 0 0 0;
-            box-sizing: border-box;
-            color: #ccc;
-           
-        }
-
+       
         /* div{
             border: 0.5px solid black;
         } */
-        
+         
 
 
             /* fromHereSameInAllPages */
@@ -735,11 +695,55 @@
             display: none;
         }
 
-       /* div{
-           border: 1px solid black;
-       } */
         
 
+        
+       
+        
+       .wrapper {
+            margin: auto;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.15);
+            position: relative;
+        }
+
+        .results ul {
+             width: 200px;
+             margin-top: 12px;
+        }
+        .results ul li {
+            box-sizing: border-box;
+            background-color: white;
+            list-style: none;
+            border-radius: 3px;
+            display: none;
+            transition: all .5s linear;
+            padding: 10px;
+            width: 100%;
+            margin-left: -70px;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .show .results ul li {
+            opacity: 1;
+            display: block;
+        }
+
+        .results ul li:hover {
+            background: #ececec
+        }
+
+        @media (min-height: 760px) {
+        #outerPart {
+            height: 800px;
+            }
+        }
+
+        #email_btn3 {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -781,12 +785,12 @@
                         <div class="results"></div>
                     </div>
                     <div class="addToCart">
-                        <img src="https://icon-library.com/images/add-user-icon/add-user-icon-23.jpg" class="img" />
+                        <img src="https://icon-library.com/images/add-user-icon/add-user-icon-23.jpg" class="img" id="toLogin"/>
                     </div>
                     <div class="addToCart">
                         <img src="https://pantaloons.imgix.net/img/app/others/heart_bordered.png" class="img" />
                     </div>
-                    <div class="addToCart">
+                    <div class="addToCart" id="toCart">
                         <img src="https://thumbs.dreamstime.com/b/add-to-cart-icon-adding-shopping-cart-well-organized-fully-editable-add-to-cart-icon-adding-shopping-cart-any-use-like-167547952.jpg"
                             class="img" />
                     </div>
@@ -799,7 +803,9 @@
         <div id="descBox">
 
             <div class="location">
+
                 <div> <span id="brand">PANTALOONS</span> &nbsp; <span class="text">/</span></div>
+
                 <div> <span id="gender">MEN</span>  &nbsp; <span class="text">/</span></div>
                 <div> <span id="type">FORMAL SHIRTS</span>  &nbsp;<span class="text">/</span></div>
                 <div class="color" id="productname">PETER ENGLAND BLUE CHECK SHIRT</div>
@@ -930,37 +936,14 @@
         </div>
 
 
-        <div class="similarProd">
+        <!-- <div class="similarProd">
             <div class="similarText">Similar <span class="colour">Products</span> </div>
             <div class="similarText1">What similarities are you interested in?</div>
 
             <div class="types">
-                <div>
-                    <div>✔</div>
-                    <div>Neck style</div>
-                </div>
-                <div>
-                    <div>✔</div>
-                    <div>Print type</div>
-                </div>
-                <div>
-                    <div>✔</div>
-                    <div>Color</div>
-                </div>
-                <div>
-                    <div>✔</div>
-                    <div>Fit</div>
-                </div>
-                <div>
-                    <div>✔</div>
-                    <div>Type</div>
-                </div>
-                <div>
-                    <div>✔</div>
-                    <div>Sleeve length</div>
-                </div>
+                <img src="https://drive.google.com/file/d/1tjwPlpFagGAQJy6-rL6GvOHi0oHxR9uy/view" class="img" />
             </div>
-        </div>
+        </div> -->
 
         <!-- /* fromHereSameInAllPages */ -->
         <div class="emailBox">
@@ -971,9 +954,9 @@
 
             <div class="enterEmailBox">
                 <div>
-                        <input type="text" class="input" placeholder="Enter your email address"/>
+                        <input type="text" class="input" placeholder="Enter your email address" id="email_enter"/>
                 </div>
-                <div>
+                <div id="email_btn3">
                     →
                 </div>
             </div>
@@ -1219,6 +1202,7 @@
 
             clickcount++;
         }; 
+        alert("Product Added In Your Cart");
     }
 
     let otherDetails = document.getElementById('otherdetails');
@@ -1239,7 +1223,8 @@
         parentdiv.style.gap = '10%';
 
         let colour = document.createElement('div');
-        colour.innerHTML = 'Color : ' + data[0].features.colour;
+        colour.innerHTML = ' Color : ' + data[0].features.colour;
+        
 
         let fit = document.createElement('div');
         fit.innerHTML = 'Fit : ' + data[0].features.fit;
@@ -1269,18 +1254,22 @@
         parentdiv.style.gridTemplateColumns = '30% 70%';
 
         let productType = document.createElement('div');
+        productType.style.fontWeight = "500"
         productType.innerHTML = 'Product Type:';
 
         let productTypeVal = document.createElement('div');
+        
         productTypeVal.innerHTML = data[0].type;
 
         let mrp = document.createElement('div');
         mrp.innerHTML = 'MRP:';
+        mrp.style.fontWeight = "500"
 
         let mrpVal = document.createElement('div');
         mrpVal.innerHTML = '₹ ' + data[0].price + ' (inclucsive of all taxes and excluding of discounts)';
 
         let netqty = document.createElement('div');
+        netqty.style.fontWeight = "500"
         netqty.innerHTML = 'Net Quantity:';
 
         let netqtyVal = document.createElement('div');
@@ -1288,29 +1277,35 @@
 
         let manufacturer = document.createElement('div');
         manufacturer.innerHTML = 'Manufactured By:'
+        manufacturer.style.fontWeight = "500"
 
         let manufacturerVal = document.createElement('div');
         manufacturerVal.innerHTML = data[0].seller_name;
 
         let marketby = document.createElement('div');
         marketby.innerHTML = 'Marketed By:';
+        marketby.style.fontWeight = "500"
 
         let marketbyVal = document.createElement('div');
         marketbyVal.innerHTML = data[0].details.marketed_by;
 
         let customercare = document.createElement('div');
         customercare.innerHTML = 'Customer care details:';
+        customercare.style.fontWeight = "500"
 
         let customercareVal = document.createElement('div');
+
         customercareVal.innerHTML = data[0].details.company_address;
         let email_div = document.createElement('div');
         email_div.innerHTML = data[0].details.email;
         customercareVal.appendChild(email_div);
 
+
         parentdiv.append(productType, productTypeVal, mrp, mrpVal, netqty, netqtyVal, manufacturer, manufacturerVal, marketby, marketbyVal, customercare, customercareVal);
 
         otherDetails.appendChild(parentdiv);
     }
+
 
     let size_div = document.getElementsByClassName('size_div');
 
@@ -1334,4 +1329,206 @@
                 size_count++;
             }
     }
+=======
+
+
+    // My FirstPart Codes : -------->
+
+    function toHomepage() {
+        window.location.href="homePage.html";
+    }
+
+    let database = JSON.parse(localStorage.getItem("database"));
+
+
+    let womenTop = document.getElementById("womenTop");
+    womenTop.addEventListener("click", toProductpage);
+
+    if(localStorage.getItem("categoryPage") == null) {
+        localStorage.setItem("categoryPage", JSON.stringify([]));
+    }
+
+    function toProductpage() {
+        let productPage = JSON.parse(localStorage.getItem("categoryPage"));
+        productPage = [];
+
+        database.forEach(function(el) {
+            if(el.gender == "women") {
+                productPage.push(el);
+            }
+        });
+        localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        window.location = 'pro1.html';
+    }
+
+
+
+    let menTop = document.getElementById("menTop");
+    menTop.addEventListener("click", toPP);
+
+    if(localStorage.getItem("categoryPage") == null) {
+        localStorage.setItem("categoryPage", JSON.stringify([]));
+    }
+
+    function toPP() {
+        let productPage = JSON.parse(localStorage.getItem("categoryPage"));
+        productPage = [];
+
+        database.forEach(function(el) {
+            if(el.gender == "men") {
+                productPage.push(el);
+            }
+        });
+        localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        window.location = 'pro1.html';
+    }
+
+
+
+    let kidTop = document.getElementById("kidsTop");
+    kidTop.addEventListener("click", toproPage);
+
+    if(localStorage.getItem("categoryPage") == null) {
+        localStorage.setItem("categoryPage", JSON.stringify([]));
+    }
+
+    function toproPage() {
+        let productPage = JSON.parse(localStorage.getItem("categoryPage"));
+        productPage = [];
+
+        database.forEach(function(el) {
+            if(el.gender == "kids") {
+                productPage.push(el);
+            }
+        });
+        localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        window.location = 'pro1.html';
+    }
+
+
+
+    let saleRed = document.getElementById("red");
+    saleRed.addEventListener("click", toprPage);
+
+    if(localStorage.getItem("categoryPage") == null) {
+        localStorage.setItem("categoryPage", JSON.stringify([]));
+    }
+
+    function toprPage() {
+        let productPage = JSON.parse(localStorage.getItem("categoryPage"));
+        productPage = [];
+
+        database.forEach(function(el) {
+            if(el.discount == "45%" || el.discount == "50%") {
+                productPage.push(el);
+            }
+        });
+        localStorage.setItem("categoryPage", JSON.stringify(productPage));
+        window.location = 'pro1.html';
+    }
+
+    
+        let searchable = ["men", "women", "kids", "boys", "girls", "shirt", "jeans", "chinos", "t-shirt", "sandals", "shoes", "boots", "crocs", "skirt", "top", "suit", "blazer", "trackpant", "trousers", "kurti", "saree", "boxers", "kurta", "checkers", "plain", "print", "stripes", "solid", "slim-fit", "narrow-bottom", "ankle-length", "turtle-neck", "skinny-fit", "regular-fit", "cotton", "polyester", "knit-wear", "Viscose Polyester", "linen", "georgette", "Mid-rise", "high-rise", "low-rise", "machine-wash", "hand-wash", "Levis", "Peter England", "Roadster", "Biba", "Zara", "Richard Parker", "Maanywar", "Wrogn", "One", "Fcuk", "H&M", "Mast & Harbor", "Denim", "Raymond", "Allen Solly", "Van Heusen"];
+
+
+        const searchInput = document.getElementById("search");
+        const searchWrapper = document.querySelector(".wrapper");
+        const resultsWrapper = document.querySelector(".results");
+
+        searchInput.addEventListener("keyup", searchInp);
+
+        function searchInp() {
+            let results = [];
+            let input = searchInput.value;
+
+            if(input.length) {
+                results = searchable.filter((item) => {
+                    return item.toLowerCase().includes(input.toLowerCase());
+                });
+            }
+            renderResults(results.slice(0, 5));
+        }
+
+
+        function renderResults(results) {
+            if(!results.length) {
+                return searchWrapper.classList.remove('show');
+            }
+
+            const content = results.map((item) => {
+                return `<li>${item}</li>`
+            }).join("");
+
+            searchWrapper.classList.add('show');
+            resultsWrapper.innerHTML = `<ul>${content}</ul>`;
+            var list1 = (document.getElementsByTagName("li"));
+
+            for(var i = 0; i < list1.length; i++) {
+                let element = list1[i].innerText;
+                list1[i].onclick = function() {
+                    inputVal(element);
+                }
+            }
+
+        }
+
+        function inputVal(el) {
+            searchInput.value = el;
+            return searchWrapper.classList.remove('show');
+        }
+
+        var submitSearch = document.getElementById("searchImg");
+        submitSearch.addEventListener("click", submitVal);
+
+        function submitVal() {
+            let value = searchInput.value;
+            let productPage = JSON.parse(localStorage.getItem("categoryPage"));
+            productPage = [];
+            let flag = true;
+
+            database.forEach(function(el) {
+                if(el.type == value || el.brand == value || el.features.pattern == value || el.features.fit == value || el.features.material == value || el.features.waist_rise == value || el.features.wash_instruction == value || el.gender == value) {
+                    flag = false;
+                    productPage.push(el);
+                }
+            });
+            if(flag) {
+                productPage = database;
+            }
+            localStorage.setItem("categoryPage", JSON.stringify(productPage));
+            window.location = 'pro1.html';
+        }
+
+        let toCart = document.getElementById("toCart");
+        toCart.addEventListener("click", toCartPage);
+
+        function toCartPage() {
+            window.location.href = "Cart.html";
+        }
+
+    let brandsTop = document.getElementById("brandsTop");
+        brandsTop.addEventListener("click", toBrands);
+
+        function toBrands() {
+            window.location.href = "brands.html";
+        }
+
+        let toLogin = document.getElementById("toLogin");
+        toLogin.addEventListener("click", toLoginPage);
+
+        function toLoginPage() {
+            window.location.href= "signin.html";
+        }
+
+        let email_btn3 = document.getElementById("email_btn3");
+        email_btn3.addEventListener("click", mailChecker);
+
+        function mailChecker() {
+            let email_enter = document.getElementById("email_enter").value;
+            if(email_enter.length > 0) {
+                alert("Confirmation Mail Sent");
+            } else {
+                alert("Please Enter Valid Email Address");
+            }
+        }
 </script>

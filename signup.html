@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://www.pantaloons.com/favicon.ico">
+</head>
+<style>
+    body
+    {
+    font-family: 'Rubik', sans-serif;
+    background-color: #00AA8A;
+    text-align: center;
+    padding-top: 5px;
+    overflow: scroll;
+    }
+.sign-up{
+    width: 400px;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    background: #fff;
+    padding: 20px 20px 20px 20px;
+    margin: 5% auto 0;
+    border-radius: 1px;
+    text-align: left;
+}
+
+    .inputbox{
+        padding:10px;
+        margin:10px 0px;
+        width: 350px;
+        background:#F8F4F4;
+        border-radius: 7px;
+        border: 1px solid rgba(128, 128, 128, 0.281);
+    }
+.signbtn{
+    color:white;
+    background: #00AA8A;
+    border: solid #00AA8A thick;
+    width:100px;
+    height: 30px;
+
+}
+.white{
+    color: white;
+}
+.alaccount{
+    color: white;
+}
+a {
+    color: white;
+}
+.blue
+{
+    color: #00AA8A;  
+}
+form{
+    margin-left: 10px;
+} 
+hr{
+    padding-left: 0px;
+    margin-left: 0px;
+    width: 408px;
+}
+.signbtn {
+    cursor: pointer;
+}
+</style>
+<body>
+    <div class="sign-up">
+        <form onsubmit ="adduser(event)" id="form">
+        <h1>Sign Up</h1>
+        <p>Please fill in this form to create an account!</p>
+        <hr>
+                <input id="firstname" type= "name" class="inputbox" placeholder="First Name" required>
+                <input id="lastname" type= "name" class="inputbox" placeholder="Last Name" required></span>
+                <input id="email" type="Email" class="inputbox" placeholder="Email" required>
+                <input id="password" type= "password" class="inputbox" placeholder="Password" required>
+                <input id="confirmpassword" type= "password" class="inputbox" placeholder="Confirm Password" required>
+                <p><span><input type="checkbox" required></span> &nbsp; I  accept the <span class="blue">Terms of use</span> & <span class="blue">Privacy policy</span></p>
+                <button type="submit" class="signbtn">Sign Up</button>
+            </form>
+    </div>
+            <p class="alaccount">Already have an account?&nbsp;<a href="signin.html" ><span class="white">Login here.</span></a></p>
+</body>
+</html>
+
+<script>
+
+    if (localStorage.getItem('pantaloon_users') == null){
+        localStorage.setItem('pantaloon_users', JSON.stringify([]));
+    };
+
+    function adduser(e){
+        e.preventDefault();
+
+        let myform = document.getElementById('form');
+
+        let firstname = myform.firstname.value;
+
+        let lastname = myform.lastname.value;
+
+        let email = myform.email.value;
+
+        let password = myform.password.value;
+
+        let confirmpassword = myform.confirmpassword.value;
+
+        if (password != confirmpassword){
+            alert('Password and Confirm Password should be same');
+        } else {
+
+            let data = {
+                firstname,
+                lastname,
+                email,
+                password,
+                confirmpassword
+            };
+
+            let arr = JSON.parse(localStorage.getItem('pantaloon_users'));
+
+            let flag = true;
+
+            arr.forEach(function(users) {
+                if(email == users.email) {
+                    flag = false;
+                    alert("Email already exists");
+                }
+            });
+
+            if(flag) {
+                arr.push(data);
+                localStorage.setItem('pantaloon_users', JSON.stringify(arr));
+                window.location.href = "signin.html"
+            }
+        };
+    };
+</script>

@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Summary</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://www.pantaloons.com/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Rubik', sans-serif;
+        }
+    
+        #outerBox{
+                margin: -10px -10px -10px -10px;
+            }
+    
+        #firstPart {
+            margin: -10px -10px -10px -10px;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.281);
+        }
+    
+        #discountBar {
+            width: 100%;
+            height: 50px;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 16px;
+            background-color: #00aa8a;
+            color: white;
+            padding: 14px 0 0 0;
+        }
+    
+        #discountBar>span {
+    
+            font-weight: 300;
+            cursor: pointer;
+        }
+    
+        .secondbar {
+            display: grid;
+            /* width: 100%; */
+            height: 100px;
+            display: grid;
+            grid-template-columns: 80% 20%;
+            /* border: 1px solid black; */
+        }
+    
+        .align {
+            margin: 28px 0 0 650px;
+            cursor: pointer;
+            
+        }
+        
+        .help{
+            font-size: 15px;
+            font-weight: 300;
+            padding: 36px 0 0 130px;
+            box-sizing: border-box;
+        }
+        .colour1{
+            color: #00a88e;
+        }
+
+       
+        
+
+       
+
+        .secondPart{
+            margin: 40px 0 0 0 ;
+            /* overflow: scroll; */
+            display: grid;
+            grid-template-columns: 65% 32%;
+            gap: 3%;
+            height: 450px;
+        }
+        .iteams{
+            margin: 0 0 0 4%;
+            /* height: 400px; */
+            
+        }
+        .yourCart{
+            height: 60px;
+            display: grid;
+            grid-template-columns: 60px auto;
+            
+        }
+
+        .cartimgbox{
+            border-radius: 50%;
+            border: 1px solid #00aa8a;
+        }
+
+        .text1{
+            font-size: 20px;
+            font-weight: 400;
+            padding: 18px 0 0 15px;
+            box-sizing: border-box;
+            background-color: #f5f5f5;
+            border-radius: 30px;
+        }
+        .img{
+         width: 80%;
+         height: 65%;   
+         border-radius: 50%;
+         margin: 9px 0 0 6px
+        }
+        
+
+        #iteamsList{
+            width: 94%;
+            display: grid;
+            grid-template-columns:  150px 270px 120px 170px 190px;
+            /* height: 200px; */
+            margin: 10px auto auto 0px;
+            border-left: 1px solid gray;
+        }
+        .img1{
+            width: 90%;
+            height: 90%;
+            box-sizing: border-box;
+            padding: 5px 0 0 10px;
+            /* margin: 5px; */
+        }
+        .imgBox{
+            height: 192.5px;
+            width: 135px;
+        }
+
+        .brandName{
+            margin: 5px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .proName{
+            margin: 5px;
+            font-weight: 300;
+            font-size: 14px;
+        }
+        .bottomDiv{
+            margin: 125px 0 0 0 ;
+            height: 20px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            font-size: 13px;
+            
+        }
+        .rightBorder{
+            border-left: 1px solid black;
+            padding-left: 25px;
+        }
+         
+
+        .sizeText{
+            width: 40%;
+            margin: 10px auto auto auto ;
+            font-weight: 400;
+            font-size: 15px;
+        }
+
+        .sizeInput{
+            width: 40%;
+            margin: 10px auto auto auto ;
+            font-weight: 400;
+            font-size: 15px;
+            
+        }
+        .input{
+            width: 70%;
+            height: 22px;
+        }
+
+        
+        .qtyBox{
+             width: 60%;
+            margin: 10px auto auto auto ;
+            font-weight: 400;
+            height: 30px;
+            display: grid;
+            grid-template-columns: 30px auto 30px  ;
+        }
+
+        .qtyBox>div:nth-child(1),
+        .qtyBox>div:nth-child(3){
+            font-size: 17px;
+            text-align: center;
+            font-weight: 700;
+            padding: 3px 0 0 0;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            border: 1px solid #00aa8a;
+        }
+        .qtyBox>div:nth-child(2){
+            font-size: 15px;
+            font-weight: 500;
+             padding: 5px 0 0 0;
+             text-align: center;
+        }
+        .qtyText{
+            width: 40%;
+            margin: 10px auto auto auto ;
+            font-weight: 400;
+            font-size: 15px;
+            box-sizing: border-box;
+            padding: 0 0 0 18px;
+        }
+
+        
+
+        .priceDiv{
+            margin: 10px 0 0 0;
+            text-align: right;
+            font-size: 15px;
+            color: #d3d3d3;
+        }
+        .font{
+            font-size: 17px;
+            font-weight: 500;
+            color: black;
+        }
+        .discountBox{
+            text-align: right;
+            color: red;
+            font-weight: 300;
+            font-size: 15px;
+              margin-top: 5px;
+        }
+
+        .priceB{
+            font-size: 11px;
+            font-weight: 400;
+            text-align: right;
+            margin-top: 5px;
+        }
+
+        
+
+        .continueDiv{
+            margin: 0 0 0 4%;
+            
+            height: 150px;
+        }
+
+        .continueBox{
+            width: 35%;
+            height: 50px;
+            border-radius: 5px;
+            background-color: #00a88e;
+            text-align: center;
+            box-sizing: border-box;
+            padding-top: 15px;
+            font-size: 16px;
+            font-weight: 300;
+            color: white;
+            margin:30px auto auto  auto;
+            cursor: pointer;
+        }
+        
+
+        .freeD{
+            width: 25%;
+            margin: 15px auto 15px auto ;
+            height: 20px;
+            font-weight: 400;
+            font-size: 13px;
+        }
+        .weight{
+            font-weight: 500;
+        }
+
+        .shopnow{
+            font-size: 14px;
+            color: #00a88e;
+            width: 25%;
+            margin: 5px auto auto auto ;
+            height: 20px;
+            text-align: center;
+            font-weight: 300;
+            cursor: pointer;
+        }
+        
+
+        .coupon{
+            height: 50px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+        .apply{
+             display: grid;
+            grid-template-columns: 20% 80%;
+            height: 100%;
+        }
+        .cimg{
+            width: 40%;
+            height: 40%;
+            padding: 13px 0 0 13px;
+        }
+
+        .atext{
+            font-size: 17px;
+            font-weight: 300;
+            box-sizing: border-box;
+            padding: 12px 0 0 13px;
+        }
+      
+        .ainput{
+            border: 1px solid white;
+            outline: none;
+            height: 20px;
+            font-size: 17px;
+            margin: -2px 0 0 0;
+            
+        }
+
+        /* div{
+            border: 1px solid black;
+        } */
+      
+        .abox{
+            border: 1px solid #00a88e;
+            width: 150px;
+            height: 35px;
+            border-radius: 5px;
+            margin: 8px 0 0 70px;
+            font-size: 14px;
+            text-align: center;
+            color: #00a88e;
+            box-sizing: border-box;
+            padding: 10px 0 0 0;
+            cursor: pointer;
+            font-weight: 200;
+        }
+        .abox:hover {
+            color: black;
+        }
+        
+
+        .orderSum{
+            margin: 10px 0 0 0 ;
+            background-color: #f5f5f5;
+            height: 300px;
+            width: 95%;
+        }
+
+        .osText{
+            padding-top: 25px ;
+            text-align: center;
+            font-size: 16px;
+        }
+        .ov{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            height: 20px;
+            margin: 20px auto auto auto ;
+            width: 93%;
+            font-size: 15px;
+            font-weight: 300;
+        }
+        .pd{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            height: 20px;
+            margin: 10px auto auto auto ;
+            width: 93%;
+            font-size: 15px;
+            font-weight: 300;
+        }
+        .ship{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            height: 30px;
+            margin: 10px auto auto auto ;
+            width: 93%;
+            font-size: 15px;
+            font-weight: 300;
+            border-bottom: 1px solid #ddd;
+            
+        }
+        .texta{
+            text-align: right;
+        }
+        .ot{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            height: 20px;
+            margin: 10px auto auto auto ;
+            width: 93%;
+            font-size: 17px;
+            font-weight: 400;
+        }
+        
+
+        .save{
+            width: 100%;
+            height: 20px;
+            margin: 15px auto auto auto ;
+            font-size: 14px;
+            color: #00a88e;
+            font-weight: 400;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        
+        .re{
+            font-size: 12px;
+            font-weight: 300;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: -3px;
+        }
+        @media (min-height: 760px) {
+        #outerPart {
+            height: 800px;
+            }
+        }
+      
+</style>
+</head>
+<body>
+    <div id="outerBox">
+    
+    
+        <div id="firstPart">
+            <div id="discountBar">
+                <span> Extra 20% OFF* on All your Orders above ₹3500. Use Code: PTDTRA20 | * T & Cs Apply > </span>
+            </div>
+            <div class="secondbar">
+                <div class="align">
+                    <div> <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/v2/PT_D_logo.png"
+                            title="Pantaloons" onclick="toHomepage()" style="cursor: pointer;" /> </div>
+    
+                </div>
+                
+                <div class="help">
+                    Need Help? <span class="colour1"><u>Contact US</u></span>
+                </div>
+    
+              
+            </div>
+        </div>
+
+        <div class="secondPart">
+            <div>
+                <div class="iteams">
+                    <div class="yourCart">
+                        <div class="cartimgbox">
+                            <img src="https://media.istockphoto.com/vectors/shopping-cart-icon-vector-vector-id1151942531?k=20&m=1151942531&s=170667a&w=0&h=wMROK4RtbfOtLMVYfQikm5waOfl-DcpJnlMEeXr06yI=" class="img" />
+                        </div>
+                        <div class="text1">
+                            1. Your Cart
+                        </div>
+                    </div>
+
+                    <div id="iteamsList">
+                        <div class="imgBox">
+                            <img src="https://pantaloons.imgix.net/img/app/product/5/522244-3927934.jpg?auto=format&w=116" class="img1">
+                        </div>
+
+                        <div>
+                            <div class="brandName">
+                                    PEOPLE
+                            </div>
+                            <div class="proName">
+                                Pink Printed Pants
+                            </div>
+                            <div class="bottomDiv">
+                                    <div ><u>Remove</u></div>
+                                    <div class="rightBorder"><u>Move to Wishlist</u></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="sizeText"></div>
+                            <div class="sizeInput">
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <div class="qtyText">Qty:</div>
+                            <div class="qtyBox">
+                                    <div>-</div>
+                                    <div>1</div>
+                                    <div>+</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="priceDiv">
+                                    ₹<s>899.00 &nbsp;</s>  <span class="font">₹&nbsp;360.00</span>
+                            </div>
+                            <div class="discountBox">
+                               60% OFF &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                            <div class="priceB">
+                                Price Breakup&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                </div>
+
+                <div class="continueDiv">
+                        <div class="continueBox" id="toPayment">
+                                CONTINUE
+                        </div>
+
+                        <div class="freeD">
+                            All <span class="weight">Products are Available</span> to process this <span class="weight">Shipment</span>
+                        </div>
+                        <div class="shopnow" id="toHome">
+                            <u>SHOP NOW </u>
+                        </div>
+
+                </div>
+            </div>
+            
+            <div>
+                 <div class="coupon">
+                    <div>
+                        <div class="apply">
+                            <div>
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAF3WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKFdpbmRvd3MpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAxOC0wMi0xOVQxNTozNTo0MSswNTozMCIgeG1wOk1vZGlmeURhdGU9IjIwMTgtMDItMjJUMTI6NTk6NTYrMDU6MzAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMTgtMDItMjJUMTI6NTk6NTYrMDU6MzAiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiBwaG90b3Nob3A6SUNDUHJvZmlsZT0ic1JHQiBJRUM2MTk2Ni0yLjEiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6YjQ3MTdjM2ItM2UyNC04NTQ0LTk4YWQtNjYxYzliMjZiODM1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOmQzZGM5YzlkLWI3N2UtOGI0ZS04NWNjLTgwZjM0Y2IzNjQzMSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmQzZGM5YzlkLWI3N2UtOGI0ZS04NWNjLTgwZjM0Y2IzNjQzMSI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZDNkYzljOWQtYjc3ZS04YjRlLTg1Y2MtODBmMzRjYjM2NDMxIiBzdEV2dDp3aGVuPSIyMDE4LTAyLTE5VDE1OjM1OjQxKzA1OjMwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpiNDcxN2MzYi0zZTI0LTg1NDQtOThhZC02NjFjOWIyNmI4MzUiIHN0RXZ0OndoZW49IjIwMTgtMDItMjJUMTI6NTk6NTYrMDU6MzAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+l+VixwAAA21JREFUSImV1luMXWMUB/BfZwyibQzKZOjQ0NI0KSWHUJcHTRqCilLEJYSou5BUIxW3ivCiNOo2hFL10OlLK+oSI0pM+lCpRDIqGioTYVRHIyYlR2c8rLU7u9ucdLqSnbPPt/e3/mv913+tb48bHh5Wq9UcgM3Gs+jC8xgay6amA0FAC67E2ViA48a6sRFQK64W0beU1i/AjXl/ZoIVPprQhjnoqDo8qAHQOejM+0+xEr24GxOxDJfh1ny+JwO7BCfiBTwyFqDy8wsxD/04FqvwIHbiKazBMTgE/+BwHFZ11Ii6Hfn7sajJqvy/Ba8IAazBJkHzZtyJpfnen6NFPJr1YzCj7M6rkObm/N2GezODTfn+dYLG3/cH1IpJOAvj0Z5ru0oAZSuvNWFK3k8SwvgrA9gLNBPzcRpOwYxc/wX1UQAKq2VAPZkJNOMBob4+/ISPCqD5eDzve/EatgpFDWZWcwWlG0vZL8GHCTSE93AUpmMazs93pxdA63CRaMTvsFjQRfTRLXgUP2ChoOwu7MYHpay/wUOZ5Vy8JZS4tlDd16IRu3ExnhMcF3aEKPrk3FjDuXgx6SlbXfTaPRnkUnSVxbANdwgp34zteFJw34k/8p3f8EwG1eP/1orlgrZlonnrVdVNw/GiLt8aGZh9YoDC/aLgqzOzo/F57pHZzMr/GzPDfebUPLwu+F2ItZUghkQN54imbce7QgDXl3z9LOhqFgKbWQa6FC+LEbNYiKO5AtQmKP1SUNaeQdUxoRLQ24L2U/EE2grqFiXIHtyQlGzHZ6Lr4SrRiMWw/AQP40hB45Coz1QhnL8xgCuwtQB6R9ShQyjrjIz2C6FCYv4tF70kM1lZyqRJTPDHMmgJtgOTC6DOvFoz6vOwouRkUAzR/VktQTYIVQ7ktaWqul15TcC/YjoMivpcjl+xvuK4GEF1I8N4hWjkvdZoes/KZ/1CjYtEX/TiRzEBpooeOQnvCxoLAU2sOmx0Hp2Qm64REp4tzqIZQnlwk5B7Pde6cG2jBBplNAWHigbuxtPiRF0tVLRT9E4vbsPJuA+nC+UePFag74Wsu9J5obSXBP9LRG1uF/XpyYAWiMn9VdXhuAbfdeOFIAbsex514E0xHTaIqd5fet6S2exW+d5rlNGgkdlVtj68IZr01QqIDGrUg/I/QDjazBUV+8IAAAAASUVORK5CYII=" class="cimg" />
+                            </div>
+                            <div class="atext"> 
+                               <input type="text" class="ainput" id="ainput" placeholder="Apply Coupon" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="applyBox" id="applySubmit">
+                        <div class="abox">
+                            APPLY
+                        </div>
+                    </div>
+                 </div>
+
+                 <div class="orderSum">
+                        <div class="osText">
+                            Order Summary
+                        </div>
+                        <div class="ov">
+                            <div> Order Value</div>
+                            <div class="texta"><b>₹</b> <span id="orderAmt">899.00</span></div>
+                        </div>
+                        <div class="pd">
+                            <div class="colour1"> Product Discount</div>
+                            <div  class="colour1 texta">- &nbsp;<b>₹</b><span id="discAmt">539.00</span></div>
+                        </div>
+                        <div class="ship">
+                            <div>Shipping</div>
+                            <div class="texta"><b>₹</b> <span id="shippinG">100</span>.00</div>
+                        </div>
+
+                        <div class="ot">
+                            <div>ORDER TOTAL</div>
+                            <div class="texta"><b>₹</b><span id="cartVal">460.00</span></div>
+                        </div>
+
+                        <div class="save">
+                            YOU HAVE SAVED <span class="weight" id="saved">539.00</span> ON THIS ORDER.
+                        </div>
+
+                        <div class="re">
+                                90 DAYS RETURN EXCLUSIVELY FOR
+                        </div>
+                        <div class="re">
+                            GREENCARD MEMBER
+                        </div>
+                 </div>
+            </div>
+
+        </div>
+        
+        
+        
+    
+    
+        
+    </div>
+</body>
+</html>
+
+<script>
+    let database = JSON.parse(localStorage.getItem('cartProducts'));
+
+
+let parent = document.getElementById("iteamsList");
+
+var orderVal = 0;
+
+var discountVal = 0;
+
+let shippinG = document.getElementById("shippinG");
+
+function showCart(database) {
+    parent.innerHTML = null;
+
+    orderVal = 0;
+
+    discountVal = 0;
+
+    database.forEach(function(element) {
+
+        orderVal += element.quantity * element.price;
+
+        discountVal += Math.round((element.quantity * element.price) * ((element.discount.split("").splice(0, 2).join("")) / 100));
+
+
+        let imgBox = document.createElement("div");
+        imgBox.setAttribute("class", "imgBox");
+
+        let img = document.createElement("img");
+        img.setAttribute("class", "img1");
+        img.src = element.image1
+
+        imgBox.append(img);
+        imgBox.style.marginBottom = "20px";
+
+        //Part End:--------->
+
+        let div1 = document.createElement("div");
+
+        let div1_1 = document.createElement("div");
+        div1_1.setAttribute("class", "brandName");
+        div1_1.textContent = element.brand;
+
+        let div1_2 = document.createElement("div");
+        div1_2.setAttribute("class", "proName");
+        div1_2.textContent = element.features.colour + " " + element.features.pattern + " " + element.type;
+
+        let div1_3 = document.createElement("div");
+        div1_3.setAttribute("class", "bottomDiv");
+        let div1_3_1 = document.createElement("div");
+        let u_3_1 = document.createElement("u");
+        u_3_1.textContent = "Remove";
+        u_3_1.style.cursor = "pointer";
+        u_3_1.onclick = function() {
+            remProd(element);
+        }
+        div1_3_1.append(u_3_1)
+        let div1_3_2 = document.createElement("div");
+        div1_3_2.setAttribute("class", "rightBorder");
+        let u_3_2 = document.createElement("u");
+        u_3_2.textContent = "Move to Wishlist";
+        u_3_2.style.cursor = "pointer";
+        u_3_2.onclick = function() {
+            addToWish(element);
+        }
+        div1_3_2.append(u_3_2);
+
+        div1_3.append(div1_3_1, div1_3_2);
+
+
+        div1.append(div1_1, div1_2, div1_3);
+        div1.style.marginBottom = "20px";
+
+
+        //Part End:--------->
+
+        let div2 = document.createElement("div");
+
+        let div2_1 = document.createElement("div");
+        div2_1.setAttribute("class", "sizeText");
+        let div2_2 = document.createElement("div");
+        div2_2.setAttribute("class", "sizeInput");
+
+        div2.append(div2_1, div2_2);
+        div2.style.marginBottom = "20px";
+
+
+        //Part End:--------->
+
+
+        let div3 = document.createElement("div");
+
+        let div3_1 = document.createElement("div");
+        div3_1.setAttribute("class", "qtyText");
+        div3_1.textContent = "Qty:";
+
+        let div3_2 = document.createElement("div");
+        div3_2.setAttribute("class", "qtyBox");
+        let div3_2_1 = document.createElement("div");
+        div3_2_1.setAttribute("class", "btn1");
+        div3_2_1.textContent = "-";
+        div3_2_1.style.cursor = "pointer";
+        div3_2_1.onclick = function() {
+            if(element.quantity > 1) {
+                subFunc(element);
+            }
+        }
+        let div3_2_2 = document.createElement("div");
+        div3_2_2.textContent = element.quantity;
+        let div3_2_3 = document.createElement("div");
+        div3_2_1.setAttribute("class", "btn2");
+        div3_2_3.textContent = "+";
+        div3_2_3.style.cursor = "pointer";
+        div3_2_3.onclick = function() {
+            addFunc(element);
+        }
+
+        div3_2.append(div3_2_1, div3_2_2, div3_2_3);
+
+        div3.append(div3_1, div3_2);
+        div3.style.marginBottom = "20px";
+
+        //Part End:--------->
+
+        let discVal = Number(element.discount.split("").splice(0, 2).join(""));
+
+        
+        let div4 = document.createElement("div");
+
+        let div4_1 = document.createElement("div");
+        div4_1.setAttribute("class", "priceDiv");
+        let div4_1_1 = document.createElement("s");
+        div4_1_1.textContent = element.quantity * element.price + ".00" + Array(2).fill('\xa0').join('');
+        let div4_1_2 = document.createElement("span");
+        div4_1_2.setAttribute("class", "font");
+        div4_1_2.textContent = Array(2).fill('\xa0').join('') + "₹" + " " + Math.round((element.quantity * element.price) * ((100 - discVal) / 100)) + ".00";
+        let div4_1_3 = document.createElement("span");
+        div4_1_3.textContent = "₹"
+        div4_1.append(div4_1_3, div4_1_1, div4_1_2);
+
+
+        let div4_2 = document.createElement("div");
+        div4_2.setAttribute("class", "discountBox");
+        div4_2.textContent = element.discount + " OFF" + Array(7).fill('\xa0').join('');
+
+        div4_3 = document.createElement("div");
+        div4_3.setAttribute("class", "priceB");
+        div4_3.textContent = "Price Breakup" + Array(10).fill('\xa0').join('');
+
+        div4.append(div4_1, div4_2, div4_3);
+        div4.style.marginBottom = "20px";
+
+        parent.append(imgBox, div1, div2, div3, div4);
+        
+    });
+}
+
+showCart(database);
+
+function addFunc(input) {
+    let old_price = input.quantity * input.price;
+    let old_disc = Math.round((input.quantity * input.price) * ((input.discount.split("").splice(0, 2).join("")) / 100));
+    input.quantity++;
+    let new_disc = Math.round((input.quantity * input.price) * ((input.discount.split("").splice(0, 2).join("")) / 100));
+    let new_price = input.quantity * input.price;
+    orderVal = orderVal - old_price + new_price;
+    discountVal = discountVal - old_disc + new_disc;
+    localStorage.setItem("cartProducts", JSON.stringify(database));
+    saved();
+    discTot();
+    orderTot();
+    cartTot();
+    counter = 0;
+    showCart(database);
+}
+
+function subFunc(input) {
+    let old_price = input.quantity * input.price;
+    let old_disc = Math.round((input.quantity * input.price) * ((input.discount.split("").splice(0, 2).join("")) / 100));
+    input.quantity--;
+    let new_disc = Math.round((input.quantity * input.price) * ((input.discount.split("").splice(0, 2).join("")) / 100));
+    let new_price = input.quantity * input.price;
+    orderVal = orderVal - old_price + new_price;
+    discountVal = discountVal - old_disc + new_disc;
+    localStorage.setItem("cartProducts", JSON.stringify(database));
+    saved();
+    discTot();
+    orderTot();
+    cartTot();
+    counter = 0;
+    showCart(database);
+}
+
+function remProd(input) {
+    var ind = database.indexOf(input);
+    database.splice(ind, 1);
+    localStorage.setItem("cartProducts", JSON.stringify(database));
+    showCart(database);
+    orderTot();
+    discTot();
+    saved();
+    counter = 0;
+    shippinGCheck()
+    cartTot();
+}
+
+function addToWish(input) {
+    alert("Product Added To Wishlist");
+    remProd(input);
+    orderTot();
+    discTot();
+    saved();
+    counter = 0;
+    shippinGCheck()
+    cartTot();
+}
+
+
+
+var toPayment = document.getElementById("toPayment");
+toPayment.addEventListener("click", paymentPage);
+
+function paymentPage() {
+    window.location.href = "paymentPage.html";
+}
+
+var toHome = document.getElementById("toHome");
+toHome.addEventListener("click", homeFunc);
+
+function homeFunc() {
+    window.location.href = "homePage.html";
+}
+
+
+function orderTot() {
+    let orderAmt = document.getElementById("orderAmt");
+    orderAmt.textContent = orderVal + ".00";
+}
+orderTot();
+
+function discTot() {
+    let discAmt = document.getElementById("discAmt");
+    discAmt.textContent = discountVal + ".00";
+}
+discTot();
+
+function saved() {
+    let saved = document.getElementById("saved");
+    saved.textContent = discountVal + ".00";
+}
+saved();
+
+shippinGCheck();
+
+function cartTot() {
+    let cartVal = document.getElementById("cartVal");
+    cartVal.textContent = orderVal - discountVal + Number(shippinG.textContent) + ".00";
+}
+cartTot();
+
+
+let promoCode = document.getElementById("applySubmit");
+let counter = 0;
+promoCode.onclick = function() {
+    promoCodeApply();
+}
+
+function promoCodeApply() {
+    let ainput = document.getElementById("ainput").value;
+    let orderAmt = document.getElementById("orderAmt").textContent;
+    orderAmt = Number(orderAmt.split("").splice(0, orderAmt.length - 3).join(""));
+    // let discAmt = document.getElementById("discAmt").textContent;
+    // discAmt = Number(discAmt.split("").splice(0, discAmt.length - 3).join(""));
+    if(ainput == "masai10" && counter < 1) {
+        counter++;
+        discountVal += Math.round(orderAmt * 0.10);
+        document.getElementById("discAmt").textContent = discountVal + ".00";
+        orderVal = Math.round(orderAmt * 0.90);
+        document.getElementById("orderAmt").textContent = orderVal + ".00";
+        cartTot();
+        saved();
+    } else if(counter >= 1) {
+        alert("Promocode Already Applied");
+    } else {
+        alert("Invalid Promocode");
+    }
+}
+function toHomepage() {
+        window.location.href="homePage.html";
+    }
+
+    function shippinGCheck() {
+        if(database.length <= 0) {
+            shippinG.textContent = 0;
+        } else {
+            shippinG.textContent = 100;
+        }
+    }
+</script>
