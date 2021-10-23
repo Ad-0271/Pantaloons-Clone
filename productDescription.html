@@ -730,6 +730,10 @@
             color: #5e5e5e;
             text-align: center;
         }
+        #size_warning{
+            color: red;
+            display: none;
+        }
 
        /* div{
            border: 1px solid black;
@@ -855,11 +859,11 @@
                             Select Size
                         </div>
                         <div class="sizeNo">
-                            <div>38</div>
-                            <div>39</div>
-                            <div>40</div>
-                            <div>42</div>
-                            <div>44</div>
+                            <div class="size_div">38</div>
+                            <div class="size_div">39</div>
+                            <div class="size_div">40</div>
+                            <div class="size_div">42</div>
+                            <div class="size_div">44</div>
 
                         </div>
                         <div class="sizeText2">
@@ -869,6 +873,9 @@
                             <div class="text3">
                                <u> Find my recommended size </u>
                             </div>
+                        </div>
+                        <div id="size_warning">
+                            Please select size!
                         </div>
                     </div>
 
@@ -1184,6 +1191,15 @@
 
     function addtocart(){
 
+        let warning = document.getElementById('size_warning');
+        
+        if(size_count == 0){
+            warning.style.display = 'block';
+            return
+        }
+
+        warning.style.display = 'none';
+
         if (clickcount == 1){
 
             let cart = JSON.parse(localStorage.getItem('cartProducts'));
@@ -1294,5 +1310,28 @@
         parentdiv.append(productType, productTypeVal, mrp, mrpVal, netqty, netqtyVal, manufacturer, manufacturerVal, marketby, marketbyVal, customercare, customercareVal);
 
         otherDetails.appendChild(parentdiv);
+    }
+
+    let size_div = document.getElementsByClassName('size_div');
+
+    for (let i = 0; i < size_div.length; i++){
+        size_div[i].addEventListener('click', () => {changebg(size_div[i])});
+    }
+
+    let size_count = 0;
+
+    function changebg(div){
+        console.log(div, 'Hey');
+        if (div.style.backgroundColor === 'rgb(129, 208, 196)'){
+                div.style.backgroundColor = 'white';
+                div.style.color = '#81d0c4';
+                size_count--;
+                
+                console.log(div);
+            } else {
+                div.style.backgroundColor = '#81d0c4';
+                div.style.color = 'white';
+                size_count++;
+            }
     }
 </script>
