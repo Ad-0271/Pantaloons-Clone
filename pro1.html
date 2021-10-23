@@ -7,7 +7,7 @@
         <title>Product Page</title>
         <style>
             #firstPart {
-                margin: -10px -10px 0px -10px;
+                /* margin: -10px -10px 0 -10px; */
                 border-bottom: 1px solid rgba(128, 128, 128, 0.281);
             }
 
@@ -16,11 +16,16 @@
                 height: 50px;
                 box-sizing: border-box;
                 text-align: center;
-                font-size: 16px;
+                font-size: 1vw;
                 background-color: #00aa8a;
                 color: white;
-                padding: 20px 0 0 0;
+                padding: 1% 0 0 0;
             }
+            #discountBar > span{
+         
+          font-weight: 300;
+        cursor: pointer;
+        }
 
             .secondbar{
                 display: grid;
@@ -31,9 +36,15 @@
             }
 
             .align{
-           margin: 40px 0 0 80px ;
-            cursor: pointer;
-       }
+                     margin: 40px 0 0 23% ;
+                    cursor: pointer;
+                    /* border: 1px solid black; */
+            }
+            .pantaimg{
+           width: 90%;
+           height: 90%;
+           align-items:stretch;
+             }
        .select{
            display: grid;
            grid-template-columns: auto auto auto auto auto auto auto;
@@ -44,7 +55,7 @@
            font-weight: 400;
            box-sizing: border-box;
            padding: 20px 0 0 0;
-           font-size: 15px;
+           font-size: 1vw;
            color: rgb(77, 77, 77);
        }
        #red{
@@ -55,7 +66,7 @@
            height: 20px;
            display: grid;
            grid-template-columns: auto auto auto auto;
-           font-size: 12px;
+           font-size: .75vw;
            font-weight: 200;
            /* text-align: right; */
             margin: 15px 0 0 40px;
@@ -63,7 +74,7 @@
        }
        .grid2{
            width: 80%;
-           margin: 10px 0 0 40px;
+           margin: 10px 0 0 7%;
            height: 40px;
        }
        .grid2 > div:nth-child(1){
@@ -99,11 +110,15 @@
        }
 
        .addToCart{
-           width: 30px;
-           height: 30px;
+           width: 7%;
+           height: 80%;
            display: inline-block;
            vertical-align: top;
-            margin: 5px 0 0 20px;
+            margin: 5px 0 0 3%;
+       }
+       #searchImg{
+           width: 100%;
+           
        }
        .img{
            width: 100%;
@@ -526,7 +541,7 @@
             padding: 20px 0 0 0 ;
             margin: auto;
             color: white;
-            font-size: 21px;
+            font-size: 1.5vw;
             text-align: center;
             font-weight: 300;
         }
@@ -556,7 +571,7 @@
         .enterEmailBox>div:nth-child(2){
             background-color: #f4ba0c;
             border-radius: 5px;
-            font-size: 30px;
+            font-size: 2vw;
             font-weight: 600;
             text-align: center;
             padding: 3px;
@@ -578,8 +593,8 @@
             /* height: 140px; */
             margin: auto ;
             display: grid;
-            grid-template-columns: 150px 150px 150px 150px 150px 150px   250px 150px;
-            grid-gap: 10px;
+            grid-template-columns: 10.9% 10.9% 10.9% 10.9% 10.9% 10.9%  18.2%  10.9%;
+            grid-gap: 0.7%;
         }
         .img1{
             width: 90%;
@@ -599,7 +614,7 @@
         }
         
         .otherfirstBox>div>div{
-            font-size: 12px;
+            font-size: .75vw;
             font-weight: 300;
             text-align: center;
             
@@ -614,6 +629,7 @@
             box-sizing: border-box;
             margin: 30px 0 0 10px;
             font-weight: 400;
+            font-size: 2vw;
         }
 
         .otherSecondBox{
@@ -649,14 +665,14 @@
         .otherSecondBox>div>div>div:nth-child(4),
         .otherSecondBox>div>div>div:nth-child(5),
         .otherSecondBox>div>div>div:nth-child(6){
-            font-size: 12px;
+            font-size: .85vw;
             font-weight: 300;
             margin: 20px 0 0 0;
             color: #a7a7a7;
 
         }
         .headingText{
-            font-size: 13px;
+            font-size: 1vw;
             font-weight: 400;
             color: #5e5e5e;
         }
@@ -667,13 +683,13 @@
         .oSB2>div>div:nth-child(5),
         .oSB2>div>div:nth-child(6){
             text-align: center;
-            font-size: 12px;
+            font-size: .85vw;
             font-weight: 300;
            margin: 20px 0 0 0;
             color: #a7a7a7;
         }
         .headingText1{
-            font-size: 13px;
+            font-size: 1vw;
             font-weight: 400;
             color: #5e5e5e;
             text-align: center;
@@ -701,7 +717,7 @@
                 </div>
                  <div class="secondbar">
                         <div class="align">
-                            <div> <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/v2/PT_D_logo.png" title="Pantaloons" onclick="toHomepage()" style="cursor: pointer;"/> </div>
+                            <div> <img src="https://pantaloons.imgix.net/img/app/brands/pantaloons/v2/PT_D_logo.png" title="Pantaloons" onclick="toHomepage()" style="cursor: pointer;" class="pantaimg"/> </div>
                             
                         </div>
                         <div >
