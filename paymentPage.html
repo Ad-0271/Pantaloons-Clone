@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Gateway</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://www.pantaloons.com/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
@@ -12,225 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-<style>
-        * {
-            font-family: 'Rubik', sans-serif;
-        }
-        
-
-        body{
-            background-color: #00aa8a;
-        }
-        #outerBox{
-            width: 40%;
-            height: 500px;
-            margin: 100px auto auto  auto;
-            border: 1px solid #00aa8a;
-            background-color: white;
-            border-radius: 5px;
-        }
-        #outerBox:hover{
-             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-
-        #cardNo{
-            width: 80%;
-            height: 30px;
-            display: grid;
-            grid-template-columns: 30% 70%;
-            margin: 60px auto auto auto;
-            font-size: 15px;
-            text-align: center;
-            
-            box-sizing: border-box;
-        }
-        .cardText{
-            margin: 3px 0 0  0;
-        }
-
-        #inputCardNo{
-
-            width: 90%;
-            margin: auto;
-            border: 1px solid #00aa8a;
-            height: 20px;
-            outline: #00aa8a;
-            border-radius: 3px;
-           
-        }
-
-        
-
-        .imgsBox{
-            display:grid;
-            grid-template-columns: auto auto auto;
-            width: 50%;
-            height: 40px;
-            margin: 10px 0 0 230px;
-        }
-
-        .img{
-            width: 90%;
-            height: 70%;
-            margin: 2px;
-        }
-        .img1{
-            width: 80%;
-            height: 70%;
-            margin: 2px 2px 2px -10px;
-        }
-
-        .img2{
-            width: 60%;
-            height: 60%;
-            margin: 7px 2px 2px 2px;
-        }
-
-        
-        #expDate{
-            width: 80%;
-            height: 40px;
-            display: grid;
-            grid-template-columns: 30% 40% 30%;
-            margin: 30px auto auto auto;
-            font-size: 15px;
-            text-align: center;
-            
-            box-sizing: border-box;
-        }
-
-        .expText{
-            margin: 10px 0 0  0;
-        }
-
-        .dates{
-            display: grid;
-            grid-template-columns: 35% 35%;
-            margin: 0 0 0 5px;
-        }
-
-        .mm{
-            font-size: 11px;
-            text-align: center;
-            margin: -5px 0 0 0;
-        }
-        
-        #inputmm{
-            width: 40px;
-            height: 20px;
-            border: 1px solid #00aa8a;
-            text-align: center;
-            outline: #00aa8a;
-            border-radius: 3px;
-        }
-
-        input[type=number]::-webkit-inner-spin-button, 
-            input[type=number]::-webkit-outer-spin-button { 
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-                margin: 0; 
-            }
-
-
-         .yy{
-            font-size: 11px;
-            text-align: center;
-            margin: -5px 0 0 0;
-        }
-        
-        #inputyy{
-            width: 40px;
-            height: 20px;
-             border: 1px solid #00aa8a;
-            text-align: center;
-            outline: #00aa8a;
-            border-radius: 3px;
-        }
-
-        .cvv{
-            display: grid;
-            grid-template-columns: 30% 50% ;
-            
-        }
-        .cvvText{
-            margin: 10px 0 0 0;
-        }
-
-        #cvvNu{
-            width: 40px;
-            height: 20px;
-             border: 1px solid #00aa8a;
-            text-align: center;
-            outline: #00aa8a;
-            border-radius: 3px;
-            margin: 8px 0 0 0;
-        }
-
-        .billText{
-             width: 80%;
-            height: 30px;
-            display: grid;
-            grid-template-columns: 30% 70%;
-            margin: 30px auto auto auto;
-            font-size: 15px;
-            text-align: center;
-            
-            box-sizing: border-box;
-        }
-
-        
-
-          #billAdd{
-
-            width: 90%;
-            margin: auto;
-            border: 1px solid #00aa8a;
-            height: 20px;
-            outline: #00aa8a;
-            border-radius: 3px;
-           
-        }
-          #ShipAdd{
-
-            width: 90%;
-            margin: auto;
-            border: 1px solid #00aa8a;
-            height: 20px;
-            outline: #00aa8a;
-            border-radius: 3px;
-           
-        }
-
-        .align{
-            margin: 2px 0 0 0;
-        }
-        
-        /* div{
-            border: 1px solid black;
-        }  */
-
-        #payNow{
-            margin:  70px auto auto auto;
-            width: 100px;
-            height: 40px;
-            border-radius: 10px;
-            background-color: #00aa8a;
-            color: white;
-            font-size: 14px;
-            text-align: center;
-            box-sizing: border-box;
-            padding: 11px 0 0 0;
-            cursor: pointer;
-        }
-
-         #payNow:hover{
-             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-
-
-
-</style>
+    <link rel="stylesheet" href="./styles/paymentPage.css">
 </head>
 <body>
         <div id="outerBox">
@@ -239,7 +22,7 @@
             <div id="cardNo">
                 <div class="cardText">Card Number</div>
                 <div>
-                    <input type="number" onkeydown="limitc(this);" onkeyup="limitc(this);"  id="inputCardNo" />
+                    <input type="number" oninput="limitc(this);" id="inputCardNo" required/>
                 </div>
             </div>
 
@@ -260,13 +43,13 @@
                     <div class="dates">
                         <div class="mm">
                             <div>mm</div>
-                            <input type="number" onkeydown="limit(this);" onkeyup="limit(this);" id="inputmm">
+                            <input type="number" oninput="limit(this);" id="inputmm" required>
 
 
                         </div>
                         <div class="yy">
                             <div>yy</div>
-                            <input type="number" onkeydown="limit(this);" onkeyup="limit(this);" id="inputyy" />
+                            <input type="number" oninput="limit(this);" id="inputyy" required/>
 
                         </div>
 
@@ -274,7 +57,7 @@
                     <div class="cvv">
                         <div class="cvvText">cvv</div>
                         <div>
-                            <input type="password"  onkeydown="limit1(this);" onkeyup="limit1(this);"  id="cvvNu" />
+                            <input type="password" oninput="limit1(this);" id="cvvNu" required/>
                         </div>
 
                     </div>
@@ -283,14 +66,14 @@
             <div class="billText">
                 <div class="align">Billing Address</div>
                 <div>
-                    <input type="text" id="billAdd" />
+                    <input type="text" id="billAdd" required/>
                 </div>
             </div>
 
             <div class="billText">
                 <div class="align">Shipping Address</div>
                 <div>
-                    <input type="text" id="ShipAdd" />
+                    <input type="text" id="ShipAdd" required/>
                 </div>
             </div>
 
@@ -305,52 +88,4 @@
         </div>
 </body>
 </html>
-<script>
-
-        function limit(element) {
-                var max_chars = 2;
-
-                if (element.value.length > max_chars) {
-                    element.value = element.value.substr(0, max_chars);
-                }
-                console.log(element);
-            }
-
-            function limit1(element) {
-                    var max_chars = 3;
-
-                    if (element.value.length > max_chars) {
-                        element.value = element.value.substr(0, max_chars);
-                    }
-                    console.log(element);
-                }
-
-            function limitc(element) {
-                    var max_chars = 16;
-
-                    if (element.value.length > max_chars) {
-                        element.value = element.value.substr(0, max_chars);
-                    }
-                    console.log(element);
-                }
-
-                let payNow = document.getElementById("payNow");
-                payNow.addEventListener("click", toSuccess);
-
-                function toSuccess() {
-                    let ccVal = document.getElementById("inputCardNo").value;
-                    let mmVal = document.getElementById("inputmm").value;
-                    let yyVal = document.getElementById("inputyy").value;
-                    let cvvVal = document.getElementById("cvvNu").value;
-                    let billAddVal = document.getElementById("billAdd").value;
-                    let shipAddVal = document.getElementById("ShipAdd").value;
-
-                    if(ccVal.length == 16 && mmVal.length == 2 && yyVal.length == 2 && cvvVal.length == 3 && billAddVal.length != 0 && shipAddVal.length != 0) {
-                        alert("Payment Recieved");
-                        window.location.href = "success.html";
-                    } else {
-                        alert("Please Enter Valid Details");
-                    }
-                }
-    
-</script>
+<script src="./scripts/paymentPage.js"></script>
