@@ -1,0 +1,740 @@
+*{
+    font-family: 'Rubik', sans-serif;
+}
+/* #outerBox{
+    height: 705px;
+} */
+
+#firstPart {
+    margin: -10px -10px -10px -10px;
+     border-bottom: 1px solid rgba(128, 128, 128, 0.281);
+    
+}
+
+#discountBar{
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1vw;
+    background-color: #00aa8a;
+    color: white;
+    padding: 19px 0 0 0;
+}
+#discountBar > span{
+ 
+  font-weight: 300;
+cursor: pointer;
+}
+.secondbar{
+    display: grid;
+    width: 100%;
+    height: 100px;
+    grid-template-columns: 22% 42%  36%;
+    /* border: 1px solid black; */
+}
+
+.align{
+   margin: 40px 0 0 23% ;
+    cursor: pointer;
+    /* border: 1px solid black; */
+}
+.pantaimg{
+   width: 90%;
+   height: 90%;
+   vertical-align: middle;
+}
+.select{
+   display: grid;
+   grid-template-columns: auto auto auto auto auto auto auto;
+   height: 40px;
+   margin: 40px 0 0 0 ;
+   /* border: 1px solid black; */
+
+   
+}
+
+.select>div{
+   font-weight: 400;
+   box-sizing: border-box;
+   padding: 20px 0 0 0;
+   font-size: 1vw;
+   color: rgb(77, 77, 77);
+}
+
+
+
+#red{
+   color: red;
+}
+.grid1{
+   width: 80%;
+   height: 20px;
+   display: grid;
+   grid-template-columns: auto auto auto auto;
+   font-size: .75vw;
+   font-weight: 200;
+   /* text-align: right; */
+    margin: 15px 0 0 40px;
+   
+}
+.grid2{
+   width: 80%;
+   margin: 10px 0 0 7%;
+   height: 40px;
+   
+}
+.grid2 > div:nth-child(1){
+   width: 60%;
+   height: 40px;
+   border: 1px solid #00aa8a;
+   border-radius: 5px;
+   display: inline-block;
+   vertical-align: top;
+   /* border: 1px solid red; */
+}
+#sid{
+   width: 10%;
+    
+   height: 30px;
+   display: inline-block;
+   margin: 7px 0 0 22% ;
+   vertical-align: middle;
+}
+
+/* .grid2 > div>div{
+   width: 30px;
+   height: 30px;
+   display: inline-block;
+   margin: 5px 0 0 40px ;
+   vertical-align: top;
+} */
+
+
+#search{
+ border: 1px solid #f5f5f5; ;
+ margin: 10px 0 0 2%;
+ vertical-align: top;
+ width: 60%;
+ outline: none;
+ color: rgb(109, 109, 109);
+ box-sizing: border-box;
+ font-family: 'Roboto', sans-serif;
+ background-color: #f5f5f5;
+}
+
+#search:focus {
+   outline: none;
+}
+
+.addToCart{
+   width: 7%;
+
+   display: inline-block;
+   vertical-align: top;
+    margin: 5px 0 0 3%;
+}
+
+
+#searchImg{
+   width: 100%;
+   
+}
+
+
+.img{
+   width: 100%;
+   height: 100%;
+   cursor : pointer;
+
+}
+
+
+.firstBox{
+   width: 100%;
+   height: 400px;
+}
+.secondBox{
+   width: 80%;
+   margin: 60px auto auto auto;
+   height: 400px;
+
+}
+#outerBox{
+   display: flex;
+   flex-direction: column;
+    height: 100vh;
+}
+#secondPart{
+    overflow: scroll;
+    margin: 10px -10px -10px -10px;
+  }
+
+
+.color{
+    color: #00aa8a;
+    font-weight: 400;
+}
+.text{
+    font-size: 37px;
+    text-align: center;
+    color: #464646;
+    font-weight: 300;
+}
+.topDeals{
+    width: 90%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    margin: 30px auto auto auto ;
+    grid-gap: 30px;
+}
+
+
+.thirdBox{
+   width: 80%;
+   margin: 50px auto auto auto;
+   height: 400px;
+
+}
+
+.under{
+    width: 90%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    margin: 30px auto auto auto ;
+    grid-gap: 30px;
+}
+.under>div{
+    border-radius: 5px;
+}
+
+
+.fourthBox{
+   width: 80%;
+   margin: 50px auto auto auto;
+   height: 350px;
+
+}
+#hot{
+    width: 90%;
+    height: 78%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: 100%;
+    margin: 30px auto auto auto ;
+    grid-gap: 30px;
+    
+}
+#hot>div{
+    background-color: #f9f9f9;
+}
+#hot>div>div:nth-child(1){
+    width: 100%;
+    height: 78%;
+}
+.hottext1{
+    
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 5px;
+}
+.hottext2{
+    
+    text-align: center;
+    font-size: 10px;
+    font-weight: 300;
+    padding: 4px;
+}
+
+.fifthBox{
+   width: 80%;
+   margin: 50px auto auto auto;
+   height: 550px;
+
+}
+.top{
+   
+    width: 90%;
+    /* height: 85%; */
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto;
+    margin: 30px auto auto auto ;
+    grid-gap: 20px;
+    cursor: pointer;
+}
+
+
+.imgc{
+   border-radius: 50%;
+   padding: 0 0 0 9px;
+   width: 90%;
+   height: 85%;
+}
+
+.top>div>div:nth-child(2){
+    width: 90%;
+    height: 10%;
+    
+}
+
+.toptext{
+    
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px;
+}
+
+.sixthBox{
+   width: 80%;
+   margin: 50px auto auto auto;
+   height: 600px;
+
+}
+.trend{
+    width: 95%;
+    /* height: 80%; */
+    display: grid;
+    grid-template-columns: 30px auto auto auto auto 30px;
+    
+    margin: 30px auto auto auto ;
+    grid-gap: 20px;
+}
+.arrowimg{
+   width: 100%;
+   height: 10%;
+   margin: 200px 0 0 0;
+
+}
+.trendimg{
+   width: 100%;
+   height: 350px;
+}
+
+.fix{
+    width: 100%;
+    height: 80px;
+}
+.trendtext1{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 5px 0 0 0 ;
+}
+.trendtext2{
+    text-align: center;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 5px 0 0 0;
+}
+.trendtext3{
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 5px 0 0 0;
+}
+.lighttext{
+    font-weight: 300;
+}
+.viewall{
+    width: 13%;
+    height: 7%;
+    background-color: #ffc230;
+    margin: 35px auto auto auto;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.seventhBox{
+   width: 80%;
+   margin: 50px auto auto auto;
+   height: 550px;
+
+}
+/* div{
+     border: 1px solid black;
+} */
+#brands{
+    width: 93%;
+    height: 85%;
+    display: grid;
+    grid-template-columns:  32% 32% 32%;
+    grid-template-rows: 47.5% 47.5%;
+    grid-row-gap: 20px;
+    margin: 30px auto auto auto ;
+    grid-column-gap: 30px;
+}
+.brandimg{
+   width: 98%;
+   height: 100%;
+   cursor: pointer;
+}
+
+
+#brands>div:nth-child(1){
+   background-image: url("https://pantaloons.imgix.net/img/app/brands/pantaloons/rangmanch_brand_banner.jpg?w=350&auto=format");
+    background-size:contain;
+    background-repeat: no-repeat;
+   
+}
+
+#brands>div:nth-child(2){
+   background-image: url("https://pantaloons.imgix.net/img/app/brands/pantaloons/dreamz_brand_banner.jpg?w=350&auto=format");
+    background-size:contain;
+    background-repeat: no-repeat;
+   
+}
+#brands>div:nth-child(3){
+   background-image: url("https://pantaloons.imgix.net/img/app/brands/pantaloons/ajile_brand_banner.jpg?w=350&auto=format");
+    background-size:contain;
+    background-repeat: no-repeat;
+   
+
+}
+#brands>div:nth-child(4){
+   background-image: url("https://pantaloons.imgix.net/img/app/brands/pantaloons/byford_brand_banner.jpg?w=350&auto=format");
+    background-size:contain;
+    background-repeat: no-repeat;
+   
+
+}
+#brands>div:nth-child(5){
+   background-image: url("https://pantaloons.imgix.net/img/app/brands/pantaloons/honey_brand_banner_10052021.jpg?w=350&auto=format");
+    background-size:contain;
+    background-repeat: no-repeat;
+   
+
+}
+#brands>div:nth-child(6){
+   background-image: url("https://pantaloons.imgix.net/img/app/brands/pantaloons/PTjunior_mobile.jpg?w=350&auto=format");
+    background-size:contain;
+    background-repeat: no-repeat;
+   
+
+ }
+
+.brandimg >div{
+    margin: 20% 0 0 62%;
+    width: 120px;
+    height: 120px;
+   cursor: auto; 
+}
+.brandimg >div>div{
+   color: white;
+   font-size: .85vw;
+   font-weight: 500;
+   margin: 0 0 12px 0 ;
+   cursor: pointer;
+}
+
+.eighthBox{
+    
+   width: 80%;
+   margin: 50px auto auto auto;
+   height: 650px;
+
+
+}
+
+.focusBox{
+    width: 93%;
+    height: 85%;
+    display: grid;
+    grid-template-columns:  auto auto auto auto;
+    grid-template-rows: 48% 48%;
+    grid-row-gap: 20px;
+    margin: 30px auto auto auto ;
+    grid-column-gap: 25px;
+}
+.focusBox>div{
+    cursor: pointer;
+}
+.focusImgBox{
+    width: 100%;
+    height: 87%;
+}
+.focusBox>div>div{
+    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+    padding: 5px;
+}
+/* div{
+    border: 1px solid black;
+} */
+
+.ninthBox{
+    
+   width: 100%;
+   margin: 50px auto auto auto;
+   height: 430px;
+
+
+}
+
+.lastImg{
+   width: 100%;
+   height: 100%;
+   cursor: pointer;
+}
+
+/* .firstBox{
+   border: 1px solid black;
+} */
+.imgSlide{
+   height: 100%;
+   width: 100%;
+}
+
+::-webkit-scrollbar{
+   display: none;
+}
+
+/* @media (min-height: 700px) {
+#outerBox{
+    height: 705px;
+}
+}
+@media (min-height: 760px) {
+#outerBox{
+    height: 800px;
+}
+}
+@media (min-height: 1000px) {
+#outerBox{
+    height: 1024px;
+}
+} */
+/* div{
+   border: 1px solid black;
+} */
+.wrapper {
+    margin: auto;
+    width: 100%;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+.results ul {
+     width: 70%;
+     margin-top: 12px;
+     margin-left: 13%;
+}
+.results ul li {
+    box-sizing: border-box;
+    background-color: white;
+    list-style: none;
+    border-radius: 3px;
+    display: none;
+    transition: all .5s linear;
+    padding: 10px;
+    width: 100%;
+    margin-left: -70px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+
+.show .results ul li {
+    opacity: 1;
+    display: block;
+}
+
+.results ul li:hover {
+    background: #ececec
+}
+
+#womenTop, #menTop, #kidsTop, #homeD, #accE, #brandsTop, #red {
+    cursor: pointer;
+}
+#womenTop:hover, #menTop:hover, #kidsTop:hover, #homeD:hover, #accE:hover, #brandsTop:hover {
+    color: #00aa8a;
+    transition: all 0.5s linear;
+}
+/* div{
+    border: 1px solid black
+} */
+
+.emailBox{
+    width: 100%;
+    height: 180px;
+    background-image: url("https://assets.trendin.com/resources/img/pantaloons/home/newsletter_bg.png");
+    background-size: contain;
+    margin: 80px 0 0 0;
+}
+
+.emailText{
+    width: 30%;
+    height: 50px;
+    padding: 20px 0 0 0 ;
+    margin: auto;
+    color: white;
+    font-size: 1.5vw;
+    text-align: center;
+    font-weight: 300;
+}
+.fontWeight{
+    font-weight: 500;
+}
+
+.enterEmailBox{
+    width: 28%;
+    height: 45px;
+    margin: 15px auto auto auto;
+    display: grid;
+    grid-template-columns: 85% 12%;
+    grid-gap: 8px ;
+}
+
+.input{
+    margin: 15px 0 0 15px;
+    width: 80%;
+    outline: none;
+    border: white;
+}
+.enterEmailBox>div:nth-child(1){
+    background-color: white;
+}
+.enterEmailBox>div:nth-child(2){
+    background-color: #f4ba0c;
+    border-radius: 5px;
+    font-size: 2vw;
+    font-weight: 600;
+    text-align: center;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+ 
+
+.otherDetails{
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 550px;
+    padding-top: 50px;
+    
+}
+
+.otherfirstBox{
+    /* border: 1px solid black; */
+    width: 90%;
+    /* height: 140px; */
+    margin: auto ;
+    display: grid;
+    grid-template-columns: 10.9% 10.9% 10.9% 10.9% 10.9% 10.9%  18.2%  10.9%;
+    grid-gap: 0.7%;
+}
+.img1{
+    width: 90%;
+    height: 80%;
+    margin: 0 0 0 15px;
+}
+
+.img2{
+    width: 80%;
+    height: 70%;
+    margin: 16px 0 0 15PX;
+}
+.img3{
+    width: 90%;
+    height: 80%;
+    margin: 0px 0 0 10px;
+}
+
+.otherfirstBox>div>div{
+    font-size: .75vw;
+    font-weight: 300;
+    text-align: center;
+    
+}
+
+
+.returnPolicyBox{
+    border: 1px solid grey;
+    width: 90%;
+    height: 40px;
+    padding: 12px 0 0 3px;
+    box-sizing: border-box;
+    margin: 30px 0 0 10px;
+    font-weight: 400;
+    font-size: 2vw;
+}
+
+.otherSecondBox{
+     border-top: 1px solid rgb(214, 214, 214);
+     border-bottom: 1px solid rgb(214, 214, 214);
+     margin: 70px auto auto auto;
+     width: 90%;
+     display: grid;
+     grid-template-columns: 60% 40%;
+     height: 300px;
+
+}
+
+.oSB1{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    height: 100%;
+   padding: 60px 0 0 25px;
+   box-sizing: border-box;
+   border-right: 1px solid rgb(214, 214, 214);
+}
+.oSB2{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 100%;
+   padding: 60px 0 0 25px;
+   box-sizing: border-box;
+  
+}
+
+.otherSecondBox>div>div>div:nth-child(2),
+.otherSecondBox>div>div>div:nth-child(3),
+.otherSecondBox>div>div>div:nth-child(4),
+.otherSecondBox>div>div>div:nth-child(5),
+.otherSecondBox>div>div>div:nth-child(6){
+    font-size: .85vw;
+    font-weight: 300;
+    margin: 20px 0 0 0;
+    color: #a7a7a7;
+
+}
+.headingText{
+    font-size: 1vw;
+    font-weight: 400;
+    color: #5e5e5e;
+}
+
+.oSB2>div>div:nth-child(2),
+.oSB2>div>div:nth-child(3),
+.oSB2>div>div:nth-child(4),
+.oSB2>div>div:nth-child(5),
+.oSB2>div>div:nth-child(6){
+    text-align: center;
+    font-size: .85vw;
+    font-weight: 300;
+   margin: 20px 0 0 0;
+    color: #a7a7a7;
+}
+.headingText1{
+    font-size: 1vw;
+    font-weight: 400;
+    color: #5e5e5e;
+    text-align: center;
+}
+
+#email_btn3 {
+    cursor: pointer;
+}
