@@ -133,12 +133,12 @@ cursor: pointer;
 display:flex;
 flex-direction: column;
 height: 300px;
-
 }
 .allbrands
 {
 
-height:300px;   
+height:100vh;
+width: 100vw;
 }
 .center
 {
@@ -149,13 +149,13 @@ height:300px;
    -webkit-tab-highlight:transparent;
    -webkit-font-smoothing:antialiased;
    text-size-adjust: 100%;
-   padding:0 420px 0 420px;
+   padding:0 29% 0 29%;
     
 
 }
 .heading
 {
-   font-size: 52px;
+   font-size: 4vw;
    color: #000;
    line-height: 60px;
    font-weight: 500;
@@ -184,28 +184,26 @@ height:300px;
     border-bottom: 5px solid #222;
     background-color: white;
     color: #333333;
-    font-size: 16px;
+    font-size: 1vw;
     
    
 }   
 .bttncontent{
     display: grid;
-    grid-template-columns: 100px 100px 100px 100px 100px 100px;
-    padding: 70px 100px 100px 150px;
-    /* border: 1px solid #ccc; */
+    grid-template-columns: 7.4% 7.4% 7.4% 7.4% 7.4% 7.4%;
+    padding: 70px 7.4% 100px 11.11%;
     border-top: none;
     background: #F5F5F5;
     text-align: center;
     font: #333333;
-    grid-column-gap:100px;
+    grid-column-gap: 7.4%;
     grid-row-gap:10px;
-
 }
 
 .bttncontent img{
     margin: 10px;
-    width: 150px;
-    height: 50px;
+    width: 10vw;
+    height: 10vh;
 
 }
 #firstPart {
@@ -214,7 +212,6 @@ height:300px;
     }
 #secondPart {
     height: 100%;
-    overflow: scroll;
 }
 .wrapper {
     margin: auto;
@@ -478,12 +475,6 @@ height:300px;
 
 .results ul li:hover {
     background: #ececec
-}
-
-@media (min-height: 760px) {
-#outerPart {
-    height: 800px;
-    }
 }
 #email_btn3 {
     cursor: pointer;
