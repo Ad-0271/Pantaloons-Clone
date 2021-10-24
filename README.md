@@ -14,7 +14,7 @@
 ## Product Description:
 #### &nbsp;&nbsp; This browser Application allows user to shop online with functionality like search, sort, filter its becomes easy for the user to select the desired product with minimum amount of time.
 ### **Home Page**
-![](https://cdn-images-1.medium.com/max/800/1*tUYGjb_psaFitptFY_jc9A.png)
+![](https://miro.medium.com/max/700/1*X7nDwvi3x4GEsiWMCtI6mA.png)
 #### From the home page user can redirect to login page or can start shopping. Home page contains **search bar** which search the related search according to the input provided.
 
 ### **Product page** 
@@ -32,4 +32,4 @@
 ![](https://cdn-images-1.medium.com/max/800/1*3utNb5Sb83FM93nPAgkwuQ.png)
 #### Finally the order is placed on submitting all the payment credential.
 
-## ** NOTE: The image used are taken for the purpose of education. copying the images and publishing for the business purpose is not acceptable.
+###### ** NOTE: The image used are taken for the purpose of education. copying the images and publishing for the business purpose is not acceptable.
