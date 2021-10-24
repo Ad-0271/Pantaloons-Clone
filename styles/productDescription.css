@@ -1,7 +1,6 @@
 * {
     font-family: 'Rubik', sans-serif;
 }
-
 #outerBox{
     height: 100vh;
     }
@@ -192,7 +191,6 @@ cursor: pointer;
    height: 570px;
    width: 65%;
    margin: auto;
-   
 }
 
 
@@ -200,23 +198,23 @@ cursor: pointer;
    display: grid;
    grid-template-columns: auto auto auto auto;
    width: 45%;
-   height: 20px;
+   height: 2vh;
    margin: 5px 0 0 5px;
 }
 
 .location>div{
-font-size: 11px;
-font-weight: 350;
-letter-spacing: 2px;
+font-size: 0.8vw;
+font-weight: 100;
+letter-spacing: 0.2vw;
 }
 .color{
    color:#00aa8a ;
    padding: 3px 0 0 0;
 }
 .text{
-   font-size: 15px;
+   font-size: 1.1vw;
    font-weight: 400;
-   padding: 3px 0 0 0;
+   padding: 0.3vh 0 0 0;
 }
 
 
@@ -283,20 +281,20 @@ letter-spacing: 2px;
 }
 
 .brandName{
-    font-size: 21px;
+    font-size: 2.1vw;
     font-weight: 400;
 
 }
 
 .shirtName{
-    font-size: 21px;
+    font-size: 2.1vw;
     font-weight: 300;
     color: #81d0c4;
 }
 
 
 .price{
-    font-size: 40px;
+    font-size: 4vw;
     font-weight: 500;
     margin: 15px 0 0 0;
     color: rgba(0,0,0,.8);
@@ -304,7 +302,7 @@ letter-spacing: 2px;
 
 .discount{
 
-    font-size: 27px;
+    font-size: 2.7vw;
     font-weight: 400;
     
 }
@@ -318,12 +316,12 @@ letter-spacing: 2px;
 
 
 .priceDesc1{
-    font-size: 13px;
+    font-size: 1.3vw;
     font-weight: 300;
     margin: 5px 0 0 0;
 }
 .priceDesc2{
-    font-size: 13px;
+    font-size: 1.3vw;
     font-weight: 300;
     margin: 3px 0 0 0;
     border-bottom: 1px solid rgb(236, 236, 236);
@@ -331,14 +329,14 @@ letter-spacing: 2px;
 }
 .color2{
     color: #81d0c4;
-    font-size: 15px;
+    font-size: 1.5vw;
 }
 
 .size{
     margin: 15px 0 0 0;
 }
 .sizeText{
-    font-size: 16px;
+    font-size: 1.6vw;
     font-weight: 300;
 
 }
@@ -399,7 +397,7 @@ letter-spacing: 2px;
 
 .iteams>div:nth-child(1),
 .iteams>div:nth-child(3){
-    font-size: 30px;
+    font-size: 3vw;
     color: #0daa8b;
     box-sizing: border-box;
     text-align: center;
@@ -410,7 +408,7 @@ letter-spacing: 2px;
 }
 .iteams>div:nth-child(2){
      text-align: center;
-     font-size: 20px;
+     font-size: 2vw;
      padding: 8px 0 0 0;
 }
 

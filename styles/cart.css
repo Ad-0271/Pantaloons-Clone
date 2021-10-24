@@ -14,13 +14,13 @@
 
 #discountBar {
     width: 100%;
-    height: 50px;
+    height: 5vh;
     box-sizing: border-box;
     text-align: center;
-    font-size: 16px;
+    font-size: 1vw;
     background-color: #00aa8a;
     color: white;
-    padding: 14px 0 0 0;
+    padding: 1.4vh 0 0 0;
 }
 
 #discountBar>span {
@@ -32,40 +32,42 @@
 .secondbar {
     display: grid;
     /* width: 100%; */
-    height: 100px;
+    height: 12vh;
     display: grid;
     grid-template-columns: 80% 20%;
     /* border: 1px solid black; */
 }
 
 .align {
-    margin: 28px 0 0 650px;
+    margin: 2.5vh 0 0 45vw;
     cursor: pointer;
-    
 }
 
 .help{
-    font-size: 15px;
+    font-size: 1.1vw;
     font-weight: 300;
-    padding: 36px 0 0 130px;
+    padding: 5vh 0 0 7vw;
     box-sizing: border-box;
 }
 .colour1{
     color: #00a88e;
 }
 
-
+.align img {
+    width: 15vw;
+    height: 6vh;
+}
 
 
 
 
 .secondPart{
-    margin: 40px 0 0 0 ;
+    margin: 5vh 0 0 0 ;
     /* overflow: scroll; */
     display: grid;
     grid-template-columns: 65% 32%;
     gap: 3%;
-    height: 450px;
+    height: 43vh;
 }
 .iteams{
     margin: 0 0 0 4%;
@@ -73,24 +75,26 @@
     
 }
 .yourCart{
-    height: 60px;
+    height: 9vh;
     display: grid;
-    grid-template-columns: 60px auto;
-    
+    grid-template-columns: 6vw auto;
 }
 
 .cartimgbox{
     border-radius: 50%;
+    height: 7vh;
+    width: 5vw;
     border: 1px solid #00aa8a;
 }
 
 .text1{
-    font-size: 20px;
+    font-size: 1.4vw;
     font-weight: 400;
-    padding: 18px 0 0 15px;
+    padding: 2.5vh 0 0 1.8vw;
     box-sizing: border-box;
     background-color: #f5f5f5;
     border-radius: 30px;
+    height: 8vh;
 }
 .img{
  width: 80%;
@@ -103,44 +107,43 @@
 #iteamsList{
     width: 94%;
     display: grid;
-    grid-template-columns:  150px 270px 120px 170px 190px;
+    grid-template-columns:  16.6% 30% 13.33% 18.88% 21.11%;
     /* height: 200px; */
-    margin: 10px auto auto 0px;
+    margin: 2vh auto auto auto;
     border-left: 1px solid gray;
 }
 .img1{
     width: 90%;
     height: 90%;
     box-sizing: border-box;
-    padding: 5px 0 0 10px;
+    padding: 1vh 0 0 1vw;
     /* margin: 5px; */
 }
 .imgBox{
-    height: 192.5px;
-    width: 135px;
+    height: 19.25vh;
+    width: 10vw;
 }
-
 .brandName{
     margin: 5px;
-    font-size: 14px;
+    font-size: 1vw;
     font-weight: 500;
 }
 .proName{
     margin: 5px;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 1vw;
 }
 .bottomDiv{
-    margin: 125px 0 0 0 ;
-    height: 20px;
+    margin: 16vh 0 0 0 ;
+    height: 2vh;
     display: grid;
     grid-template-columns: 50% 50%;
-    font-size: 13px;
+    font-size: 0.9vw;
     
 }
 .rightBorder{
     border-left: 1px solid black;
-    padding-left: 25px;
+    padding-left: 2vw;
 }
  
 
@@ -148,19 +151,19 @@
     width: 40%;
     margin: 10px auto auto auto ;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 1vw;
 }
 
 .sizeInput{
     width: 40%;
     margin: 10px auto auto auto ;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 1vw;
     
 }
 .input{
     width: 70%;
-    height: 22px;
+    height: 2.2vh;
 }
 
 
@@ -168,14 +171,14 @@
      width: 60%;
     margin: 10px auto auto auto ;
     font-weight: 400;
-    height: 30px;
+    height: 3.4vh;
     display: grid;
-    grid-template-columns: 30px auto 30px  ;
+    grid-template-columns: 2vw auto 2vw  ;
 }
 
 .qtyBox>div:nth-child(1),
 .qtyBox>div:nth-child(3){
-    font-size: 17px;
+    font-size: 1.1vw;
     text-align: center;
     font-weight: 700;
     padding: 3px 0 0 0;
@@ -184,7 +187,7 @@
     border: 1px solid #00aa8a;
 }
 .qtyBox>div:nth-child(2){
-    font-size: 15px;
+    font-size: 1.1vw;
     font-weight: 500;
      padding: 5px 0 0 0;
      text-align: center;
@@ -193,7 +196,7 @@
     width: 40%;
     margin: 10px auto auto auto ;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 1vw;
     box-sizing: border-box;
     padding: 0 0 0 18px;
 }
@@ -203,11 +206,11 @@
 .priceDiv{
     margin: 10px 0 0 0;
     text-align: right;
-    font-size: 15px;
+    font-size: 1vw;
     color: #d3d3d3;
 }
 .font{
-    font-size: 17px;
+    font-size: 1vw;
     font-weight: 500;
     color: black;
 }
@@ -215,12 +218,12 @@
     text-align: right;
     color: red;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 1.2vw;
       margin-top: 5px;
 }
 
 .priceB{
-    font-size: 11px;
+    font-size: 1vw;
     font-weight: 400;
     text-align: right;
     margin-top: 5px;
@@ -231,18 +234,18 @@
 .continueDiv{
     margin: 0 0 0 4%;
     
-    height: 150px;
+    height: 15vh;
 }
 
 .continueBox{
     width: 35%;
-    height: 50px;
+    height: 6vh;
     border-radius: 5px;
     background-color: #00a88e;
     text-align: center;
     box-sizing: border-box;
-    padding-top: 15px;
-    font-size: 16px;
+    padding-top: 1.7vh;
+    font-size: 1.2vw;
     font-weight: 300;
     color: white;
     margin:30px auto auto  auto;
@@ -255,14 +258,14 @@
     margin: 15px auto 15px auto ;
     height: 20px;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 0.9vw;
 }
 .weight{
     font-weight: 500;
 }
 
 .shopnow{
-    font-size: 14px;
+    font-size: 1vw;
     color: #00a88e;
     width: 25%;
     margin: 5px auto auto auto ;
@@ -290,7 +293,7 @@
 }
 
 .atext{
-    font-size: 17px;
+    font-size: 1.2vw;
     font-weight: 300;
     box-sizing: border-box;
     padding: 12px 0 0 13px;
@@ -300,7 +303,7 @@
     border: 1px solid white;
     outline: none;
     height: 20px;
-    font-size: 17px;
+    font-size: 1.2vw;
     margin: -2px 0 0 0;
     
 }
@@ -311,15 +314,15 @@
 
 .abox{
     border: 1px solid #00a88e;
-    width: 150px;
-    height: 35px;
+    width: 10vw;
+    height: 4.3vh;
     border-radius: 5px;
-    margin: 8px 0 0 70px;
-    font-size: 14px;
+    margin: 8px 0 0 5vw;
+    font-size: 1vw;
     text-align: center;
     color: #00a88e;
     box-sizing: border-box;
-    padding: 10px 0 0 0;
+    padding: 1vh 0 0 0;
     cursor: pointer;
     font-weight: 200;
 }
@@ -331,40 +334,40 @@
 .orderSum{
     margin: 10px 0 0 0 ;
     background-color: #f5f5f5;
-    height: 300px;
+    height: 35vh;
     width: 95%;
 }
 
 .osText{
     padding-top: 25px ;
     text-align: center;
-    font-size: 16px;
+    font-size: 1vw;
 }
 .ov{
     display: grid;
     grid-template-columns: 50% 50%;
-    height: 20px;
+    height: 2vh;
     margin: 20px auto auto auto ;
     width: 93%;
-    font-size: 15px;
+    font-size: 1vw;
     font-weight: 300;
 }
 .pd{
     display: grid;
     grid-template-columns: 50% 50%;
-    height: 20px;
+    height: 2vh;
     margin: 10px auto auto auto ;
     width: 93%;
-    font-size: 15px;
+    font-size: 1vw;
     font-weight: 300;
 }
 .ship{
     display: grid;
     grid-template-columns: 50% 50%;
-    height: 30px;
+    height: 3vh;
     margin: 10px auto auto auto ;
     width: 93%;
-    font-size: 15px;
+    font-size: 1vw;
     font-weight: 300;
     border-bottom: 1px solid #ddd;
     
@@ -375,19 +378,19 @@
 .ot{
     display: grid;
     grid-template-columns: 50% 50%;
-    height: 20px;
+    height: 2vh;
     margin: 10px auto auto auto ;
     width: 93%;
-    font-size: 17px;
+    font-size: 1vw;
     font-weight: 400;
 }
 
 
 .save{
     width: 100%;
-    height: 20px;
+    height: 2vh;
     margin: 15px auto auto auto ;
-    font-size: 14px;
+    font-size: 1vw;
     color: #00a88e;
     font-weight: 400;
     text-align: center;
@@ -395,14 +398,9 @@
 }
 
 .re{
-    font-size: 12px;
+    font-size: 0.9vw;
     font-weight: 300;
     text-align: center;
     margin-top: 10px;
     margin-bottom: -3px;
-}
-@media (min-height: 760px) {
-#outerPart {
-    height: 800px;
-    }
 }
