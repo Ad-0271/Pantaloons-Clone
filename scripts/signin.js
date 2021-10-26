@@ -9,7 +9,7 @@ function checker(el) {
     users.forEach(function(el) {
         if(el.email == email && el.password == pass) {
             flag = false;
-            window.location.href = "homePage.html"
+            window.location.href = "./homePage.html"
         }
     });
     if(flag) {

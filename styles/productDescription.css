@@ -197,7 +197,7 @@ cursor: pointer;
 .location{
    display: grid;
    grid-template-columns: auto auto auto auto;
-   width: 45%;
+   width: fit-content;
    height: 2vh;
    margin: 5px 0 0 5px;
 }
@@ -385,25 +385,27 @@ letter-spacing: 0.2vw;
     grid-template-columns: 50% 50%;
     height: 80px;
     margin: 20px 0 0 0;
+    /* border: 1px solid red; */
 }
 
 .iteams{
     display: grid;
     grid-template-columns: auto 45px auto;
     width: 50%;
-    height: 37px;
+    height: 1vh;
     margin: 20px 0 0 0 ;
 }
 
 .iteams>div:nth-child(1),
 .iteams>div:nth-child(3){
-    font-size: 3vw;
+    font-size: 2vw;
     color: #0daa8b;
     box-sizing: border-box;
     text-align: center;
     box-shadow: 1px 1px #888888;
     border: 1px solid rgb(236, 236, 236);
     border-radius: 7px;
+    padding-top: 10%;
 
 }
 .iteams>div:nth-child(2){
@@ -443,8 +445,6 @@ letter-spacing: 0.2vw;
     font-size: 11px;
     font-weight: 300;
     margin: 4px 0 0 0;
-     border-bottom: 1px solid rgb(236, 236, 236);
-     padding-bottom: 29px;
 
 }
 .freeColor{

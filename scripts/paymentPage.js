@@ -33,17 +33,21 @@ function limitc(element) {
         let mmVal = document.getElementById("inputmm").value;
         let yyVal = document.getElementById("inputyy").value;
         let cvvVal = document.getElementById("cvvNu").value;
-        let billAddVal = document.getElementById("billAdd").value;
-        let shipAddVal = document.getElementById("ShipAdd").value;
+        let billAddVal = document.getElementById("billAdd").value.trim();
+        let shipAddVal = document.getElementById("ShipAdd").value.trim();
 
-        if(ccVal.length == 16 && mmVal.length == 2 && yyVal.length == 2 && cvvVal.length == 3 && cvvVal >= 000 && cvvVal <= 999 && billAddVal.length != 0 && shipAddVal.length != 0) {
+        let currentYear = new Date().getFullYear().toString();
+        
+        
+
+        if(ccVal.length == 16 && mmVal.length == 2 && yyVal.length == 2 && currentYear < yyVal && cvvVal.length == 3 && cvvVal >= 000 && cvvVal <= 999 && billAddVal.length != 0 && shipAddVal.length != 0) {
             alert("Payment Recieved");
             window.location.href = "success.html";
         } else if(ccVal.length != 16) {
             alert("Please Enter Valid Card Number");
         } else if(mmVal.length != 2) {
             alert("Please Enter Valid Expiry Month");
-        } else if(yyVal.length != 2) {
+        } else if(yyVal.length != 2 || currentYear > yyVal) {
             alert("Please Enter Valid Expiry Year");
         } else if(cvvVal.length != 3 || cvvVal < 000 || cvvVal > 999) {
             alert("Please Enter Valid CVV Number");
