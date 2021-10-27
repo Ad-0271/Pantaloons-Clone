@@ -18,7 +18,10 @@ function adduser(e){
     let confirmpassword = myform.confirmpassword.value;
 
     let sortedpass = password.split('').sort().join('');
-    if (sortedpass[0] == ' '){
+
+    if (firstname.trim().length == 0 || lastname.trim().length == 0){
+        alert('Please enter valid firstname or lastname');
+    } else if (sortedpass[0] == ' '){
         alert('Please remove spaces from password');
     } else if (password != confirmpassword){
         alert('Password and Confirm Password should be same');
