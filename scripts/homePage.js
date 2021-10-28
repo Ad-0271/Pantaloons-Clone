@@ -5204,7 +5204,7 @@ let database = [
     localStorage.setItem("database", JSON.stringify(database));
 
     function toHomepage() {
-        window.location.href="homePage.html";
+        window.location.href="../pages/homePage.html";
     }
 
 
@@ -5226,7 +5226,7 @@ let database = [
             }
         });
         localStorage.setItem("categoryPage", JSON.stringify(productPage));
-        window.location = 'pro1.html';
+        window.location = '../pages/pro1.html';
     }
 
 
