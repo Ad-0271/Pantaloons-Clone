@@ -1,0 +1,1 @@
+web: node ./pages/homePage.html
